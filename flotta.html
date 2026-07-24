@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Flotta | Bambini S.p.A. — Maritime Excellence</title>
+  <meta name="description" content="Unità navali all'avanguardia per supporto offshore, trasporto equipaggi e rimorchio d'altura."/>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+  
+  <div id="app-header"></div>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="bg-primary-container text-white py-20 relative overflow-hidden">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+        <span class="text-secondary-fixed font-label-lg uppercase tracking-widest block mb-2">Flotta Navale</span>
+        <h1 class="font-display-lg text-display-lg mb-4">La Nostra Flotta Navale</h1>
+        <p class="font-body-lg text-on-primary-container max-w-2xl leading-relaxed">
+          Unità navali all'avanguardia per supporto offshore, trasporto equipaggi e rimorchio d'altura. Eccellenza ingegneristica al servizio dell'energia globale.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sticky Filter Bar -->
+    <section class="bg-white py-6 sticky top-20 z-40 border-b border-outline-variant shadow-sm">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="flex flex-wrap gap-3 items-center">
+          <button data-category="all" class="fleet-filter-btn px-6 py-2 rounded-full border border-primary active-tab font-label-lg text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Tutti
+          </button>
+          <button data-category="crew" class="fleet-filter-btn px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Crew Boats & FSIV
+          </button>
+          <button data-category="utility" class="fleet-filter-btn px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Utility Boats
+          </button>
+          <button data-category="tug" class="fleet-filter-btn px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-xs uppercase tracking-wider transition-colors cursor-pointer">
+            Rimorchiatori
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vessel Catalogue Grid -->
+    <section class="py-20 bg-background">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="vessel-grid">
+          
+          <!-- Vessel 1: Blue Brother -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="crew">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsdtd3eHQCQ52L5QMUHXgYtvEm7Q28XJ7fftxSmBCLDdT35Djl-bYWan1ZzV2REgWeKtKcFeKTOgCRXem1tsaeQ-6UJd9wgf_P-rFHUqYXiBVEJJ6vtBkXj_7criBSuA6BdTRNHMaeWw8LW9q2tbz2UVNn0px3jdWxjQ9-yd6Ov0snxkNpbV-trFIg27ec1lqzOJv0wT2mFLbGGwEv2k5nmhWk-M01Ja4hFwcr9oT2uyJ1ObXQG88QvY5XbzGxePAF7AogSGAPPzfQ" 
+                   alt="Blue Brother FSIV" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Blue Brother — FSIV</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Utility boat con sistema DP2 per posizionamento dinamico e trasporto veloce.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Velocità: 28 nodi</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Deck Space: 210 m²</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: DP2</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="vessel-detail.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">visibility</span> Dettagli Nave
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vessel 2: Green Sister -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="utility">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFsX_cj5Pal222bcaeQwIhItCZkahQFF0hwYqNLcsxJ2cdpmZ9YOZ7kztt66lMteYz8XQUHg-HgRh9nUzCDMy8ko4cTbo_fgEynjSrukK-3--3H9Hps_foYsk-me4i6HcgMoo6ArdT5HR4JjhMqPBmq7fcGJ_csL0n4aWF2MQET0oSsS6V3L08nO9xzXw6YWRCJ_7wXgv24CeZEAai0lq3LUN5YNscKLKw9Bu1JejkLaQTe8kTZ_INXtuIna28pyh49FFWsMQAECx6" 
+                   alt="Green Sister PSV" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Green Sister — PSV</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Platform supply vessel ad elevata capacità di carico ponte per operazioni offshore.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Velocità: 14 nodi</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Deck Space: 850 m²</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: DP2</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="contatti.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vessel 3: Atlas Tug -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="tug">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1t4cH1xjLyC-X6sy5idsHSzCLr8Km15_90X3ywFDAT8P9EFGugngdeDP33VEXGq099WezoBSIAmuP-txU5YBPEemZ2YHIOwbhOlGfeDjdg96RBC8knJIaUOv2Y4_F7MUjvppAOZYVoTVDbC4F-4sVnt0ku1hN_MhO9n0p6Ygr2w4FSYFEZ4_dlK1CiitzxLA6Vh26cVhjW33hPJLOk1V_p3KAtNIWKjnmNfU0a_u4F84AFuDSkf9wquj-r9_aR-_nwhMzphuOJro4" 
+                   alt="Atlas Tug" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Atlas — Tug</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Rimorchiatore d'altura ad alta potenza di tiro per salvataggio e assistenza portuale.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Bollard Pull: 80 t</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Potenza: 6000 HP</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: FiFi 1</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="contatti.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vessel 4: Fast Swift CTV -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="crew">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDljz0zgo77MO86Xy3Hm3rXWvicm2D4ATHa2aZ8QXu2kp5miI3W44xaTfOjlfFOG0PyLj624SsH14eApKHqNzuI3NwxaxWTa77xA0ayOguss4nYTyHE-bc-9sqLqBZGGjgIWdx_nT0xUzsntE2Pt4_PsUrER0ZqtOTpWVLLcRjpjsa8_2UW8XQbKeO-hTbBC1r2xeV88blb7JGAIuCRgQLV1stZ1CkD_IANaNVn0bP0bCedzzOg1v9izDsY1oxWKaC8-wOKI_WXnPSR" 
+                   alt="Fast Swift CTV" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Fast Swift — CTV</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Catamarano veloce per il trasferimento di personale specializzato su strutture marittime.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Velocità: 32 nodi</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Passeggeri: 24</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: HSC</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="contatti.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vessel 5: Unity Utility -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="utility">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmYc-5nhyocQQ4_1T_su_2oWcf44jaSmzEwYM716ZhtgfAClXgRWzTpfqHHS3zWFW06YyCdw8X6BsTHUyWMlVdUs9Ny3Gwc-fNaAjatdagwh8dcH223j1VrfumilV1mssiqGPHORh_tlZcW7Ovz7ZYo4dvox7J9G2QvFqXUWJd6jmAHIxrakUSuCySRiq2fXjk5LKtJJ5JfRMnY6PZplDpaZs61DB6gpCGt81DIqOhVD4uCn1n_bwo-SGHauF3zcAXLwcZUl1Y2DCI" 
+                   alt="Unity Utility" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Unity — Utility</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Naviglio multiuso dotato di gru idraulica per supporto logistico e parchi eolici offshore.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Gru: 50 t/m</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Posti: 12</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: 4-Point</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="contatti.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Vessel 6: Carrier Uno PSV -->
+          <article class="vessel-card bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover transition-all duration-300" data-category="utility">
+            <div class="h-64 overflow-hidden relative">
+              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8TXmTw4v85mNnce2bPw5kSLgOi_4waIU-QGh-uzChZo0YaQR8UpmBqy142GZkTMspEld3fSB69rYMyYpYBsiUSKNpjnXEVIx6jKgzBTBf8A3kof8dVii8grpzWC-4n3vJYALBafZBj9ooCUEMoQR06pRHZiRjc7n_yJrD_fVSIcz2JXJw_ajZ2y7boYJjyOAC-YvysiaSupbB3QkGBSEsmS12V6RvDlIdmvRx4tgHGMKfA8Hh0mK6GiTkEq4TCvAkw9Av52u2SEJN" 
+                   alt="Carrier Uno PSV" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"/>
+            </div>
+            <div class="p-6">
+              <h3 class="font-headline-md text-headline-md text-primary mb-2">Carrier Uno — PSV</h3>
+              <p class="text-xs text-on-surface-variant mb-4">Nave supply ad altissima capacità di carico ponte per la logistica di grandi infrastrutture.</p>
+              <div class="flex flex-wrap gap-2 mb-6 text-xs">
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Velocità: 12 nodi</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Deck Space: 900 m²</span>
+                <span class="bg-surface-container-high px-2.5 py-1 rounded font-medium text-on-surface-variant">Sistemi: DP2</span>
+              </div>
+              <div class="flex flex-col gap-2.5">
+                <a href="contatti.html" class="w-full py-2.5 border border-primary text-primary font-label-lg text-xs uppercase tracking-wider text-center rounded hover:bg-surface-container-low transition-colors inline-flex items-center justify-center gap-2">
+                  <span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                </a>
+                <a href="contatti.html" class="w-full py-2.5 bg-secondary text-white font-label-lg text-xs uppercase tracking-wider text-center rounded hover:opacity-90 transition-opacity">
+                  Richiedi Disponibilità
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Excellence Stats Section -->
+    <section class="py-24 bg-deep-sea text-white">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-headline-lg text-headline-lg mb-6">Standard di Sicurezza e Tecnologia</h2>
+          <p class="font-body-lg opacity-80 mb-8 leading-relaxed">
+            Ogni nostra unità è soggetta a rigorosi controlli di manutenzione e aggiornamento tecnologico. La nostra flotta integra sistemi DP2 (Dynamic Positioning), propulsioni eco-efficienti e strumentazioni di navigazione all'avanguardia.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-fixed">verified</span>
+              <span class="font-label-lg text-sm">Certificazioni Internazionali RINA & Lloyds</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-fixed">eco</span>
+              <span class="font-label-lg text-sm">Riduzione Emissioni CO2 & Tecnologie Ibride</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary-fixed">support_agent</span>
+              <span class="font-label-lg text-sm">Supporto Tecnico H24 & Equipaggi Certificati</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-primary-container p-8 rounded-xl border border-white/10">
+          <h3 class="font-headline-md text-headline-md mb-6 text-secondary-fixed">Statistiche Flotta 2026</h3>
+          <div class="grid grid-cols-2 gap-8">
+            <div class="border-l-2 border-secondary-fixed pl-4">
+              <div class="text-4xl font-bold text-secondary-fixed mb-1">50+</div>
+              <div class="text-xs opacity-70 uppercase tracking-widest">Unità Navali</div>
+            </div>
+            <div class="border-l-2 border-secondary-fixed pl-4">
+              <div class="text-4xl font-bold text-secondary-fixed mb-1">99%</div>
+              <div class="text-xs opacity-70 uppercase tracking-widest">Operational Uptime</div>
+            </div>
+            <div class="border-l-2 border-secondary-fixed pl-4">
+              <div class="text-4xl font-bold text-secondary-fixed mb-1">15k+</div>
+              <div class="text-xs opacity-70 uppercase tracking-widest">Ore Motore/Anno</div>
+            </div>
+            <div class="border-l-2 border-secondary-fixed pl-4">
+              <div class="text-4xl font-bold text-secondary-fixed mb-1">ZERO</div>
+              <div class="text-xs opacity-70 uppercase tracking-widest">Incidenti LTI</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script type="module">
+    import './js/main.js';
+    import { initFleetFilter } from './js/pages/fleet-filter.js';
+    document.addEventListener('DOMContentLoaded', () => initFleetFilter());
+  </script>
+</body>
+</html>

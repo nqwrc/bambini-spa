@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HSEQ &amp; Sostenibilità | Bambini S.p.A.</title>
+<!-- Google Fonts: Montserrat for Headlines, Inter for Body -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2f3031",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dbdadb",
+                    "tertiary-fixed": "#d2e4ff",
+                    "surface-container-highest": "#e3e2e3",
+                    "on-secondary-fixed-variant": "#3f4c00",
+                    "surface-container-high": "#e9e8e9",
+                    "surface-variant": "#e3e2e3",
+                    "secondary-fixed": "#d1f052",
+                    "on-surface": "#1b1c1d",
+                    "inverse-on-surface": "#f2f0f1",
+                    "secondary-fixed-dim": "#b6d337",
+                    "tertiary": "#0c365d",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c6d0",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "secondary-container": "#d1f052",
+                    "offshore-white": "#F8F9FA",
+                    "on-secondary-container": "#5a6c00",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#244870",
+                    "primary-fixed": "#d3e4ff",
+                    "on-secondary-fixed": "#181e00",
+                    "primary-container": "#1a4d80",
+                    "outline": "#727780",
+                    "surface-bright": "#faf9fa",
+                    "on-background": "#1b1c1d",
+                    "surface-container-low": "#f5f3f4",
+                    "tertiary-fixed-dim": "#a6c9f8",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#13487b",
+                    "on-surface-variant": "#42474f",
+                    "on-tertiary-fixed": "#001c37",
+                    "tertiary-container": "#294d75",
+                    "surface-tint": "#326094",
+                    "background": "#faf9fa",
+                    "on-primary-container": "#93bef8",
+                    "on-tertiary-container": "#9cbeec",
+                    "error": "#ba1a1a",
+                    "surface-container": "#efedee",
+                    "secondary": "#546500",
+                    "on-error-container": "#93000a",
+                    "deep-sea": "#0D2640",
+                    "primary": "#003662",
+                    "inverse-primary": "#a2c9ff",
+                    "surface": "#faf9fa",
+                    "on-primary-fixed": "#001c38",
+                    "brand-green": "#9CB819"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-tablet": "32px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .text-brand-green { color: #9CB819; }
+        .bg-brand-green { background-color: #9CB819; }
+        .border-brand-green { border-color: #9CB819; }
+
+        body {
+            background-color: #faf9fa;
+            color: #1b1c1d;
+            overflow-x: hidden;
+        }
+
+        .certification-card {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .certification-card:hover {
+            transform: translateY(-4px);
+            border-color: #003662;
+        }
+
+        .stat-item::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 20%;
+            height: 60%;
+            width: 1px;
+            background-color: rgba(255,255,255,0.2);
+        }
+        .stat-item:last-child::after { display: none; }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-deep-sea border-b border-outline-variant dark:border-outline fixed top-0 left-0 right-0 z-50">
+<div class="flex justify-between items-center w-full px-6 md:px-margin-desktop h-24 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg font-bold text-primary dark:text-on-primary-container tracking-tight">
+                Bambini S.p.A.
+            </div>
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Servizi</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Flotta</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Aree di intervento</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors duration-300" href="#">Contatti</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-inverse-primary font-label-lg text-label-lg cursor-pointer">IT/EN</div>
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary">language</span>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="mt-24">
+<!-- Page Title Section -->
+<section class="relative bg-primary-container py-24 md:py-32 overflow-hidden">
+<!-- Subtle Nautical Pattern Background -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-6 md:px-margin-desktop text-center">
+<h1 class="font-display-lg text-display-lg md:text-5xl text-on-primary mb-6">
+                    HSEQ &amp; Sostenibilità
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-3xl mx-auto opacity-90">
+                    Il nostro impegno quotidiano per l'eccellenza operativa, la salvaguardia della vita umana in mare e la protezione degli ecosistemi marini attraverso i più alti standard internazionali.
+                </p>
+</div>
+</section>
+<!-- Certifications Grid -->
+<section class="py-20 md:py-32 max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="text-center mb-16">
+<span class="text-brand-green font-label-lg text-label-lg tracking-widest uppercase">Standard Internazionali</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Le Nostre Certificazioni</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- ISO 9001 -->
+<div class="certification-card bg-white border border-outline-variant p-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-8 flex items-center justify-center bg-offshore-white rounded-full">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">ISO 9001</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sistemi di Gestione per la Qualità. Garantiamo processi ottimizzati per soddisfare le richieste più complesse dei nostri clienti offshore.
+                    </p>
+</div>
+<!-- ISO 14001 -->
+<div class="certification-card bg-white border border-outline-variant p-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-8 flex items-center justify-center bg-offshore-white rounded-full">
+<span class="material-symbols-outlined text-4xl text-brand-green" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">ISO 14001</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sistemi di Gestione Ambientale. Monitoraggio costante dell'impatto delle nostre operazioni sull'ambiente marino e riduzione dei rifiuti.
+                    </p>
+</div>
+<!-- ISO 45001 -->
+<div class="certification-card bg-white border border-outline-variant p-10 flex flex-col items-center text-center">
+<div class="w-20 h-20 mb-8 flex items-center justify-center bg-offshore-white rounded-full">
+<span class="material-symbols-outlined text-4xl text-error" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">ISO 45001</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sistemi di Gestione per la Salute e Sicurezza sul Lavoro. La protezione dei nostri equipaggi è il pilastro fondamentale di ogni missione.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Safety & Environment Section -->
+<section class="bg-offshore-white py-20 md:py-32">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<!-- Left: Safety Policy -->
+<div class="space-y-8">
+<div class="inline-block p-4 bg-primary-container/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-3xl">policy</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Politica per la Sicurezza</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Bambini S.p.A. promuove una cultura della sicurezza basata sulla prevenzione e sulla responsabilità condivisa. Ogni membro dell'equipaggio è formato per gestire situazioni critiche con la massima precisione tecnica, seguendo protocolli rigorosi che superano i requisiti di legge.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-green text-xl">check_circle</span>
+<span class="font-body-md text-on-surface">Formazione continua e addestramento specialistico STCW.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-green text-xl">check_circle</span>
+<span class="font-body-md text-on-surface">Manutenzione preventiva di classe superiore per tutta la flotta.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-brand-green text-xl">check_circle</span>
+<span class="font-body-md text-on-surface">Audit interni ed esterni mensili su ogni unità navale.</span>
+</li>
+</ul>
+<button class="px-8 py-4 bg-primary text-on-primary font-label-lg text-label-lg hover:opacity-90 transition-opacity">
+                        Scarica Documentazione HSEQ
+                    </button>
+</div>
+<!-- Right: Environmental Commitment -->
+<div class="relative">
+<div class="aspect-square bg-surface border border-outline-variant overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="A modern professional photography of a Bambini S.p.A. vessel cutting through clean deep blue Mediterranean waters under a clear sky. The lighting is crisp and high-contrast, emphasizing the ship's sleek engineering. The overall aesthetic is minimalist and prestigious, reflecting a high-end corporate maritime environment focusing on sustainability and clean operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuVpegslk_9a0kDq7Wr6wPLTEvXt-Mhi64LdAKtCPjmCGUVqtehXahfesUNvcwcXGdCPBWv_EQmEU4BB7jORAQGtaklEdDj0la6miAVWC6baFke2W7pYoFyW_rrjrZ5X3lzHxKOFkwk7WjNUXl6ySi4PWL4PUafU30a6XpGN4mV8GYFGMABCyStWkmk0AxxzV4ROPUcW1RdI_cavalf8yaTbdkyHE0pdH8Ucc7v8V5BTjbUp8Bcna5DaXymVtYzGnicoIL1evf7i7T"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-brand-green p-10 hidden md:block max-w-xs shadow-xl">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Impegno Ambientale</h3>
+<p class="font-body-md text-white/90 text-sm">
+                            Investiamo in tecnologie ibride e sistemi di monitoraggio delle emissioni per ridurre l'impronta carbonica delle nostre operazioni offshore.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Bar -->
+<section class="bg-deep-sea py-16">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="stat-item relative px-8">
+<div class="font-display-lg text-display-lg text-brand-green mb-2">Zero</div>
+<div class="font-label-lg text-label-lg text-white uppercase tracking-widest">Infortuni (LTI)</div>
+<p class="text-white/60 text-xs mt-2 italic">Negli ultimi 36 mesi di attività</p>
+</div>
+<div class="stat-item relative px-8">
+<div class="font-display-lg text-display-lg text-on-primary mb-2">100%</div>
+<div class="font-label-lg text-label-lg text-white uppercase tracking-widest">Conformità HSEQ</div>
+<p class="text-white/60 text-xs mt-2 italic">Audit superati senza NC</p>
+</div>
+<div class="stat-item relative px-8">
+<div class="font-display-lg text-display-lg text-brand-green mb-2">-15%</div>
+<div class="font-label-lg text-label-lg text-white uppercase tracking-widest">CO2 Ridotta</div>
+<p class="text-white/60 text-xs mt-2 italic">Rispetto al benchmark 2021</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Details / Bento Grid Feel -->
+<section class="py-20 md:py-32 max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-white border border-outline-variant p-12 flex flex-col justify-center">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Investire nel Futuro</h3>
+<p class="font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                        La nostra strategia di sostenibilità non è solo ambientale, ma anche sociale. Sosteniamo le comunità costiere e formiamo i giovani talenti del settore marittimo, garantendo una crescita equa e duratura.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-2 border-white bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a professional maritime officer in a crisp white uniform looking at navigation displays, high-key lighting, corporate minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcpgbqa4S5gcdRzrz9coNZbWSebp1kBXuuLJDzsLujp_e3cgfmVpBQjtR4xGjbT776JPpGixVhbgwd5Qllz0kYn0uVHFNfcnv_4bZI2U3SKdo-nyYmhb9VAWNUOaE9GKpopLAkfqdEKGp3yAG3FQy3138LmYJWJvSIeN-LP3wymmXyyBqxI8aOM_z661w0EmLEKNXDR5HxEkxCvcEQiwa65CtJoIcdrbhlF_wgS1D61pQ-12GGXAeaMgBVM1LnJ-xanZ41OpHMnJPP"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Technical engineer with protective gear inspecting vessel machinery, bright high-contrast professional lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPizi6haTpx1LU2Zt8M-smlVZ3jaHtuiPVMjfNS4V5gLu9s-64tygQkgVZToclxk-uS0noo8EEmDEoxqxJEhRHfydJFeBZ5xOVe2QrzXJ6cElhZ6xqUzdn0IzLqyhnFhwT5g3p1OO7iNPBAG7Ba5Fl84HeuDuKqdyvgdcbqeRwivuhJ4hvyGZb7_kve9Ri90qAQ58rTrBJCoT1Q5qR0t7aVhJcpy5lI4Uoh98SxR2M3dMwqQm6PODPC3hJtq8z-yjjUjPL7rJcArBT"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white bg-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Sea safety coordinator pointing at map, clean minimalist corporate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOjKzFezpqqj5qNO63VYKX116dR3weyUZrdDmY97I6atiunFdT954z40of7VUNmxNHnbzG-P4KPmlQmJTWznKBmoDPp267BOO4MDrzv5ZqSnT486mmRwJC8j47kZoGZ0_3hKkvCnZSjjjw8PjzqHA7txt_HTy7ltIstgMdI8j60qMl5CyF5pn8UYbMgtRtsOt-OyUOKkRRDXp6lwdjCU_XHIv037m_osmvT7SCuyIQVy_9dWiSEz6unD1W3drfgpoVo6mAEUPJ4i0h"/>
+</div>
+</div>
+<span class="font-label-md text-label-md text-primary">+200 Collaboratori</span>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary p-12 flex flex-col justify-center text-white">
+<span class="material-symbols-outlined text-4xl mb-4 text-brand-green">anchor</span>
+<h4 class="font-headline-md text-headline-md mb-2">Sicurezza delle Navi</h4>
+<p class="font-body-md text-white/80">Monitoraggio satellitare h24 e sistemi di telemetria avanzata.</p>
+</div>
+<div class="bg-offshore-white border border-outline-variant p-8 flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Zero</h4>
+<p class="font-label-md text-on-surface-variant">Oil Spills in mare</p>
+</div>
+<div class="bg-offshore-white border border-outline-variant p-8 flex flex-col justify-center">
+<h4 class="font-headline-md text-headline-md text-primary mb-2">120</h4>
+<p class="font-label-md text-on-surface-variant">Ore di training/anno</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-offshore-white dark:bg-deep-sea border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-6 md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary-container mb-6">
+                    Bambini S.p.A.
+                </div>
+<p class="font-body-md text-on-surface-variant dark:text-surface-variant mb-6 text-sm">
+                    Leader nei servizi di supporto logistico offshore nel Mediterraneo dal 1962.
+                </p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary dark:text-on-primary-container mb-6 uppercase tracking-wider">Azienda</h5>
+<ul class="space-y-4">
+<li><a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">La Storia</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">La Flotta</a></li>
+<li><a class="font-label-md text-label-md text-primary dark:text-inverse-primary underline" href="#">HSEQ</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Contatti</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary dark:text-on-primary-container mb-6 uppercase tracking-wider">Legale</h5>
+<ul class="space-y-4">
+<li><a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Cookie Notice</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary dark:text-on-primary-container mb-6 uppercase tracking-wider">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-white transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant">
+                © 2024 Bambini S.p.A. Via Funrocala Soart, 12. P.IVA 0123456789.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple scroll animation for navigation
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+                header.classList.remove('h-24');
+                header.classList.add('h-20');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.add('h-24');
+                header.classList.remove('h-20');
+            }
+        });
+    </script>
+</body></html>

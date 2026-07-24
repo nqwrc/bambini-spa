@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La Flotta | Bambini S.p.A. - Maritime Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#93bef8",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#42474f",
+                        "on-surface": "#1b1c1d",
+                        "secondary-container": "#d1f052",
+                        "tertiary-container": "#294d75",
+                        "on-tertiary-fixed-variant": "#244870",
+                        "secondary-fixed": "#d1f052",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f2f0f1",
+                        "primary-container": "#1a4d80",
+                        "surface-container-highest": "#e3e2e3",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f4c00",
+                        "on-secondary-fixed": "#181e00",
+                        "on-tertiary-container": "#9cbeec",
+                        "primary": "#003662",
+                        "on-background": "#1b1c1d",
+                        "background": "#faf9fa",
+                        "deep-sea": "#0D2640",
+                        "surface-tint": "#326094",
+                        "surface-bright": "#faf9fa",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d3e4ff",
+                        "outline": "#727780",
+                        "surface-dim": "#dbdadb",
+                        "offshore-white": "#F8F9FA",
+                        "on-secondary-container": "#5a6c00",
+                        "surface-variant": "#e3e2e3",
+                        "outline-variant": "#c2c6d0",
+                        "tertiary-fixed-dim": "#a6c9f8",
+                        "surface-container-low": "#f5f3f4",
+                        "on-tertiary-fixed": "#001c37",
+                        "inverse-surface": "#2f3031",
+                        "secondary": "#546500",
+                        "on-primary-fixed-variant": "#13487b",
+                        "on-primary-fixed": "#001c38",
+                        "surface-container": "#efedee",
+                        "inverse-primary": "#a2c9ff",
+                        "secondary-fixed-dim": "#b6d337",
+                        "tertiary-fixed": "#d2e4ff",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "surface": "#faf9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e9e8e9",
+                        "tertiary": "#0c365d",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "brand-green": "#9CB819"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "32px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vessel-card:hover {
+            box-shadow: 0 4px 12px rgba(26, 77, 128, 0.08);
+            border-color: #003662;
+        }
+        .active-tab {
+            background-color: #003662;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant w-full">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">Bambini S.p.A.</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-opacity duration-300" href="#">Servizi</a>
+<a class="font-label-lg text-label-lg text-primary border-b-2 border-primary pb-1" href="#">Flotta</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-opacity duration-300" href="#">Aree di intervento</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-opacity duration-300" href="#">Contatti</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:opacity-80">language</button>
+<button class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-2 rounded transition-opacity duration-300 hover:opacity-90">Client Portal</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Header Banner -->
+<section class="bg-primary-container py-24 relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<h1 class="font-display-lg text-display-lg text-white mb-4">La Nostra Flotta Navale</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl">
+                    Unità navali all'avanguardia per supporto offshore, trasporto equipaggi e rimorchio d'altura. Eccellenza ingegneristica al servizio dell'energia globale.
+                </p>
+</div>
+<!-- Decorative wave pattern -->
+<div class="absolute bottom-0 right-0 opacity-10 pointer-events-none">
+<svg fill="none" height="200" viewbox="0 0 400 200" width="400" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 100C100 50 150 150 250 100C350 50 400 100 400 100V200H0V100Z" fill="white"></path>
+</svg>
+</div>
+</section>
+<!-- Filter Bar -->
+<section class="bg-white py-8 sticky top-20 z-40 border-b border-outline-variant shadow-sm">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-wrap gap-4 items-center">
+<button class="px-6 py-2 rounded-full border border-primary active-tab font-label-lg text-label-lg transition-colors">Tutti</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-label-lg transition-colors">Crew Boats & FSIV</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-label-lg transition-colors">Utility Boats</button>
+<button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary font-label-lg text-label-lg transition-colors">Rimorchiatori</button>
+</div>
+</div>
+</section>
+<!-- Vessel Grid -->
+<section class="py-20 bg-background">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Vessel Card 1 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" data-alt="A professional photograph of a modern blue and white offshore crew boat slicing through choppy deep blue ocean waves. The vessel features advanced radar arrays and a spacious rear deck, with the late afternoon sun highlighting its sleek engineering. The overall mood is powerful, efficient, and corporate maritime." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsdtd3eHQCQ52L5QMUHXgYtvEm7Q28XJ7fftxSmBCLDdT35Djl-bYWan1ZzV2REgWeKtKcFeKTOgCRXem1tsaeQ-6UJd9wgf_P-rFHUqYXiBVEJJ6vtBkXj_7criBSuA6BdTRNHMaeWw8LW9q2tbz2UVNn0px3jdWxjQ9-yd6Ov0snxkNpbV-trFIg27ec1lqzOJv0wT2mFLbGGwEv2k5nmhWk-M01Ja4hFwcr9oT2uyJ1ObXQG88QvY5XbzGxePAF7AogSGAPPzfQ"/>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Blue Brother - FSIV</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Velocità: 28 nodi</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Deck Space: 210 m²</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: DP2</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+<!-- Vessel Card 2 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="A high-end commercial supply ship designed for offshore logistics, painted in professional navy and bright green. The vessel is docked at a modern industrial port with clear blue skies and reflective water. The image is captured with a shallow depth of field, emphasizing the technical details of the ship's bridge and hull structure." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFsX_cj5Pal222bcaeQwIhItCZkahQFF0hwYqNLcsxJ2cdpmZ9YOZ7kztt66lMteYz8XQUHg-HgRh9nUzCDMy8ko4cTbo_fgEynjSrukK-3--3H9Hps_foYsk-me4i6HcgMoo6ArdT5HR4JjhMqPBmq7fcGJ_csL0n4aWF2MQET0oSsS6V3L08nO9xzXw6YWRCJ_7wXgv24CeZEAai0lq3LUN5YNscKLKw9Bu1JejkLaQTe8kTZ_INXtuIna28pyh49FFWsMQAECx6')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Green Sister - PSV</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Velocità: 14 nodi</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Deck Space: 850 m²</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: DP2</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+<!-- Vessel Card 3 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="A powerful offshore tugboat performing a towing maneuver in deep navy waters. The vessel displays immense power with visible water spray and foam. The lighting is dramatic, suggesting a sunrise or sunset over the Mediterranean, reflecting the brand's heritage and operational precision in a high-contrast corporate style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1t4cH1xjLyC-X6sy5idsHSzCLr8Km15_90X3ywFDAT8P9EFGugngdeDP33VEXGq099WezoBSIAmuP-txU5YBPEemZ2YHIOwbhOlGfeDjdg96RBC8knJIaUOv2Y4_F7MUjvppAOZYVoTVDbC4F-4sVnt0ku1hN_MhO9n0p6Ygr2w4FSYFEZ4_dlK1CiitzxLA6Vh26cVhjW33hPJLOk1V_p3KAtNIWKjnmNfU0a_u4F84AFuDSkf9wquj-r9_aR-_nwhMzphuOJro4')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Atlas - Tug</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Bollard Pull: 80 t</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Potenza: 6000 HP</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: FiFi 1</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+<!-- Vessel Card 4 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="Close-up of a high-speed catamaran crew transfer vessel moving through a calm harbor. The shot focuses on the sleek silver and navy aluminum hull, conveying a sense of speed and modernity. The aesthetic is clean and professional, using a cool blue color palette consistent with high-end maritime logistics branding." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDljz0zgo77MO86Xy3Hm3rXWvicm2D4ATHa2aZ8QXu2kp5miI3W44xaTfOjlfFOG0PyLj624SsH14eApKHqNzuI3NwxaxWTa77xA0ayOguss4nYTyHE-bc-9sqLqBZGGjgIWdx_nT0xUzsntE2Pt4_PsUrER0ZqtOTpWVLLcRjpjsa8_2UW8XQbKeO-hTbBC1r2xeV88blb7JGAIuCRgQLV1stZ1CkD_IANaNVn0bP0bCedzzOg1v9izDsY1oxWKaC8-wOKI_WXnPSR')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Fast Swift - CTV</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Velocità: 32 nodi</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Passeggeri: 24</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: HSC</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+<!-- Vessel Card 5 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="A multipurpose utility vessel equipped with a heavy-duty hydraulic crane on its deck. The ship is positioned near an offshore wind farm, with turbines visible in the distance. The lighting is bright and clear, emphasizing the industrial capability and versatility of the fleet in a sustainable energy context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmYc-5nhyocQQ4_1T_su_2oWcf44jaSmzEwYM716ZhtgfAClXgRWzTpfqHHS3zWFW06YyCdw8X6BsTHUyWMlVdUs9Ny3Gwc-fNaAjatdagwh8dcH223j1VrfumilV1mssiqGPHORh_tlZcW7Ovz7ZYo4dvox7J9G2QvFqXUWJd6jmAHIxrakUSuCySRiq2fXjk5LKtJJ5JfRMnY6PZplDpaZs61DB6gpCGt81DIqOhVD4uCn1n_bwo-SGHauF3zcAXLwcZUl1Y2DCI')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Unity - Utility</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Gru: 50 t/m</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Posti: 12</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: 4-Point</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+<!-- Vessel Card 6 -->
+<article class="vessel-card bg-white border border-outline-variant overflow-hidden transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 hover:scale-105" data-alt="An expansive aerial shot of a large platform supply vessel navigating through open seas. The deck is loaded with containers, showcasing the vessel's carrying capacity. The water is a deep sapphire blue, and the ship's wake forms a white trail behind it, emphasizing the scale and importance of maritime logistics in the energy sector." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8TXmTw4v85mNnce2bPw5kSLgOi_4waIU-QGh-uzChZo0YaQR8UpmBqy142GZkTMspEld3fSB69rYMyYpYBsiUSKNpjnXEVIx6jKgzBTBf8A3kof8dVii8grpzWC-4n3vJYALBafZBj9ooCUEMoQR06pRHZiRjc7n_yJrD_fVSIcz2JXJw_ajZ2y7boYJjyOAC-YvysiaSupbB3QkGBSEsmS12V6RvDlIdmvRx4tgHGMKfA8Hh0mK6GiTkEq4TCvAkw9Av52u2SEJN')"></div>
+</div>
+<div class="p-6">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Carrier Uno - PSV</h3>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Velocità: 12 nodi</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Deck Space: 900 m²</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-md font-label-md text-on-surface-variant">Sistemi: DP2</span>
+</div>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 border border-primary text-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-offshore-white transition-colors">
+<span class="material-symbols-outlined text-sm">picture_as_pdf</span> Scheda Tecnica PDF
+                                </button>
+<button class="w-full py-3 bg-brand-green text-white font-label-lg text-label-lg hover:opacity-90 transition-opacity">Richiedi Disponibilità</button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Technical Excellence Detail Section -->
+<section class="py-24 bg-deep-sea text-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Standard di Sicurezza e Tecnologia</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-8">
+                        Ogni nostra unità è soggetta a rigorosi controlli di manutenzione e aggiornamento tecnologico. La nostra flotta integra sistemi DP2 (Dynamic Positioning), propulsioni eco-efficienti e strumentazioni di navigazione all'avanguardia per garantire operazioni sicure in qualsiasi condizione meteorologica.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-green">verified</span>
+<span class="font-label-lg text-label-lg">Certificazioni Internazionali RINA & Lloyds</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-green">eco</span>
+<span class="font-label-lg text-label-lg">Riduzione Emissioni Co2 & Tecnologie Ibride</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-brand-green">support_agent</span>
+<span class="font-label-lg text-label-lg">Supporto Tecnico H24 & Equipaggi Certificati</span>
+</li>
+</ul>
+</div>
+<div class="bg-primary-container p-8 rounded-xl border border-white/10">
+<h4 class="font-headline-md text-headline-md mb-4">Statistiche Flotta 2024</h4>
+<div class="grid grid-cols-2 gap-8">
+<div class="border-l-2 border-brand-green pl-4">
+<div class="text-4xl font-bold text-brand-green mb-1">45+</div>
+<div class="text-sm opacity-60 uppercase tracking-widest">Unità Navali</div>
+</div>
+<div class="border-l-2 border-brand-green pl-4">
+<div class="text-4xl font-bold text-brand-green mb-1">99%</div>
+<div class="text-sm opacity-60 uppercase tracking-widest">Operational Uptime</div>
+</div>
+<div class="border-l-2 border-brand-green pl-4">
+<div class="text-4xl font-bold text-brand-green mb-1">15k+</div>
+<div class="text-sm opacity-60 uppercase tracking-widest">Ore Motore/Anno</div>
+</div>
+<div class="border-l-2 border-brand-green pl-4">
+<div class="text-4xl font-bold text-brand-green mb-1">ZERO</div>
+<div class="text-sm opacity-60 uppercase tracking-widest">Incidenti LTI</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-offshore-white border-t border-outline-variant py-20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-sm text-headline-sm font-bold text-primary mb-6">Bambini S.p.A.</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Leader nel settore dei servizi marittimi offshore, con una storia di eccellenza e innovazione tecnologica.
+                </p>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Navigazione</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Servizi</a></li>
+<li><a class="font-label-md text-label-md text-secondary font-bold" href="#">Flotta</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Aree di intervento</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">News & Eventi</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Corporate</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">HSEQ Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Ethics Code</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg text-label-lg text-primary mb-6">Contatti</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Via dell'Artigianato, 12</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">48123 Ravenna (RA), Italy</p>
+<p class="font-body-md text-body-md text-on-surface-variant">info@bambinispa.it</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto w-full mt-16 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-label-md text-label-md text-on-surface-variant opacity-70">
+                © 2024 Bambini S.p.A. - All Rights Reserved. P.IVA 01234567890
+            </div>
+<div class="flex gap-6">
+<a class="text-primary hover:opacity-80 transition-opacity" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary hover:opacity-80 transition-opacity" href="#"><span class="material-symbols-outlined">link</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple filter interaction logic
+        const buttons = document.querySelectorAll('.filter-bar button');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active-tab', 'bg-primary', 'text-white'));
+                btn.classList.add('active-tab');
+            });
+        });
+
+        // Sticky header background shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Compliance &amp; Ethics | Bambini S.p.A.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#727780",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "offshore-white": "#F8F9FA",
+                        "on-tertiary-fixed": "#001c37",
+                        "secondary-fixed": "#d1f052",
+                        "on-secondary-container": "#5a6c00",
+                        "on-primary-fixed": "#001c38",
+                        "surface-dim": "#dbdadb",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#d2e4ff",
+                        "primary": "#003662",
+                        "on-primary": "#ffffff",
+                        "background": "#faf9fa",
+                        "on-primary-fixed-variant": "#13487b",
+                        "surface-tint": "#326094",
+                        "surface-container-high": "#e9e8e9",
+                        "on-tertiary-fixed-variant": "#244870",
+                        "surface-container": "#efedee",
+                        "surface-bright": "#faf9fa",
+                        "secondary-fixed-dim": "#b6d337",
+                        "surface-variant": "#e3e2e3",
+                        "tertiary": "#0c365d",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "surface": "#faf9fa",
+                        "on-surface": "#1b1c1d",
+                        "outline-variant": "#c2c6d0",
+                        "on-primary-container": "#93bef8",
+                        "tertiary-container": "#294d75",
+                        "error-container": "#ffdad6",
+                        "deep-sea": "#0D2640",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary": "#546500",
+                        "surface-container-low": "#f5f3f4",
+                        "on-secondary-fixed": "#181e00",
+                        "inverse-primary": "#a2c9ff",
+                        "tertiary-fixed-dim": "#a6c9f8",
+                        "primary-container": "#1a4d80",
+                        "on-secondary-fixed-variant": "#3f4c00",
+                        "primary-fixed": "#d3e4ff",
+                        "on-background": "#1b1c1d",
+                        "inverse-surface": "#2f3031",
+                        "secondary-container": "#d1f052",
+                        "inverse-on-surface": "#f2f0f1",
+                        "surface-container-highest": "#e3e2e3",
+                        "on-tertiary-container": "#9cbeec",
+                        "on-surface-variant": "#42474f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-tablet": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "label-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #faf9fa;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(13, 38, 64, 0.85), rgba(13, 38, 64, 0.7)), url('placeholder');
+            background-size: cover;
+            background-position: center;
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: #003662;
+            box-shadow: 0 4px 12px rgba(26, 77, 128, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="w-full h-20 bg-surface dark:bg-surface-container-low border-b border-outline-variant dark:border-outline flat no shadows sticky top-0 z-50">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed duration-200 ease-in-out cursor-pointer">
+                Bambini S.p.A.
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out cursor-pointer">Services</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out cursor-pointer">Fleet</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out cursor-pointer">HSEQ</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out cursor-pointer">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary px-6 py-2 font-label-lg text-label-lg hover:bg-primary-container transition-all duration-200">
+                    Client Portal
+                </button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient relative py-32 md:py-48 flex items-center" data-alt="An expansive aerial view of a sophisticated offshore logistics vessel navigating deep blue waters under a bright clear sky, symbolizing integrity and global maritime standards. The lighting is crisp and professional, reflecting a minimalist corporate aesthetic with deep navy blue and white tones.">
+<div class="max-w-container-max mx-auto px-margin-desktop text-on-primary relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg mb-6">Compliance &amp; Ethics</h1>
+<p class="font-body-lg text-body-lg text-surface-variant opacity-90 leading-relaxed">
+                        At Bambini S.p.A., our reputation for excellence in maritime logistics is built upon a foundation of uncompromising integrity. We are dedicated to maintaining the highest ethical standards, ensuring transparency across our global operations and fostering a culture of legal compliance and professional responsibility.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Documenti Societari Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="text-secondary font-label-lg tracking-widest uppercase mb-2 block">Governance</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Documenti Societari</h2>
+</div>
+<p class="text-on-surface-variant font-body-md max-w-md">
+                        Review our core governance frameworks and policies that define our commitment to ethical business conduct.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Codice Etico -->
+<div class="bento-card p-8 bg-surface-container-lowest border border-outline-variant flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Codice Etico</h3>
+<p class="text-on-surface-variant font-body-md mb-8">
+                                The cornerstone of our corporate culture, detailing the principles and behavioral norms for all employees and stakeholders.
+                            </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-lg group-hover:gap-4 transition-all" href="#">
+                            Download PDF <span class="material-symbols-outlined">download</span>
+</a>
+</div>
+<!-- Modello 231 -->
+<div class="bento-card p-8 bg-surface-container-lowest border border-outline-variant flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Modello 231</h3>
+<p class="text-on-surface-variant font-body-md mb-8">
+                                Organization and management model implemented to prevent corporate crimes and ensure institutional accountability.
+                            </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-lg group-hover:gap-4 transition-all" href="#">
+                            Download PDF <span class="material-symbols-outlined">download</span>
+</a>
+</div>
+<!-- Policy Anticorruzione -->
+<div class="bento-card p-8 bg-surface-container-lowest border border-outline-variant flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">format_image_left</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Policy Anticorruzione</h3>
+<p class="text-on-surface-variant font-body-md mb-8">
+                                Strict guidelines prohibiting any form of bribery or corruption, maintaining our status as a trusted maritime partner.
+                            </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-lg group-hover:gap-4 transition-all" href="#">
+                            View Policy <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Whistleblowing Section -->
+<section class="py-24 bg-offshore-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="flex-1">
+<span class="text-secondary font-label-lg tracking-widest uppercase mb-4 block">Confidential Reporting</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Canale di Segnalazione Whistleblowing</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-6 leading-relaxed">
+                            Bambini S.p.A. provides a secure and confidential portal for reporting potential violations of our Code of Ethics, laws, or regulations. We encourage proactive disclosure to maintain our high operational and moral standards.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md">Complete anonymity and data protection guaranteed.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md">Compliance with international reporting standards.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<span class="font-body-md">Protection against any form of retaliation.</span>
+</li>
+</ul>
+<button class="bg-secondary text-on-secondary px-10 py-4 font-label-lg text-label-lg rounded-none hover:opacity-90 transition-all flex items-center gap-3">
+                            Access Whistleblowing Portal <span class="material-symbols-outlined">open_in_new</span>
+</button>
+</div>
+<div class="flex-1 w-full">
+<div class="relative">
+<div class="absolute -inset-4 border-2 border-primary/10 rounded-xl"></div>
+<div class="relative bg-white p-12 shadow-sm border border-outline-variant">
+<h4 class="font-headline-md text-headline-md text-primary mb-6">Why report?</h4>
+<p class="font-body-md text-on-surface-variant mb-6 italic">
+                                    "Your voice is an essential component of our safety and compliance ecosystem. By reporting concerns, you help us identify risks before they impact our personnel or the environment."
+                                </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-primary">Chief Compliance Officer</div>
+<div class="font-label-md text-label-md text-outline">Bambini S.p.A.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Further Clarifications</h2>
+<p class="text-on-surface-variant font-body-md mb-12 max-w-2xl mx-auto">
+                    For inquiries regarding our Ethics Committee, DPO, or any compliance-related matter, please reach out to our dedicated advisory team.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="p-8 border border-outline-variant flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">contact_support</span>
+<h4 class="font-headline-md text-headline-md mb-2">Ethics Committee</h4>
+<p class="font-label-lg text-label-lg text-primary">comitato.etico@bambinispa.it</p>
+</div>
+<div class="p-8 border border-outline-variant flex flex-col items-center">
+<span class="material-symbols-outlined text-primary mb-4 text-4xl">admin_panel_settings</span>
+<h4 class="font-headline-md text-headline-md mb-2">Data Protection Officer</h4>
+<p class="font-label-lg text-label-lg text-primary">dpo@bambinispa.it</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container dark:bg-surface-container-highest">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-6">
+                    Bambini S.p.A.
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Excellence in maritime logistics and offshore support services since 1962.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">group</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">anchor</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-2">Maritime</h5>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Vessel Fleet</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Support Services</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Crew Management</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-2">Links</h5>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Cookies Settings</a>
+<a class="text-on-surface-variant hover:text-primary font-body-md transition-all cursor-pointer hover:underline">Legal Notice</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider mb-2">Headquarters</h5>
+<p class="font-body-md text-on-surface-variant">Via Funrocala Soart, 12<br/>48122 Ravenna (RA), Italy</p>
+<p class="font-body-md text-on-surface-variant">Tel: +39 0544 36675</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Bambini S.p.A. All rights reserved. Maritime Logistics &amp; Offshore Excellence.
+            </p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">assured_workload</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+</footer>
+<!-- Cookie Banner Micro-interaction -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-outline-variant p-4 z-[100] transform translate-y-full transition-transform duration-500" id="cookie-banner">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-label-md text-on-surface-variant text-center md:text-left">
+                We use cookies and cookies to improve the use of our website. You noptor conftnue on tist our <a class="underline" href="#">Cookie orestensa</a>.
+            </p>
+<button class="bg-primary text-on-primary px-8 py-2 font-label-lg text-label-lg hover:bg-primary-container transition-all" onclick="closeCookieBanner()">Salva e continua</button>
+</div>
+</div>
+<script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('cookie-banner').classList.remove('translate-y-full');
+            }, 1000);
+        });
+
+        function closeCookieBanner() {
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-4');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

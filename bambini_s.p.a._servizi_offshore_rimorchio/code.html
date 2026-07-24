@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Servizi Offshore &amp; Rimorchio | Bambini S.p.A.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#a2c9ff",
+                    "surface": "#faf9fa",
+                    "surface-variant": "#e3e2e3",
+                    "surface-container-low": "#f5f3f4",
+                    "on-background": "#1b1c1d",
+                    "surface-container-highest": "#e3e2e3",
+                    "primary-container": "#1a4d80",
+                    "on-tertiary-container": "#9cbeec",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#d2e4ff",
+                    "inverse-on-surface": "#f2f0f1",
+                    "offshore-white": "#F8F9FA",
+                    "on-primary-container": "#93bef8",
+                    "on-secondary-container": "#5a6c00",
+                    "surface-tint": "#326094",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#b6d337",
+                    "surface-container": "#efedee",
+                    "background": "#faf9fa",
+                    "surface-container-high": "#e9e8e9",
+                    "on-primary-fixed": "#001c38",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#181e00",
+                    "surface-dim": "#dbdadb",
+                    "secondary": "#546500",
+                    "primary": "#003662",
+                    "on-surface-variant": "#42474f",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#d1f052",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1b1c1d",
+                    "secondary-container": "#d1f052",
+                    "on-primary-fixed-variant": "#13487b",
+                    "inverse-surface": "#2f3031",
+                    "surface-bright": "#faf9fa",
+                    "outline-variant": "#c2c6d0",
+                    "on-secondary-fixed-variant": "#3f4c00",
+                    "outline": "#727780",
+                    "on-tertiary-fixed": "#001c37",
+                    "tertiary": "#0c365d",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "deep-sea": "#0D2640",
+                    "on-tertiary-fixed-variant": "#244870",
+                    "tertiary-container": "#294d75",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#a6c9f8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "display-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(13, 38, 64, 0.4), rgba(13, 38, 64, 0.6));
+        }
+        .vessel-card:hover .card-icon {
+            transform: translateY(-4px);
+            color: #d1f052;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl">directions_boat</span>
+                Bambini S.p.A.
+            </div>
+<div class="hidden md:flex gap-base">
+<a class="px-4 py-2 text-secondary font-bold border-b-2 border-secondary font-label-lg text-label-lg transition-colors duration-200" href="#">Services</a>
+<a class="px-4 py-2 text-on-surface font-medium font-label-lg text-label-lg hover:text-secondary transition-colors duration-200" href="#">Fleet</a>
+<a class="px-4 py-2 text-on-surface font-medium font-label-lg text-label-lg hover:text-secondary transition-colors duration-200" href="#">Areas of Intervention</a>
+<a class="px-4 py-2 text-on-surface font-medium font-label-lg text-label-lg hover:text-secondary transition-colors duration-200" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-lg text-label-lg cursor-pointer transition-transform active:scale-95 hover:bg-deep-sea">
+                Request Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[819px] min-h-[600px] flex items-center pt-20">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-10000 hover:scale-105" data-alt="A powerful red offshore supply vessel stationed next to a massive oil platform in the middle of a calm, deep blue Mediterranean Sea. The lighting is bright and clear, emphasizing the maritime engineering and the vast scale of the operation under a brilliant azure sky. The aesthetic is clean, professional, and reflects high-end logistics and safety." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8jvpiHBFlloe2StkWmGdRvr6sYK-DNSyMahgaVW2N8On7cz_Zg5cNLS2gFsEHJBYaKTOgZmbaKkHbfE-z9jOX2onXPtgiZhVbok27aoJufM1R5zVCm0MwkgbVznLYavOQV0gkdjmL4jJc34l4KOYvo_aKA-dqWojy30ElwhALtgCyPsBCw5UPw6AoBrVbUDJZNmq3h7R0EqbZGv_qDFJJC_gnyb9FrDfkWzvNoIbpburtyk4CXK-7JM5s1daoECdVZ58iLdW1zZ6P')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="text-secondary-fixed font-label-lg text-label-lg uppercase tracking-widest mb-4 block">Operazioni d'Eccellenza</span>
+<h1 class="text-white font-display-lg text-display-lg mb-6 leading-tight">Servizi Offshore &amp; Rimorchio</h1>
+<p class="text-offshore-white font-body-lg text-body-lg mb-10 opacity-90 leading-relaxed">
+                    Logistica integrata, supporto tecnico d'avanguardia e massima sicurezza operativa per il settore energetico nel Mediterraneo. Dal 1962, garantiamo precisione marittima senza compromessi.
+                </p>
+<div class="flex gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-lg text-label-lg hover:bg-secondary-fixed transition-all duration-300" href="#rfq">Richiedi Noleggio</a>
+<a class="border border-white text-white px-8 py-4 rounded-lg font-label-lg text-label-lg hover:bg-white/10 transition-all duration-300" href="#">Scopri la Flotta</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Competenza Tecnica Integrata</h2>
+<div class="w-20 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Crew Transfer -->
+<div class="vessel-card group p-8 border border-outline-variant hover:shadow-[0_4px_12px_rgba(26,77,128,0.08)] transition-all duration-300 bg-surface-container-lowest">
+<div class="card-icon mb-6 text-primary transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Crew Transfer</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Trasporto rapido e sicuro di personale verso piattaforme offshore con unità FSIV ad alta velocità e sistemi di posizionamento dinamico DP2.
+                    </p>
+<div class="flex items-center text-secondary font-bold font-label-lg text-label-lg cursor-pointer group-hover:gap-2 transition-all">
+                        DETTAGLI TECNICI <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Cargo Logistics -->
+<div class="vessel-card group p-8 border border-outline-variant hover:shadow-[0_4px_12px_rgba(26,77,128,0.08)] transition-all duration-300 bg-surface-container-lowest">
+<div class="card-icon mb-6 text-primary transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl">inventory_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Cargo Logistics</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Supporto logistico per attrezzature pesanti, rifornimenti idrici e combustibili tramite unità MPSV con ampi ponti di carico e gru certificate.
+                    </p>
+<div class="flex items-center text-secondary font-bold font-label-lg text-label-lg cursor-pointer group-hover:gap-2 transition-all">
+                        DETTAGLI TECNICI <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Emergency Towage -->
+<div class="vessel-card group p-8 border border-outline-variant hover:shadow-[0_4px_12px_rgba(26,77,128,0.08)] transition-all duration-300 bg-surface-container-lowest">
+<div class="card-icon mb-6 text-primary transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl">minor_crash</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Emergency Towage</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Interventi di emergenza e rimorchio d'altura attivo 24/7. Reattività immediata per la salvaguardia della navigazione e delle strutture.
+                    </p>
+<div class="flex items-center text-secondary font-bold font-label-lg text-label-lg cursor-pointer group-hover:gap-2 transition-all">
+                        DETTAGLI TECNICI <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+<!-- Anchor Handling -->
+<div class="vessel-card group p-8 border border-outline-variant hover:shadow-[0_4px_12px_rgba(26,77,128,0.08)] transition-all duration-300 bg-surface-container-lowest">
+<div class="card-icon mb-6 text-primary transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl">anchor</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Anchor Handling</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">
+                        Operazioni specializzate di movimentazione ancore per rig offshore e piattaforme semisommergibili con winch ad alta potenza.
+                    </p>
+<div class="flex items-center text-secondary font-bold font-label-lg text-label-lg cursor-pointer group-hover:gap-2 transition-all">
+                        DETTAGLI TECNICI <span class="material-symbols-outlined text-base">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RFQ Section -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden" id="rfq">
+<div class="absolute right-0 top-0 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[400px] leading-none">corporate_fare</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Richiesta di Noleggio (RFQ)</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-8">
+                        Contatta il nostro ufficio logistico per una quotazione personalizzata. Il nostro team tecnico risponderà entro 12 ore lavorative.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                            Conformità HSEQ ISO
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                            Operatività 24/7/365
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+                            Copertura tutto il Mediterraneo
+                        </li>
+</ul>
+</div>
+<div class="bg-white p-10 border border-outline-variant shadow-lg">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label-lg text-label-lg text-primary uppercase">Servizio Richiesto</label>
+<select class="w-full bg-surface border border-outline p-3 rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all">
+<option>Seleziona un servizio</option>
+<option>Crew Transfer (FSIV)</option>
+<option>Cargo &amp; Supply (MPSV)</option>
+<option>Rimorchio Emergenza</option>
+<option>Anchor Handling</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-label-lg text-primary uppercase">Durata Progetto</label>
+<input class="w-full bg-surface border border-outline p-3 rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Es: 15 giorni" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-label-lg text-primary uppercase">Nome e Azienda</label>
+<input class="w-full bg-surface border border-outline p-3 rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Mario Rossi - Offshore Corp" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-label-lg text-primary uppercase">Email Aziendale</label>
+<input class="w-full bg-surface border border-outline p-3 rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="nome@azienda.it" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-label-lg text-primary uppercase">Messaggio / Note Operative</label>
+<textarea class="w-full bg-surface border border-outline p-3 rounded focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all" placeholder="Dettagli aggiuntivi o requisiti tecnici specifici..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-bold py-4 px-8 rounded shadow-md hover:bg-secondary-fixed transition-colors text-label-lg uppercase tracking-wider active:scale-[0.98]" type="submit">
+                            Invia Richiesta Quotazione
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-sea dark:bg-on-background text-offshore-white py-20">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-6">
+<div class="font-headline-md text-headline-md font-bold text-offshore-white">Bambini S.p.A.</div>
+<p class="font-body-md text-body-md text-offshore-white/80 max-w-xs">
+                    Eccellenza marittima dal 1962. Leader nei servizi offshore, logistica e rimorchio nel cuore del Mediterraneo.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">link</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">mail</span>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed">Servizi</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Trasporto Equipaggi</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Logistica Cargo</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Rimorchio d'Altura</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Supporto Tecnico</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed">Azienda</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Sostenibilità</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Careers</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-offshore-white/80 hover:text-secondary-fixed transition-colors duration-200" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed">Sede Legale</h4>
+<p class="font-body-md text-body-md text-offshore-white/80">
+                    Via Romea 12/A<br/>
+                    48123 Ravenna (RA), Italia<br/>
+                    Tel: +39 0544 123456<br/>
+                    Email: info@bambinispa.it
+                </p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop pt-20 border-t border-white/10 mt-10">
+<p class="font-body-md text-body-md text-offshore-white/50 text-center">
+                © 2024 Bambini S.p.A. All rights reserved. Maritime Excellence Since 1962.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple form interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'INVIANDO...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'INVIATO CON SUCCESSO';
+                btn.classList.replace('bg-secondary', 'bg-green-600');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-600', 'bg-secondary');
+                    btn.disabled = false;
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

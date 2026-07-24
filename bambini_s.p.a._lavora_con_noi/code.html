@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<html class="light" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lavora con Noi | Bambini S.p.A.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#a6c9f8",
+                    "inverse-on-surface": "#f2f0f1",
+                    "on-surface": "#1b1c1d",
+                    "tertiary-fixed": "#d2e4ff",
+                    "on-background": "#1b1c1d",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#001c37",
+                    "on-secondary-fixed-variant": "#3f4c00",
+                    "surface-tint": "#326094",
+                    "background": "#faf9fa",
+                    "secondary": "#546500",
+                    "secondary-fixed": "#d1f052",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#13487b",
+                    "surface-dim": "#dbdadb",
+                    "outline": "#727780",
+                    "deep-sea": "#0D2640",
+                    "offshore-white": "#F8F9FA",
+                    "on-secondary-fixed": "#181e00",
+                    "tertiary": "#0c365d",
+                    "surface-container-high": "#e9e8e9",
+                    "on-primary-fixed": "#001c38",
+                    "on-secondary-container": "#5a6c00",
+                    "surface-bright": "#faf9fa",
+                    "surface": "#faf9fa",
+                    "primary-fixed": "#d3e4ff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c6d0",
+                    "on-tertiary-container": "#9cbeec",
+                    "surface-container": "#efedee",
+                    "on-tertiary-fixed-variant": "#244870",
+                    "secondary-container": "#d1f052",
+                    "surface-container-low": "#f5f3f4",
+                    "surface-container-highest": "#e3e2e3",
+                    "primary-fixed-dim": "#a2c9ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#b6d337",
+                    "inverse-primary": "#a2c9ff",
+                    "primary": "#003662",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#42474f",
+                    "surface-variant": "#e3e2e3",
+                    "primary-container": "#1a4d80",
+                    "tertiary-container": "#294d75",
+                    "on-primary-container": "#93bef8",
+                    "inverse-surface": "#2f3031",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "margin-tablet": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-lg": ["Inter"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(13, 38, 64, 0.70) 0%, rgba(13, 38, 64, 0.30) 100%);
+        }
+        .btn-hover-shadow:hover {
+            box-shadow: 0 4px 12px rgba(26, 77, 128, 0.15);
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            border-color: #003662;
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface dark:bg-deep-sea border-b border-outline-variant dark:border-outline z-50">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed cursor-pointer">
+                Bambini S.p.A.
+            </div>
+<div class="hidden md:flex items-center gap-10 font-body-md text-body-md font-label-lg text-label-lg">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Servizi</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Flotta</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Aree di Intervento</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-colors duration-200" href="#">Contatti</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-lg rounded transition-all active:opacity-80 hover:bg-primary-container text-primary-fixed-dim btn-hover-shadow">
+                Lavora con Noi
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[716px] min-h-[500px] flex items-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic, wide-angle photograph of a professional maritime crew wearing high-visibility safety gear working on the deck of a modern red offshore supply vessel. The bright Mediterranean sun creates high-contrast highlights on the vessel's white machinery and blue waves. The atmosphere is professional and heroic, emphasizing technical precision and oceanic scale." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAogRN7GPdJnYzbcS1-9KrvIp2SvlraLpy9yeutakNl-NR8KH8fzEGdL_rkSJaWyZrHgtxOcPBsbTI7ROvFt6ykbR9aa-GCfDJLeQheYWV8EFhll2qf4DxVxy058Y69_09fmDd0aIPljakpwqWHWPdMfgkvyQIbSZCXa-BlgZEq0p830VCLXg_jBOF9EIFP873gl4pxZSj6M5oe72l2LW0Rfa40MtCGRfKLwNzioyIldBljFwD0bkBnJCBrkTaCCGJ92kSYtiA74-1Q')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-white">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg mb-4 text-offshore-white">
+                        Unisciti all'Eccellenza Marittima
+                    </h1>
+<p class="font-body-lg text-body-lg text-outline-variant mb-8 leading-relaxed">
+                        Costruisci il tuo futuro con noi nelle sfide dell'offshore globale. Entra a far parte di un'eredità storica proiettata verso l'innovazione sostenibile.
+                    </p>
+<a class="inline-flex items-center gap-2 bg-secondary text-on-primary px-8 py-4 font-label-lg rounded uppercase tracking-wider hover:bg-secondary-container hover:text-on-secondary-container transition-all" href="#positions">
+                        Scopri le posizioni
+                        <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Stats Divider -->
+<div class="bg-deep-sea py-8 text-offshore-white">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-between gap-base text-center">
+<div class="flex-1 min-w-[150px]">
+<div class="font-headline-md text-headline-md font-bold">60+</div>
+<div class="font-label-md text-label-md opacity-70 uppercase">Anni di Storia</div>
+</div>
+<div class="flex-1 min-w-[150px]">
+<div class="font-headline-md text-headline-md font-bold">30+</div>
+<div class="font-label-md text-label-md opacity-70 uppercase">Unità Navali</div>
+</div>
+<div class="flex-1 min-w-[150px]">
+<div class="font-headline-md text-headline-md font-bold">400+</div>
+<div class="font-label-md text-label-md opacity-70 uppercase">Professionisti</div>
+</div>
+<div class="flex-1 min-w-[150px]">
+<div class="font-headline-md text-headline-md font-bold">ZERO</div>
+<div class="font-label-md text-label-md opacity-70 uppercase">Incidenti HSEQ</div>
+</div>
+</div>
+</div>
+<!-- Open Positions Section -->
+<section class="py-24 bg-white" id="positions">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Posizioni Aperte</h2>
+<div class="h-1 w-24 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Position Card 1 -->
+<div class="bento-card border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<span class="inline-block px-3 py-1 bg-surface-container-low text-primary font-label-md rounded mb-4">Board Personnel</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Comandante</h3>
+<p class="text-on-surface-variant mb-6 font-body-md leading-relaxed">
+                                Responsabilità del comando nautico e della gestione operativa di unità veloci (FSIV) o DP2. Richiesta esperienza pregressa in ambito offshore.
+                            </p>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-label-lg uppercase tracking-widest hover:bg-primary hover:text-white transition-all rounded">
+                            Candidati
+                        </button>
+</div>
+<!-- Position Card 2 -->
+<div class="bento-card border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<span class="inline-block px-3 py-1 bg-surface-container-low text-primary font-label-md rounded mb-4">Engine Dept</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Ufficiale di Macchina</h3>
+<p class="text-on-surface-variant mb-6 font-body-md leading-relaxed">
+                                Gestione e manutenzione degli impianti di propulsione e sistemi ausiliari. Conoscenza approfondita di sistemi elettronici di monitoraggio.
+                            </p>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-label-lg uppercase tracking-widest hover:bg-primary hover:text-white transition-all rounded">
+                            Candidati
+                        </button>
+</div>
+<!-- Position Card 3 -->
+<div class="bento-card border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<span class="inline-block px-3 py-1 bg-surface-container-low text-primary font-label-md rounded mb-4">Offshore Ops</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Personale di Coperta</h3>
+<p class="text-on-surface-variant mb-6 font-body-md leading-relaxed">
+                                Operatività durante le fasi di ormeggio, carico/scarico e assistenza a piattaforme offshore. Richiesti brevetti STCW aggiornati.
+                            </p>
+</div>
+<button class="w-full py-4 border border-primary text-primary font-label-lg uppercase tracking-widest hover:bg-primary hover:text-white transition-all rounded">
+                            Candidati
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Work Benefits Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">La Vita a Bordo</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto">Offriamo un ambiente di lavoro stimolante basato sul rispetto, la sicurezza e la continua evoluzione tecnologica.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="text-center px-4">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">trending_up</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Crescita Professionale</h4>
+<p class="text-on-surface-variant text-label-md">Percorsi di formazione continua e upgrade delle certificazioni tecniche marittime.</p>
+</div>
+<div class="text-center px-4">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Sicurezza Eccellente</h4>
+<p class="text-on-surface-variant text-label-md">Standard HSEQ ai vertici della categoria, garantendo la massima tutela per ogni operatore.</p>
+</div>
+<div class="text-center px-4">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">directions_boat</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Flotta all'Avanguardia</h4>
+<p class="text-on-surface-variant text-label-md">Operiamo con mezzi moderni dotati di sistemi DP2 e tecnologie di ultima generazione.</p>
+</div>
+<div class="text-center px-4">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-3xl">public</span>
+</div>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Ambiente Internazionale</h4>
+<p class="text-on-surface-variant text-label-md">Collaborazione con i principali attori energetici globali in contesti multiculturali.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Application Form Section -->
+<section class="py-24 bg-white relative overflow-hidden">
+<!-- Decorative element -->
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-5 pointer-events-none flex items-center">
+<span class="material-symbols-outlined text-[400px] text-primary">anchor</span>
+</div>
+<div class="max-w-4xl mx-auto px-margin-desktop relative z-10">
+<div class="bg-white border border-outline-variant p-8 md:p-12 shadow-lg">
+<div class="mb-10">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Invia la tua Candidatura</h2>
+<p class="text-on-surface-variant font-body-md">Siamo sempre alla ricerca di nuovi talenti per la nostra flotta.</p>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-lg text-primary mb-2">Nome e Cognome</label>
+<input class="w-full border border-outline-variant px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Mario Rossi" type="text"/>
+</div>
+<div>
+<label class="block font-label-lg text-primary mb-2">Email</label>
+<input class="w-full border border-outline-variant px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="m.rossi@example.it" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-lg text-primary mb-2">Posizione di Interesse</label>
+<select class="w-full border border-outline-variant px-4 py-3 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-white">
+<option>Seleziona una posizione...</option>
+<option>Comandante</option>
+<option>Ufficiale di Macchina</option>
+<option>Personale di Coperta</option>
+<option>Candidatura Spontanea</option>
+</select>
+</div>
+<div>
+<label class="block font-label-lg text-primary mb-2">Curriculum Vitae / Certificati</label>
+<div class="border-2 border-dashed border-outline-variant p-8 text-center bg-surface-container-lowest cursor-pointer hover:border-secondary transition-colors group">
+<span class="material-symbols-outlined text-4xl text-outline mb-2 group-hover:text-secondary">cloud_upload</span>
+<p class="text-on-surface-variant text-label-md">Trascina qui il tuo file (PDF, max 10MB) o <span class="text-secondary font-bold">clicca per sfogliare</span></p>
+<input class="hidden" type="file"/>
+</div>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 border-outline-variant text-primary focus:ring-primary" id="privacy" type="checkbox"/>
+<label class="text-label-md text-on-surface-variant" for="privacy">
+                                Autorizzo il trattamento dei miei dati personali ai sensi del GDPR per finalità di selezione del personale. Leggi la <a class="text-primary underline" href="#">Privacy Policy</a>.
+                            </label>
+</div>
+<button class="w-full md:w-auto bg-secondary text-on-primary px-12 py-4 font-label-lg uppercase tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all btn-hover-shadow" type="submit">
+                            Invia Candidatura
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 bg-deep-sea dark:bg-on-surface py-12 px-margin-desktop flex flex-col items-center gap-base">
+<div class="font-headline-md text-headline-md text-offshore-white mb-6">
+            Bambini S.p.A.
+        </div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 font-body-md text-body-md font-label-md text-label-md">
+<a class="text-outline-variant hover:text-offshore-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-outline-variant hover:text-offshore-white transition-colors" href="#">Cookies</a>
+<a class="text-outline-variant hover:text-offshore-white transition-colors" href="#">Legal Mentions</a>
+<a class="text-outline-variant hover:text-offshore-white transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex gap-6 mb-8">
+<a class="text-outline-variant hover:text-offshore-white" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-outline-variant hover:text-offshore-white" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-outline-variant hover:text-offshore-white" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<div class="text-offshore-white dark:text-surface-variant font-label-md text-center opacity-60">
+            © 2024 Bambini S.p.A. All rights reserved. Maritime Excellence since 1962.
+        </div>
+</footer>
+<script>
+        // Micro-interaction for form file upload
+        const dropZone = document.querySelector('.border-dashed');
+        if (dropZone) {
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('border-primary', 'bg-primary-container/10');
+            });
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('border-primary', 'bg-primary-container/10');
+            });
+        }
+    </script>
+</body></html>

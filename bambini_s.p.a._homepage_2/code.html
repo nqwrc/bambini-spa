@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bambini S.p.A. - Eccellenza Marittima nel Mediterraneo</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f2f0f1",
+                        "on-background": "#1b1c1d",
+                        "surface-tint": "#326094",
+                        "surface-container": "#efedee",
+                        "tertiary": "#0c365d",
+                        "on-tertiary-fixed-variant": "#244870",
+                        "outline": "#727780",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#b6d337",
+                        "secondary-fixed": "#d1f052",
+                        "primary": "#003662",
+                        "surface-dim": "#dbdadb",
+                        "on-surface": "#1b1c1d",
+                        "deep-sea": "#0D2640",
+                        "primary-container": "#1a4d80",
+                        "on-primary-fixed": "#001c38",
+                        "tertiary-fixed": "#d2e4ff",
+                        "on-secondary-container": "#5a6c00",
+                        "on-primary-fixed-variant": "#13487b",
+                        "inverse-surface": "#2f3031",
+                        "offshore-white": "#F8F9FA",
+                        "outline-variant": "#c2c6d0",
+                        "secondary": "#546500",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e9",
+                        "secondary-container": "#d1f052",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-container-low": "#f5f3f4",
+                        "on-secondary-fixed-variant": "#3f4c00",
+                        "on-tertiary-container": "#9cbeec",
+                        "inverse-primary": "#a2c9ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#001c37",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e3e2e3",
+                        "tertiary-fixed-dim": "#a6c9f8",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#294d75",
+                        "on-secondary-fixed": "#181e00",
+                        "on-primary-container": "#93bef8",
+                        "surface": "#faf9fa",
+                        "surface-bright": "#faf9fa",
+                        "surface-container-highest": "#e3e2e3",
+                        "background": "#faf9fa",
+                        "on-surface-variant": "#42474f",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "32px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-lg": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vessel-card-hover:hover .vessel-overlay {
+            opacity: 1;
+        }
+        .vessel-card-hover:hover {
+            box-shadow: 0 4px 12px rgba(26, 77, 128, 0.08);
+            border-color: #003662;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-surface border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">Bambini S.p.A.</span>
+</div>
+<nav class="hidden md:flex items-center gap-base">
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all px-4" href="#servizi">Servizi</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1 px-4" href="#flotta">Flotta</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all px-4" href="#aree">Aree di Intervento</a>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-primary transition-all px-4" href="#contatti">Contatti</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex items-center gap-2 bg-secondary text-on-primary px-6 py-3 font-label-lg uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                    Request Quote
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- 1. Hero Section -->
+<section class="relative w-full h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="FSIV Blue Brother at sea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp4EiJNd31KTz_hcA7gZRO4qsYRWi3BkomuAzO75bbTFqOcMIXAQpsuOXJIJg-F908emVLvMWewJjMF42RPEYAAKGVU9dTHrniz-P0BDh1FIHAm4Og_9YmuApeXmiDCR9t4NKPGlRTC4el6DdvFy8tKpxKl-xXpgBVB2xWKLE2n4GgjY1eYY4wXZnzm-lYIScjv7w7bkLRmlw8TATFOsitQoWA-SY9W3EWn2xA4fMfyxvMtcBAVb_cAFfLqjLk4QQLFTjQNDwyrRsX"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full text-white">
+<div class="max-w-2xl">
+<span class="font-label-lg text-label-lg uppercase tracking-[0.2em] mb-4 block text-secondary-fixed">Offshore Leadership</span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Eccellenza Marittima nel Mediterraneo</h1>
+<p class="font-body-lg text-body-lg mb-10 text-offshore-white opacity-90 leading-relaxed">
+                        Logistica integrata, supporto tecnico d'avanguardia e massima sicurezza operativa per il settore energetico dal 1962.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-secondary hover:bg-secondary-fixed-dim text-white px-10 py-4 font-label-lg uppercase tracking-widest transition-all shadow-lg inline-flex items-center gap-3" href="#flotta">
+                            Scopri la Flotta
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-white hover:bg-white/10 text-white px-10 py-4 font-label-lg uppercase tracking-widest transition-all inline-flex items-center" href="#servizi">
+                            I Nostri Servizi
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Metrics Section -->
+<section class="bg-primary text-white py-12">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center md:items-start border-l border-white/20 pl-6">
+<span class="text-secondary-fixed font-headline-lg text-headline-lg mb-1">60+</span>
+<p class="font-label-lg uppercase tracking-wider text-white/70">Anni di Storia</p>
+</div>
+<div class="flex flex-col items-center md:items-start border-l border-white/20 pl-6">
+<span class="text-secondary-fixed font-headline-lg text-headline-lg mb-1">50+</span>
+<p class="font-label-lg uppercase tracking-wider text-white/70">Unità Navali</p>
+</div>
+<div class="flex flex-col items-center md:items-start border-l border-white/20 pl-6">
+<span class="text-secondary-fixed font-headline-lg text-headline-lg mb-1">400+</span>
+<p class="font-label-lg uppercase tracking-wider text-white/70">Professionisti</p>
+</div>
+<div class="flex flex-col items-center md:items-start border-l border-white/20 pl-6">
+<span class="text-secondary-fixed font-headline-lg text-headline-lg mb-1">ZERO</span>
+<p class="font-label-lg uppercase tracking-wider text-white/70">Incidenti HSEQ</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Fleet Preview -->
+<section class="py-24 bg-surface-container-low" id="flotta">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">UNITÀ NAVALI</h2>
+<div class="w-16 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="flex justify-center mb-12 gap-8 border-b border-outline-variant">
+<button class="tab-btn font-label-lg text-label-lg pb-4 border-b-2 border-primary text-primary font-bold" onclick="toggleTab('crew')">CREW BOATS-FSIV</button>
+<button class="tab-btn font-label-lg text-label-lg pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-all" onclick="toggleTab('utility')">UTILITY BOATS-MPSV</button>
+<button class="tab-btn font-label-lg text-label-lg pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-all" onclick="toggleTab('rimorchiatori')">RIMORCHIATORI</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="vessel-grid">
+<!-- Card 1 -->
+<div class="bg-white border border-outline-variant vessel-card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A cinematic wide shot of the Blue Brother, a modern red and white Fast Support Intervention Vessel cutting through deep blue Mediterranean waters under a clear sky. Professional maritime photography, technical details visible, high contrast, clean minimalist framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOMt6Hed2t276nErtvR9Ehp5jdiJ3qxSHjZM8vqnY9VvozA9XR-nOR1S16B5PPj3LRD_yNogIeFXDBn-M7zFwjzrlRXIpQxhmGHZHw3Qx_gk5sP1mTuFI_l_vNdW8qVTYOOlKV8TfAr7hqNIX6sEEupRdfRevwNNdEjMzBKvbDc9Y2ACYSXlrDqSN5LBgua198Q5-Pz_-qWTzUqaTTibAspuvB91M-DBczCYRnOWCmktOQGdjgDrmLzGVDY-_gswxAbrGDnln05JG3"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">BLUE BROTHER</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Utility boat con sistema DP2 per posizionamento dinamico e trasporto veloce.</p>
+<div class="grid grid-cols-2 gap-4 mb-8 text-xs font-semibold text-primary/60 tracking-wider">
+<div>DWT: 450t</div>
+<div>LOA: 55m</div>
+<div>POWER: 7200 BHP</div>
+<div>SPEED: 28kn</div>
+</div>
+<a class="text-primary font-bold border-b border-primary pb-1 flex items-center gap-2 group w-max" href="#">
+                                Scheda Tecnica PDF
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">download</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-outline-variant vessel-card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Technical vessel profile of a white and red Utility Multi-Purpose Support Vessel equipped with a large offshore crane on the deck, anchored in calm harbor waters. Sharp details, industrial aesthetic, high-end corporate maritime photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgJ8i5RmNYDTiFfGYZhxbY0_22DGjhjsHqTgJj5vyromZpWisk-Z5p03YASiZylsl6TYCP3j1BYWcasqfUlnD5EeFkXMi7NQD6jF4P8UZrq4RzjdJcCs721F2fzjbJkSdpyifpjxOLmrJPC15gIGe2gwodT57paP6QgB8VyJMH5QMOdUwucJj9JWHkzRanqjHw0v7Rj-fYwqQjNsZbh7uKFhVvnxYPc0Ua5xLlJPKHam8R48p78RkK1q1RG3aZbx2Cq5qRvwJU7_e_"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">UTILITY BOATS-MPSV</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Multi-Purpose Support Vessel con gru offshore ad alta capacità per operazioni subacquee.</p>
+<div class="grid grid-cols-2 gap-4 mb-8 text-xs font-semibold text-primary/60 tracking-wider">
+<div>DWT: 1200t</div>
+<div>LOA: 72m</div>
+<div>CRANE: 60t AHC</div>
+<div>CABINS: 40 berths</div>
+</div>
+<a class="text-primary font-bold border-b border-primary pb-1 flex items-center gap-2 group w-max" href="#">
+                                Scheda Tecnica PDF
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">download</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border border-outline-variant vessel-card-hover transition-all duration-300">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A powerful red harbor tugboat pushing a massive container ship, white water churning in its wake, sunset lighting, golden hour maritime atmosphere. Technical precision, engineering power, corporate branding aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPWlrfBL9Fzx77ptwa4fe_WXqjgL_MRU04JfqPFBcL8weOz0hOPFvm2E-a5XLkGPn44niwdQVM2ljB0Uy_WTfMWI8GVyxEqfnrVqG2C5e0pE-glPppu7hATqL3KOrPC5tdVAMjuhVAzQ9FssWkAs3TvprcBr62c0Dyhfy67NVo1du1uQeobox0qF9JPy6TEtC8nAn4WZzYEbUeIcXEKfq6fGJ6jQ4T_RcSsREsRHvuHrP4d5gD0drRrxyZx-Fwzx-iIwYpVTOJak8r"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">RIMORCHIATORI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Rimorchiatori d'altura per operazioni di rimorchio, assistenza portuale e salvataggio.</p>
+<div class="grid grid-cols-2 gap-4 mb-8 text-xs font-semibold text-primary/60 tracking-wider">
+<div>BOLLARD PULL: 80t</div>
+<div>LOA: 32m</div>
+<div>POWER: 5600 BHP</div>
+<div>CLASS: A1 Tug</div>
+</div>
+<a class="text-primary font-bold border-b border-primary pb-1 flex items-center gap-2 group w-max" href="#">
+                                Scheda Tecnica PDF
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">download</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. HSEQ Commitment -->
+<section class="py-24 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary mb-4 block">Responsabilità Aziendale</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Sicurezza, Qualità, Ambiente: La nostra filosofia operativa</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Bambini S.p.A. opera secondo i più alti standard internazionali per garantire operazioni offshore impeccabili. La nostra cultura "Zero Incidenti" non è solo un obiettivo, ma il fondamento di ogni manovra.
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+<div>
+<h4 class="font-bold text-primary">ISO 9001</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Qualità Totale</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">eco</span>
+<div>
+<h4 class="font-bold text-primary">ISO 14001</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Ambiente</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">health_and_safety</span>
+<div>
+<h4 class="font-bold text-primary">ISO 45001</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Salute &amp; Sicurezza</p>
+</div>
+</div>
+</div>
+<div class="bg-offshore-white p-6 border-l-4 border-secondary">
+<p class="italic text-primary-container font-medium">
+                                "Sostenibilità significa proteggere il mare che ci ospita, riducendo l'impatto ambientale di ogni nostra missione grazie a tecnologie all'avanguardia."
+                            </p>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="pt-8">
+<img class="w-full aspect-square object-cover mb-4" data-alt="A close-up high-resolution technical photograph of maritime safety equipment on a vessel deck, life vests, life rafts, and clear signage. Bright daylight, crisp details, professional maritime documentation aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBwTrBatdZc74MkTxKXc2dDtVYRXqDcty_a9hDXe6NtNpLW4I5NuZwfiVte42_G0Bon_N6vy-CV1eUs3XHC1QmsbJg3R2-PBsgdgNWtWTMsXDkknXZNpCxg7GcSiQio6E_X3qILN5ye4IhT7Sv9i2wy0aK3I2Bl6W_5V5yMxW0tf9uebUiSGIckhy3Ac3Amr80j-1u1YEkQEU-ei1TOho6opzjJOMmVG0nsxBQMVwNo5gRPZE2UulogEhj4RhdHFpHHkJZrjUaRxJ4"/>
+<img class="w-full aspect-video object-cover" data-alt="An overhead drone shot of a vessel cruising through pristine turquoise water, minimal wake, symbolizing environmental responsibility and efficient engineering. Deep navy and clear blue water contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0VFtH8R3CT7e4dPbT7q47HtOeE7w5960h2-ZhY-kxSFdLqmKaUQ_2SM_rJc17aN8UX5f1IK98X-uD2sHQHwR_TyLMDDxT3PLAzVI_1X7D71Pz70OWzvdp87tmY5d1VfQ9ia6kPsFtICX1y76bABkfniJ4uS48FCMnGT9hq_svfpWVy9Olfi0M6CvXrgGy_MgmIShNbYEm_e6-ayG1Jtyy146Wik6QzJrIvmjObeAWNx1GmF0lyDqo3VpbwzCrsT4r5115bM0PjRAH"/>
+</div>
+<div>
+<img class="w-full aspect-[3/4] object-cover mb-4" data-alt="Maritime engineers in high-visibility safety gear reviewing blueprints on a digital tablet on the bridge of a ship. Professional, focused atmosphere, high-tech equipment in background, natural morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4WPNPcPRmvw3SNelryAA1ZfQ_crNpeZCF1VVQLWHakPw9pcm-kAsaFn1h-4W6ohVLuQYyUvJLN86PgLTxPk-_Qvtj9WbVOEFgs9nsFn2hiQCmXdxj5ELh5P9bDpwCs5HWNMPFTAEr-zoGc_qS9aDTk_aYxHnEXqEJuvHlWVGMRVkeWwRRkC3uaoTot-kltkRUc0toSU0vgE15suMjedUV8kThJgYZU_x3vaCvSa_W83-FbS9QsLOTZEtRaQ2fh3GUnPkV3izbiymb"/>
+</div>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-primary text-white p-8 hidden md:block">
+<div class="flex items-center gap-4">
+<span class="text-4xl font-bold text-secondary-fixed">0</span>
+<div class="text-xs uppercase tracking-widest leading-tight">Infortuni negli<br/>ultimi 5 anni</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Call to Action -->
+<section class="relative py-24 bg-deep-sea overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-display-lg text-display-lg text-white mb-8">Pronti a supportare i vostri progetti offshore</h2>
+<p class="font-body-lg text-body-lg text-offshore-white/80 mb-12 max-w-2xl mx-auto">
+                    Contattate il nostro team tecnico per consulenze personalizzate e preventivi su misura per le vostre esigenze logistiche nel Mediterraneo.
+                </p>
+<button class="bg-secondary hover:bg-secondary-fixed-dim text-white px-12 py-5 font-label-lg uppercase tracking-widest transition-all shadow-xl active:scale-95 inline-flex items-center gap-4">
+                    Richiedi un Preventivo
+                    <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-sea w-full border-t border-white/10">
+<div class="max-w-container-max mx-auto px-margin-desktop py-20 flex flex-col md:flex-row justify-between gap-gutter">
+<div class="md:w-1/3">
+<span class="font-headline-lg text-headline-lg text-offshore-white block mb-6">Bambini S.p.A.</span>
+<p class="text-offshore-white/60 mb-8 max-w-xs font-body-md">
+                    Via Funrocale Soart, 12<br/>
+                    48123 Marina di Ravenna (RA)<br/>
+                    Tel. (033) 36675 373<br/>
+                    Email: info@bambinispa.it
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:border-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:border-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">link</span></a>
+<a class="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:border-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">mail</span></a>
+</div>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-3 gap-12">
+<div>
+<h5 class="text-secondary-fixed font-label-lg uppercase tracking-widest mb-6">Navigazione</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Servizi</a></li>
+<li><a class="text-secondary-fixed font-bold transition-all font-body-md hover:underline" href="#">La Flotta</a></li>
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Mission &amp; HSEQ</a></li>
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">News</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-secondary-fixed font-label-lg uppercase tracking-widest mb-6">Supporto</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Privacy Policy</a></li>
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Cookie Policy</a></li>
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Quality &amp; Safety</a></li>
+<li><a class="text-offshore-white/80 hover:text-offshore-white transition-all font-body-md hover:underline" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-secondary-fixed font-label-lg uppercase tracking-widest mb-6">Newsletter</h5>
+<p class="text-offshore-white/60 mb-4 text-sm leading-relaxed">Rimani aggiornato sulle nostre attività offshore.</p>
+<div class="flex">
+<input class="bg-white/10 border border-white/20 text-white p-3 flex-grow focus:outline-none focus:border-secondary transition-all" placeholder="Email" type="email"/>
+<button class="bg-secondary px-4 text-white hover:brightness-110 transition-all"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider text-offshore-white/40 uppercase">
+<span>© 2024 Bambini S.p.A. - Marina di Ravenna. All rights reserved. P.IVA 00063620392</span>
+<div class="flex gap-8">
+<span>Made in Italy</span>
+<span>Offshore Excellence</span>
+</div>
+</div>
+</footer>
+<!-- Cookie Banner Microinteraction -->
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-outline-variant p-4 z-[100] transform translate-y-full transition-transform duration-500" id="cookie-banner">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-on-surface-variant text-sm">Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. Continuando accetti la nostra privacy policy.</p>
+<div class="flex gap-4">
+<button class="text-primary font-bold text-sm" onclick="dismissCookie()">Preferenze</button>
+<button class="bg-primary text-white px-6 py-2 font-label-lg uppercase tracking-widest" onclick="dismissCookie()">Accetta e Chiudi</button>
+</div>
+</div>
+</div>
+<script>
+        // Simple Tab Logic
+        function toggleTab(tabId) {
+            const btns = document.querySelectorAll('.tab-btn');
+            btns.forEach(btn => {
+                btn.classList.remove('text-primary', 'font-bold', 'border-primary');
+                btn.classList.add('text-on-surface-variant', 'border-transparent');
+            });
+            event.target.classList.add('text-primary', 'font-bold', 'border-primary');
+            event.target.classList.remove('text-on-surface-variant', 'border-transparent');
+            
+            // In a real app, this would filter the grid content
+            const grid = document.getElementById('vessel-grid');
+            grid.style.opacity = '0.5';
+            setTimeout(() => {
+                grid.style.opacity = '1';
+            }, 300);
+        }
+
+        // Cookie banner show
+        setTimeout(() => {
+            document.getElementById('cookie-banner').classList.remove('translate-y-full');
+        }, 2000);
+
+        function dismissCookie() {
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        // Navigation hover interaction
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                if (!link.classList.contains('border-primary')) {
+                    link.style.transform = 'translateY(-2px)';
+                }
+            });
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bambini S.p.A. - Eccellenza Marittima nel Mediterraneo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#326094",
+                        "on-primary-container": "#93bef8",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "deep-sea": "#0D2640",
+                        "secondary-fixed": "#d1f052",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "on-surface-variant": "#42474f",
+                        "tertiary-fixed": "#d2e4ff",
+                        "secondary-fixed-dim": "#b6d337",
+                        "on-secondary-fixed-variant": "#3f4c00",
+                        "on-primary-fixed": "#001c38",
+                        "inverse-primary": "#a2c9ff",
+                        "outline-variant": "#c2c6d0",
+                        "on-surface": "#1b1c1d",
+                        "error-container": "#ffdad6",
+                        "background": "#faf9fa",
+                        "surface-container-high": "#e9e8e9",
+                        "primary-fixed": "#d3e4ff",
+                        "on-tertiary-fixed-variant": "#244870",
+                        "on-secondary-fixed": "#181e00",
+                        "surface-bright": "#faf9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1b1c1d",
+                        "tertiary-container": "#294d75",
+                        "primary-container": "#1a4d80",
+                        "inverse-on-surface": "#f2f0f1",
+                        "surface-dim": "#dbdadb",
+                        "on-tertiary-container": "#9cbeec",
+                        "on-tertiary-fixed": "#001c37",
+                        "surface-container-highest": "#e3e2e3",
+                        "inverse-surface": "#2f3031",
+                        "tertiary-fixed-dim": "#a6c9f8",
+                        "primary": "#003662",
+                        "outline": "#727780",
+                        "offshore-white": "#F8F9FA",
+                        "surface-container": "#efedee",
+                        "on-primary-fixed-variant": "#13487b",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "tertiary": "#0c365d",
+                        "secondary": "#546500",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#5a6c00",
+                        "surface-container-low": "#f5f3f4",
+                        "secondary-container": "#d1f052",
+                        "surface": "#faf9fa",
+                        "surface-variant": "#e3e2e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-tablet": "32px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased pt-20">
+<!-- TopNavBar (JSON Anchored) -->
+<nav class="bg-surface dark:bg-deep-sea fixed top-0 w-full z-50 border-b border-outline-variant dark:border-on-surface-variant flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-deep-sea dark:text-primary-fixed flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_boat</span>
+            Bambini S.p.A.
+        </div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="font-label-lg text-label-lg text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:opacity-80" href="#">Services</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:opacity-80" href="#">Fleet</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:opacity-80" href="#">Areas of Intervention</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200 active:opacity-80" href="#">Contact</a>
+</div>
+<button class="hidden md:flex h-12 px-6 bg-primary text-on-primary font-label-lg text-label-lg items-center justify-center rounded hover:bg-tertiary transition-colors duration-200 active:opacity-80">
+            Client Portal
+        </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A striking photograph of a bright orange Fast Support Intervention Vessel (FSIV) navigating the deep blue Mediterranean sea under a clear sky. High-contrast, minimal-corporate aesthetic, crisp lighting, showcasing offshore engineering prowess." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeEznKkupB39NYugS6xdVPObidIhuPJMEtxgsc5WzyUbEHBtuB-LkapMVEz46SthdQCzWmUkci_9XrhFUoLDP5_X9tqYOWXYZpU9UkaFUO-r7QpkWwLyeC6BEgSYYmOAvBi9zOKa4jsNsKxM-lPOp647A5Yg4vDb3tHg7T67ByDHJ3oX9JgEDCQO6OGTfpVrdRpJlR9SScJMmwSV_sDVoMiQf0XAslVdSYCNpZjj5jXgKd2l5taIHS9rDa5oN_F8NFkx71KJNmOLTn')">
+<div class="absolute inset-0 bg-deep-sea/40"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary pt-20">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg mb-4 max-w-4xl mx-auto">Eccellenza Marittima nel Mediterraneo</h1>
+<p class="font-body-lg text-body-lg mb-8 max-w-2xl mx-auto text-inverse-primary">Logistica integrata e supporto tecnico d'avanguardia dal 1962.</p>
+<button class="h-12 px-8 bg-secondary text-on-secondary-fixed font-label-lg text-label-lg rounded hover:bg-secondary-fixed transition-colors duration-200 active:opacity-80 inline-flex items-center gap-2">
+                Scopri la Flotta
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</header>
+<!-- Metrics Counter -->
+<section class="bg-offshore-white py-12 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg text-primary mb-2">60+</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Anni di Storia</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg text-primary mb-2">50+</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Unità Navali</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg text-primary mb-2">400+</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Professionisti</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg text-secondary mb-2">0</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider">Incidenti HSEQ</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (JSON Anchored) -->
+<footer class="bg-offshore-white dark:bg-deep-sea w-full border-t border-outline-variant dark:border-on-surface-variant mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter py-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-deep-sea dark:text-primary-fixed flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_boat</span>
+                    Bambini S.p.A.
+                </div>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-primary-fixed">© 2024 Bambini S.p.A. All rights reserved. Maritime Excellence Since 1962.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-300" href="#">Legal Notice</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-300" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-300" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-300" href="#">HSEQ Certifications</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-fixed-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all duration-300" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+</body></html>
