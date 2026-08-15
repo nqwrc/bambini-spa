@@ -3,3 +3,6 @@ dist/
 *.log
 .env
 .env.local
+
+# local AI-agent context, not meant for a public repo
+CLAUDE.md
