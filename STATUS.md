@@ -2,7 +2,7 @@
 
 state: active
 remote: github-public
-updated: 2026-08-13
+updated: 2026-08-20
 stale-after-days: 30
 
 ## kpi
@@ -15,4 +15,6 @@ scraped reference pages (aree-intervento, compliance, contatti, flotta, ecc.) no
 a clean static site.
 
 ## backlog
-- nothing tracked here; see the repo's open issues
+- reference-scrape folders (the ten bambini_s.p.a._* dirs plus maritime_excellence/,
+  ~5.4 MB, unreferenced by any built page) are dead weight in the public tree; keep or
+  remove is the owner's decision (flagged 2026-08-20)
