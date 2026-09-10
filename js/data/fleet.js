@@ -11,7 +11,7 @@ export const FLEET_CATEGORIES = [
 export const FLEET = [
   { slug: 'famar-intervention', name: 'Famar Intervention', category: 'fsiv', cls: 'FSIV DP2 FiFi1', loa: 54.0, beam: 9.0, speed: 27, pax: 58, deck: '192 m²', cargo: 250, photos: 2 },
   { slug: 'blue-mommy', name: 'Blue Mommy', category: 'fsiv', cls: 'FSIV DP2 FiFi1', loa: 56.0, beam: 9.36, speed: 28, pax: 71, deck: '210 m²', cargo: 200, photos: 2 },
-  { slug: 'blue-ludo', name: 'Blue Ludo', category: 'fsiv', cls: 'FSIV DP2 FiFi1', loa: 55.1, beam: 10.0, speed: 25, pax: 72, deck: '200 m²', cargo: 226, photos: 1 },
+  { slug: 'blue-ludo', name: 'Blue Ludo', category: 'fsiv', cls: 'FSIV DP2 FiFi1', loa: 55.1, beam: 10.0, speed: 25, pax: 72, deck: '200 m²', cargo: 226, photos: 2 },
   { slug: 'blue-giulia', name: 'Blue Giulia', category: 'fsiv', cls: 'FSIV DP2', loa: 50.7, beam: 9.1, speed: 23, pax: 72, deck: '223 m²', cargo: 279, photos: 2 },
   { slug: 'blue-brother', name: 'Blue Brother', category: 'fsiv', cls: 'FSIV DP1 FiFi1', loa: 51.3, beam: 9.2, speed: 27, pax: 71, deck: '200 m²', cargo: 180, photos: 1 },
   { slug: 'blue-daddy', name: 'Blue Daddy', category: 'fsiv', cls: 'FSIV DP1 FiFi1', loa: 51.43, beam: 9.2, speed: 29, pax: 71, deck: '25,00 × 7,20 m', cargo: 200, photos: 1 },
