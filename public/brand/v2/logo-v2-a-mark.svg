@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112" role="img" aria-label="Bambini S.p.A.">
+  <title>Bambini S.p.A. - Versione A v2, Linea</title>
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#003662">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg>

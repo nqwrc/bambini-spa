@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marchio Bambini: versione 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Tokens mirror css/main.css so the page judges the mark against the real site palette. */
+  :root {
+    --navy: #003662;            /* --color-primary: the mark colour, 12.32:1 on white */
+    --deep-sea: #0D2640;        /* --color-deep-sea: ground for the white variant */
+    --offshore-white: #F8F9FA;  /* --color-offshore-white: white variant, 14.56:1 on deep-sea */
+    --secondary: #546500;       /* --color-secondary: CTA and construction axis, white on it 6.48:1 */
+    --rule: #dfe3e8;
+    --muted: #4a5a6c;           /* captions on white 7.07:1 */
+    --muted-dark: #b9c6d4;      /* captions on deep-sea 8.84:1 */
+    --display: Montserrat, 'Helvetica Neue', Arial, sans-serif;
+    --body: Inter, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: var(--navy); font: 15px/1.55 var(--body); }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 40px 32px 72px; }
+
+  .intro { display: flex; justify-content: space-between; align-items: end; gap: 24px; border-bottom: 2px solid var(--navy); padding-bottom: 18px; }
+  .intro h1 { font: 800 28px/1.1 var(--display); margin: 0; letter-spacing: .01em; }
+  .intro p { margin: 0; color: var(--muted); max-width: 60ch; font-size: 14px; }
+
+  .dir { padding: 36px 0 8px; }
+  .dir + .dir { border-top: 1px solid var(--rule); margin-top: 28px; }
+  .dir > h2 { font: 800 22px/1.2 var(--display); margin: 0 0 18px; }
+  .dir > h2 span { font-weight: 600; color: var(--muted); margin-left: 6px; }
+
+  /* v1 | v2 at large size, with the anchor axis drawn through both */
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .vs figure { margin: 0; }
+  .stage { position: relative; border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; height: 380px; }
+  .stage.is-v2 { border-color: var(--navy); }
+  .stage svg { position: relative; height: 300px; width: auto; }
+  .stage::before { content: ""; position: absolute; left: 50%; top: 14px; bottom: 14px; border-left: 1px dashed var(--secondary); opacity: .6; }
+  .stage .axis { position: absolute; left: calc(50% + 8px); top: 12px; font: 500 11px/1 var(--body); color: var(--secondary); letter-spacing: .04em; }
+  .vs figcaption { display: flex; justify-content: space-between; margin-top: 8px; font: 600 12px/1.3 var(--body); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+  .vs .is-v2 + figcaption { color: var(--navy); }
+
+  /* four meeting points, numbered as in the meeting notes */
+  .fb { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .fb li { border-top: 2px solid var(--navy); padding-top: 10px; font-size: 14px; line-height: 1.5; color: #1f3346; }
+  .fb b { display: block; font: 700 12px/1.3 var(--display); color: var(--navy); margin-bottom: 4px; letter-spacing: .02em; }
+
+  .sizes-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 22px; }
+  .panel { border: 1px solid var(--rule); display: flex; align-items: flex-end; justify-content: center; gap: 48px; padding: 28px 20px 18px; }
+  .panel.dark { background: var(--deep-sea); border-color: var(--deep-sea); }
+  .panel figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .panel svg { height: var(--s); width: auto; display: block; }
+  .panel figcaption { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .panel.dark figcaption { color: var(--muted-dark); }
+  .panel .lock svg { height: 44px; }
+
+  .bars { margin-top: 44px; border-top: 1px solid var(--rule); padding-top: 32px; }
+  .bars h2 { font: 800 22px/1.2 var(--display); margin: 0 0 6px; }
+  .bar-label { margin: 18px 0 6px; font-size: 12px; color: var(--muted); }
+  .site-bar { display: flex; align-items: center; gap: 28px; background: #fff; border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule), 0 6px 18px rgba(0,54,98,.06); padding: 14px 28px; }
+  .site-bar .brand { display: block; }
+  .site-bar .brand svg { height: 40px; width: auto; display: block; }
+  .site-bar nav { display: flex; gap: 28px; margin-left: auto; }
+  .site-bar nav a { color: var(--navy); text-decoration: none; font: 500 11px/1 var(--body); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .site-bar .cta { background: var(--secondary); color: #fff; text-decoration: none; font: 600 11px/1 var(--body); text-transform: uppercase; letter-spacing: .06em; padding: 11px 12px; border-radius: 3px; white-space: nowrap; }
+  .site-bar.dark { background: var(--deep-sea); border-color: var(--deep-sea); box-shadow: none; }
+  .site-bar.dark nav a { color: var(--offshore-white); }
+  a:focus-visible { outline: 2px solid var(--secondary); outline-offset: 3px; }
+
+  @media (max-width: 960px) {
+    .vs, .sizes-row { grid-template-columns: 1fr; }
+    .fb { grid-template-columns: 1fr 1fr; }
+    .site-bar nav { display: none; }
+    .intro { flex-direction: column; align-items: start; }
+  }
+  @media (max-width: 560px) { .fb { grid-template-columns: 1fr; } .stage { height: 300px; } .stage svg { height: 230px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="intro">
+    <h1>Marchio Bambini: versione 2</h1>
+    <p>Le quattro osservazioni della riunione applicate a entrambe le direzioni. La linea tratteggiata è l'asse dell'ancora, dall'anello al diamante: nella v1 la B pende a destra, nella v2 le sta sopra al centro.</p>
+  </header>
+
+  <section class="dir" aria-labelledby="h-a">
+    <h2 id="h-a">Versione A <span>Linea</span></h2>
+    <div class="vs">
+      <figure><div class="stage"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V102"/>
+    <path d="M28 29.5H60a12.25 12.25 0 0 1 0 24.5H50"/>
+    <path d="M50 54H62a14 14 0 0 1 0 28H50"/>
+    <path d="M8.69 86.77L12.84 73.97L15.29 79.46A38 38 0 0 0 84.71 79.46L87.16 73.97L91.31 86.77"/>
+  </g>
+</svg><span class="axis">asse</span></div><figcaption><span>v1</span><span>presentata</span></figcaption></figure>
+      <figure><div class="stage is-v2"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#003662">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg><span class="axis">asse</span></div><figcaption><span>v2</span><span>proposta</span></figcaption></figure>
+    </div>
+    <ol class="fb">
+      <li><b>1 · B centrata sul collo</b>Il fusto della B esce dall'asse: ora è il corpo intero della lettera a stare centrato sotto l'anello, niente più vela sull'albero.</li>
+      <li><b>2 · Righetta anche sotto</b>Alla righetta del ceppo in alto corrisponde una righetta uguale in basso a sinistra: stessa lunghezza, stesso spessore.</li>
+      <li><b>3 · Spazio sopra la mezzaluna</b>La B finisce prima delle braccia: tra lettera e diamante resta un tratto di fusto libero, largo tre volte il tratto.</li>
+      <li><b>4 · Marre, non frecce</b>Le punte sono marre a vanga: lobi arrotondati che rientrano nel braccio, nessuna aletta all'indietro, punta rivolta in fuori.</li>
+    </ol>
+    <div class="sizes-row">
+      <div class="panel">
+        <figure><div style="--s:64px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#003662">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>64 px</figcaption></figure>
+        <figure><div style="--s:32px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#003662">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>32 px</figcaption></figure>
+        <figure><div style="--s:16px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#003662">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>16 px</figcaption></figure>
+      </div>
+      <div class="panel dark">
+        <figure><div style="--s:64px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#F8F9FA" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>64 px</figcaption></figure>
+        <figure><div style="--s:32px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#F8F9FA" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>32 px</figcaption></figure>
+        <figure><div style="--s:16px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <g fill="none" stroke="#F8F9FA" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+    <circle cx="50" cy="11.5" r="8"/>
+    <path d="M50 19.5V29.5"/>
+    <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+    <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+    <path d="M33.5 26V79.5"/>
+    <path d="M50 76V104"/>
+    <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+    <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+  </g>
+</svg></div><figcaption>16 px</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="dir" aria-labelledby="h-b">
+    <h2 id="h-b">Versione B <span>Stampo</span></h2>
+    <div class="vs">
+      <figure><div class="stage"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0-22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0-10Z"/>
+    <path d="M55.5 22h9v9h-9Z"/>
+    <path d="M44 30H64a12 12 0 0 1 12 12V47a12 12 0 0 1-12 12a14 14 0 0 1 14 14V96H44ZM53 39H63a4 4 0 0 1 4 4V50.5a4 4 0 0 1-4 4H53ZM53 63.5H65a4 4 0 0 1 4 4V83a4 4 0 0 1-4 4H53Z"/>
+    <path d="M13.64 74.73A50 50 0 0 0 106.36 74.73L111.73 80.13L107.34 58.95L89.47 71.14L97.09 70.98A40 40 0 0 1 22.91 70.98L30.53 71.14L12.66 58.95L8.27 80.13Z"/>
+  </g>
+</svg><span class="axis">asse</span></div><figcaption><span>v1</span><span>presentata</span></figcaption></figure>
+      <figure><div class="stage is-v2"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#003662">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg><span class="axis">asse</span></div><figcaption><span>v2</span><span>proposta</span></figcaption></figure>
+    </div>
+    <ol class="fb">
+      <li><b>1 · B centrata sul collo</b>Il corpo pieno della B, asta e occhielli, è bilanciato ai due lati dell'asse: il collo cade a metà della lettera.</li>
+      <li><b>2 · Righetta anche sotto</b>Due righette piene, in alto e in basso a sinistra, spesse quanto le aste: la B ha la stessa base sopra e sotto.</li>
+      <li><b>3 · Spazio sopra la mezzaluna</b>La B non affonda più nel diamante: è alzata e accorciata, e il fusto la stacca dalla mezzaluna.</li>
+      <li><b>4 · Marre, non frecce</b>Le punte a freccia diventano marre piene a vanga, con i lobi tondi e la punta aperta verso l'esterno.</li>
+    </ol>
+    <div class="sizes-row">
+      <div class="panel">
+        <figure><div style="--s:64px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#003662">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>64 px</figcaption></figure>
+        <figure><div style="--s:32px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#003662">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>32 px</figcaption></figure>
+        <figure><div style="--s:16px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#003662">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>16 px</figcaption></figure>
+      </div>
+      <div class="panel dark">
+        <figure><div style="--s:64px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#F8F9FA" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>64 px</figcaption></figure>
+        <figure><div style="--s:32px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#F8F9FA" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>32 px</figcaption></figure>
+        <figure><div style="--s:16px"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="#F8F9FA" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+    <path d="M55.5 23H64.5V31.5H55.5Z"/>
+    <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+  </g>
+  <g fill="#F8F9FA">
+    <path d="M55.5 81.5H64.5V105H55.5Z"/>
+    <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+    <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+    <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+  </g>
+</svg></div><figcaption>16 px</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bars" aria-labelledby="h-bars">
+    <h2 id="h-bars">Nella testata del sito</h2>
+    <p class="bar-label">Versione A, Linea</p>
+    <div class="site-bar">
+      <a class="brand" href="#" aria-label="Bambini S.p.A., home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251 64">
+  <g transform="translate(0 0) scale(0.5714)">
+    <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+      <circle cx="50" cy="11.5" r="8"/>
+      <path d="M50 19.5V29.5"/>
+      <path d="M25 29.5H49.75a11.25 11.25 0 0 1 0 22.5H33.5"/>
+      <path d="M33.5 52H52.5a12 12 0 0 1 0 24H25"/>
+      <path d="M33.5 26V79.5"/>
+      <path d="M50 76V104"/>
+      <path d="M11.96 76.36A40 40 0 0 0 88.04 76.36"/>
+    </g>
+    <g fill="#003662">
+      <path d="M12.64 86.13C10.13 80.95 6.74 79.07 5.35 74.81C3.87 70.24 6.06 63.47 7.01 61.14C9.31 62.42 15.47 66.47 16.96 71.04C18.34 75.3 16.46 78.89 19.3 83.97Z"/>
+      <path d="M87.36 86.13C89.87 80.95 93.26 79.07 94.65 74.81C96.13 70.24 93.94 63.47 92.99 61.14C90.69 62.42 84.53 66.47 83.04 71.04C81.66 75.3 83.54 78.89 80.7 83.97Z"/>
+    </g>
+  </g>
+  <g fill="#003662" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif">
+    <text x="73" y="37" font-size="31" font-weight="800" letter-spacing="3" textLength="176" lengthAdjust="spacingAndGlyphs">BAMBINI</text>
+    <text x="74" y="55" font-size="9" font-weight="600" letter-spacing="2.4" textLength="174" lengthAdjust="spacing">S.P.A. · RAVENNA · 1962</text>
+  </g>
+</svg></a>
+      <nav aria-label="Esempio di menu, versione A"><a href="#">Servizi</a><a href="#">Flotta</a><a href="#">Aree di intervento</a><a href="#">Contatti</a></nav>
+      <a class="cta" href="#">Richiedi preventivo</a>
+    </div>
+    <p class="bar-label">Versione B, Stampo</p>
+    <div class="site-bar">
+      <a class="brand" href="#" aria-label="Bambini S.p.A., home"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 64">
+  <g transform="translate(0 0) scale(0.5333)">
+    <g fill="#003662" fill-rule="evenodd">
+      <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0 -22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0 -10Z"/>
+      <path d="M55.5 23H64.5V31.5H55.5Z"/>
+      <path d="M35 31H64.5a11 11 0 0 1 11 11V44a11 11 0 0 1 -11 11a13 13 0 0 1 13 13V69a13 13 0 0 1 -13 13H35V73H42.5V40H35ZM51.5 40H62.45a4.5 4.5 0 0 1 4.5 4.5V46a4.5 4.5 0 0 1 -4.5 4.5H51.5ZM51.5 59.5H62a6.5 6.5 0 0 1 6.5 6.5V66.5a6.5 6.5 0 0 1 -6.5 6.5H51.5Z"/>
+    </g>
+    <g fill="#003662">
+      <path d="M55.5 81.5H64.5V105H55.5Z"/>
+      <path d="M10.55 74.07A52 52 0 0 0 109.45 74.07L99.94 70.98A42 42 0 0 1 20.06 70.98Z"/>
+      <path d="M15.71 85.01C12.47 78.49 7.99 76.23 6.17 70.63C4.22 64.64 7.43 55.65 8.81 52.55C11.96 54.18 20.39 59.39 22.34 65.38C24.15 70.97 21.54 75.54 25.22 81.92Z"/>
+      <path d="M104.29 85.01C107.53 78.49 112.01 76.23 113.83 70.63C115.78 64.64 112.57 55.65 111.19 52.55C108.04 54.18 99.61 59.39 97.66 65.38C95.85 70.97 98.46 75.54 94.78 81.92Z"/>
+    </g>
+  </g>
+  <g fill="#003662" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif">
+    <text x="78" y="37" font-size="31" font-weight="800" letter-spacing="3" textLength="176" lengthAdjust="spacingAndGlyphs">BAMBINI</text>
+    <text x="79" y="55" font-size="9" font-weight="600" letter-spacing="2.4" textLength="174" lengthAdjust="spacing">S.P.A. · RAVENNA · 1962</text>
+  </g>
+</svg></a>
+      <nav aria-label="Esempio di menu, versione B"><a href="#">Servizi</a><a href="#">Flotta</a><a href="#">Aree di intervento</a><a href="#">Contatti</a></nav>
+      <a class="cta" href="#">Richiedi preventivo</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>
