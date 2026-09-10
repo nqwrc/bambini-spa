@@ -1,0 +1,7 @@
+// Open positions for lavora-con-noi.html. Only the entries marked source: 'live-site'
+// are published on bambinispa.it; the rest are illustrative, for the prototype.
+export const ROLES = [
+  { title_it: 'Comandante (>500 GT)', area: 'bordo', department: 'Coperta', location: 'Italia / Africa Occidentale · FSIV', contract: 'Imbarco a rotazione', requirements_it: 'Abilitazione al comando di navi oltre 500 GT ed esperienza su unità offshore.', description_it: 'Comando nautico e gestione operativa di unità FSIV oltre 500 GT, impiegate in Italia e in Africa Occidentale.', source: 'live-site' },
+  { title_it: '1° Ufficiale di Coperta (>500 GT)', area: 'bordo', department: 'Coperta', location: 'Italia / Africa Occidentale · FSIV', contract: 'Imbarco a rotazione', requirements_it: 'Abilitazione di primo ufficiale di coperta su navi oltre 500 GT.', description_it: 'Supporto al Comandante nella navigazione, nelle operazioni di carico e scarico e nell\'assistenza alle piattaforme offshore.', source: 'live-site' },
+  { title_it: 'Direttore di Macchina (>3000 kW)', area: 'bordo', department: 'Macchina', location: 'Italia / Africa Occidentale · FSIV', contract: 'Imbarco a rotazione', requirements_it: 'Abilitazione di direttore di macchina per apparati oltre 3000 kW.', description_it: 'Conduzione e manutenzione degli apparati di propulsione e dei sistemi ausiliari di unità FSIV con potenza oltre 3000 kW.', source: 'live-site' },
+];

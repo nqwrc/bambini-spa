@@ -54,66 +54,26 @@
       </div>
     </section>
 
-    <!-- Open Positions Section -->
+    <!-- Open Positions Section (rendered by js/pages/careers.js from js/data/careers.js) -->
     <section class="py-24 bg-white" id="open-positions">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="text-center mb-16">
-          <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">Posizioni di Bordo & Ufficio</span>
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Posizioni Aperte</h2>
-          <div class="w-16 h-1 bg-secondary mx-auto"></div>
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+          <div>
+            <span class="text-primary font-label-lg uppercase tracking-widest block mb-2">Posizioni di Bordo &amp; a Terra</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Posizioni Aperte</h2>
+          </div>
+          <p id="careers-count" class="text-sm text-on-surface-variant" aria-live="polite"></p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-16">
-          
-          <!-- Position 1 -->
-          <div class="p-8 border border-outline-variant rounded-xl bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
-                Italia / Africa Occ. · FSIV
-              </span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Comandante (&gt;500 GT)</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed text-sm">
-                Comando nautico e gestione operativa di unità FSIV oltre 500 GT, impiegate in Italia e in Africa Occidentale. Richiesta esperienza in ambito offshore.
-              </p>
-            </div>
-            <a href="#apply-form" onclick="document.getElementById('position-select').value='Comandante';" class="w-full py-3 bg-secondary text-white text-center rounded font-label-lg text-xs uppercase tracking-wider block hover:bg-secondary-fixed transition-colors">
-              Candidati Ora
-            </a>
-          </div>
-
-          <!-- Position 2 -->
-          <div class="p-8 border border-outline-variant rounded-xl bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
-                Italia / Africa Occ. · FSIV
-              </span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Direttore di Macchina (&gt;3000 kW)</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed text-sm">
-                Conduzione e manutenzione degli apparati di propulsione e dei sistemi ausiliari di unità FSIV con potenza oltre 3000 kW.
-              </p>
-            </div>
-            <a href="#apply-form" onclick="document.getElementById('position-select').value='Direttore di Macchina';" class="w-full py-3 bg-secondary text-white text-center rounded font-label-lg text-xs uppercase tracking-wider block hover:bg-secondary-fixed transition-colors">
-              Candidati Ora
-            </a>
-          </div>
-
-          <!-- Position 3 -->
-          <div class="p-8 border border-outline-variant rounded-xl bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">
-                Italia / Africa Occ. · FSIV
-              </span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">1° Ufficiale di Coperta (&gt;500 GT)</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed text-sm">
-                Supporto al Comandante nella navigazione, nelle operazioni di carico e scarico e nell'assistenza alle piattaforme offshore.
-              </p>
-            </div>
-            <a href="#apply-form" onclick="document.getElementById('position-select').value='1° Ufficiale di Coperta';" class="w-full py-3 bg-secondary text-white text-center rounded font-label-lg text-xs uppercase tracking-wider block hover:bg-secondary-fixed transition-colors">
-              Candidati Ora
-            </a>
-          </div>
-
+        <div class="flex flex-col md:flex-row md:items-center gap-4 mb-10 pb-6 border-b border-outline-variant">
+          <div id="careers-areas" class="flex flex-wrap gap-2" role="group" aria-label="Filtra per area"></div>
+          <label class="md:ml-auto flex items-center gap-3 text-xs uppercase tracking-wider text-on-surface-variant">
+            Reparto
+            <select id="careers-dept" class="border border-outline-variant rounded px-3 py-2 bg-white text-sm normal-case tracking-normal text-primary focus:ring-1 focus:ring-primary outline-none"></select>
+          </label>
         </div>
+
+        <div id="careers-list" class="space-y-10"></div>
       </div>
     </section>
 
@@ -177,9 +137,6 @@
               <label class="block font-label-lg uppercase text-primary mb-2">Posizione di Interesse</label>
               <select id="position-select" class="w-full bg-white border border-outline-variant rounded p-3 focus:ring-1 focus:ring-primary outline-none">
                 <option value="Candidatura Spontanea">Candidatura Spontanea</option>
-                <option value="Comandante">Comandante (&gt;500 GT)</option>
-                <option value="1° Ufficiale di Coperta">1° Ufficiale di Coperta (&gt;500 GT)</option>
-                <option value="Direttore di Macchina">Direttore di Macchina (&gt;3000 kW)</option>
               </select>
             </div>
 
@@ -216,8 +173,10 @@
   <script type="module">
     import './js/main.js';
     import { initFileUpload } from './js/pages/file-upload.js';
+    import { initCareers } from './js/pages/careers.js';
     document.addEventListener('DOMContentLoaded', () => {
       initFileUpload();
+      initCareers();
       const form = document.getElementById('candidate-form');
       if (form) {
         form.addEventListener('submit', (e) => {
