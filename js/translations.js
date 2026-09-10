@@ -4,12 +4,19 @@ export const translations = {
       services: "Servizi",
       fleet: "La Flotta",
       areas: "Aree di Intervento",
+      media: "Media",
       hseq: "HSEQ & Sostenibilità",
       compliance: "Compliance & Ethics",
       contact: "Contatti",
       careers: "Lavora con Noi",
       clientPortal: "Client Portal",
       requestQuote: "Richiedi Preventivo"
+    },
+    // Short labels for the desktop header bar (full labels stay in the footer and mobile menu)
+    navShort: {
+      fleet: "Flotta",
+      hseq: "HSEQ",
+      compliance: "Compliance"
     },
     footer: {
       tagline: "Eccellenza marittima e supporto logistico integrato dal 1962.",
@@ -37,12 +44,18 @@ export const translations = {
       services: "Services",
       fleet: "Fleet",
       areas: "Areas of Operation",
+      media: "Media",
       hseq: "HSEQ & Sustainability",
       compliance: "Compliance & Ethics",
       contact: "Contact",
       careers: "Careers",
       clientPortal: "Client Portal",
       requestQuote: "Request Quote"
+    },
+    navShort: {
+      fleet: "Fleet",
+      hseq: "HSEQ",
+      compliance: "Compliance"
     },
     footer: {
       tagline: "Maritime excellence and integrated logistics support since 1962.",

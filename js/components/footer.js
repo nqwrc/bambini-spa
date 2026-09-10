@@ -37,6 +37,7 @@ export function renderFooter() {
               <li><a href="servizi.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.services">Servizi</a></li>
               <li><a href="flotta.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.fleet">La Flotta</a></li>
               <li><a href="aree-intervento.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.areas">Aree di Intervento</a></li>
+              <li><a href="media.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.media">Media</a></li>
               <li><a href="hseq.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.hseq">HSEQ & Sostenibilità</a></li>
               <li><a href="compliance.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.compliance">Compliance & Ethics</a></li>
               <li><a href="contatti.html" class="text-offshore-white/80 hover:text-offshore-white transition-all hover:underline" data-i18n="nav.contact">Contatti</a></li>

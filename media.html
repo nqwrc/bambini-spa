@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Foto e Video | Bambini S.p.A. — Maritime Excellence</title>
+  <meta name="description" content="Fotografie reali della flotta Bambini S.p.A. e delle operazioni offshore, con filtri per categoria e la sezione dedicata alle riprese aeree."/>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+
+  <div id="app-header"></div>
+
+  <main>
+    <!-- Header Banner -->
+    <section class="bg-primary-container text-white py-20 relative overflow-hidden">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+        <span class="text-secondary-fixed font-label-lg uppercase tracking-widest block mb-2">Media</span>
+        <h1 class="font-display-lg text-display-lg mb-4">Foto e Video della Flotta</h1>
+        <p class="font-body-lg text-on-primary-container max-w-2xl leading-relaxed">
+          Una raccolta di fotografie reali delle nostre unità e delle operazioni in mare. Filtra per categoria oppure guarda la sezione video dedicata alle riprese aeree della flotta.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sticky Filter Bar (chips rendered by js/pages/media.js) -->
+    <section class="bg-white py-6 sticky top-20 z-40 border-b border-outline-variant shadow-sm">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div id="media-filters" class="flex flex-wrap gap-3 items-center"></div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery (masonry grid built by js/pages/media.js from FLEET + operation photos) -->
+    <section class="py-20 bg-background">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div id="media-gallery" class="columns-1 sm:columns-2 lg:columns-3 gap-4"></div>
+      </div>
+    </section>
+
+    <!-- Video Section: plays public/video/hero-drone.mp4 if present, otherwise keeps the poster photo -->
+    <section class="relative w-full h-[50vh] min-h-[380px] overflow-hidden bg-deep-sea" data-video-poster>
+      <img src="./img/servizi/blue-brother-wide.jpg" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-deep-sea/75"></div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-margin-mobile md:px-margin-desktop">
+        <span class="text-white/85 font-label-lg uppercase tracking-widest block mb-2">Video</span>
+        <h2 class="font-headline-lg text-headline-lg mb-4">Riprese Aeree della Flotta</h2>
+        <p id="media-video-caption" class="font-body-md max-w-xl text-offshore-white/90">
+          Le riprese aeree della flotta sono in lavorazione: questa sezione sarà aggiornata con il video appena disponibile.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <!-- Lightbox (controlled by js/pages/media.js), hidden until a gallery button is activated -->
+  <div id="media-lightbox" style="display:none;" class="fixed inset-0 z-[110] items-center justify-center bg-deep-sea/95 p-4"
+       role="dialog" aria-modal="true" aria-label="Galleria fotografica">
+    <button type="button" id="media-lightbox-close" aria-label="Chiudi" class="absolute top-4 right-4 text-white hover:text-secondary-fixed cursor-pointer">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <button type="button" id="media-lightbox-prev" aria-label="Foto precedente" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white hover:text-secondary-fixed cursor-pointer">
+      <span class="material-symbols-outlined text-4xl">chevron_left</span>
+    </button>
+    <button type="button" id="media-lightbox-next" aria-label="Foto successiva" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white hover:text-secondary-fixed cursor-pointer">
+      <span class="material-symbols-outlined text-4xl">chevron_right</span>
+    </button>
+    <figure class="max-w-4xl w-full max-h-[85vh] flex flex-col items-center">
+      <img id="media-lightbox-img" src="" alt="" class="max-h-[70vh] w-auto max-w-full object-contain rounded"/>
+      <figcaption class="mt-4 text-center text-white">
+        <p id="media-lightbox-caption" class="font-body-md"></p>
+        <a id="media-lightbox-link" href="#" class="hidden mt-2 inline-flex items-center gap-1 text-secondary-fixed font-label-lg text-xs uppercase tracking-wider hover:underline">
+          <span id="media-lightbox-link-label"></span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script type="module">
+    import './js/main.js';
+    import { initMedia } from './js/pages/media.js';
+    document.addEventListener('DOMContentLoaded', () => initMedia());
+  </script>
+</body>
+</html>

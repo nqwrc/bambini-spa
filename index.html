@@ -3,202 +3,265 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bambini S.p.A. — Eccellenza Marittima nel Mediterraneo</title>
-  <meta name="description" content="Logistica integrata, supporto tecnico d'avanguardia e massima sicurezza operativa per il settore energetico dal 1962."/>
+  <title>Bambini S.p.A. — Supporto navale offshore da Marina di Ravenna dal 1962</title>
+  <meta name="description" content="17 unità tra FSIV, crew boat e utility per il trasporto di personale e materiali verso le piattaforme offshore, dall'Adriatico al Golfo di Guinea. Dal 1962."/>
   <link rel="stylesheet" href="./css/main.css"/>
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased">
-  
-  <!-- Shared Sticky Header -->
+
+  <!-- Shared split header (utility bar + sticky main bar) -->
   <div id="app-header"></div>
 
   <main>
-    <!-- Hero Section (from Homepage 1 mockup) -->
-    <section class="relative w-full h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-      <!-- Drone video: put the MP4 at public/video/hero-drone.mp4 and add data-hero-video="./video/hero-drone.mp4" to the div below; js/components/hero-video.js swaps it in for the photo -->
-      <div class="absolute inset-0 bg-cover bg-center w-full h-full transform scale-105 transition-transform duration-10000"
-
+    <!-- (a) Hero -->
+    <section id="hero" class="hero on-dark" aria-labelledby="hero-title">
+      <!-- Drone video: put the MP4 at public/video/hero-drone.mp4. The data-hero-video attribute below is
+           read by js/components/hero-video.js, which checks the file exists (HEAD request, video/* type)
+           and prepends a muted looping <video> inside this div, under the scrim. Until the file exists,
+           or under prefers-reduced-motion, the background photo stays as the poster. -->
+      <div class="hero__media" data-hero-video="./video/hero-drone.mp4"
            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeEznKkupB39NYugS6xdVPObidIhuPJMEtxgsc5WzyUbEHBtuB-LkapMVEz46SthdQCzWmUkci_9XrhFUoLDP5_X9tqYOWXYZpU9UkaFUO-r7QpkWwLyeC6BEgSYYmOAvBi9zOKa4jsNsKxM-lPOp647A5Yg4vDb3tHg7T67ByDHJ3oX9JgEDCQO6OGTfpVrdRpJlR9SScJMmwSV_sDVoMiQf0XAslVdSYCNpZjj5jXgKd2l5taIHS9rDa5oN_F8NFkx71KJNmOLTn');">
-        <div class="absolute inset-0 bg-deep-sea/50 backdrop-contrast-125"></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
       </div>
 
-      <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary">
-        <span class="inline-block bg-secondary text-on-primary px-4 py-1.5 rounded-full text-xs uppercase tracking-widest font-bold mb-6">
-          Offshore Leadership Since 1962
-        </span>
-        <h1 class="font-display-lg text-display-lg mb-6 max-w-4xl mx-auto leading-tight">
-          Eccellenza Marittima nel Mediterraneo
-        </h1>
-        <p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto text-offshore-white/90 leading-relaxed">
-          Logistica integrata, supporto tecnico d'avanguardia e massima sicurezza operativa per il settore energetico dal 1962.
+      <div class="hero__content max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop" data-reveal-group>
+        <span class="eyebrow" data-reveal>Marina di Ravenna, dal 1962</span>
+        <h1 id="hero-title" class="hero__title" data-reveal>Supporto navale per l'offshore</h1>
+        <p class="hero__lead" data-reveal>
+          Diciassette unità tra FSIV, crew boat e utility portano personale e materiali alle piattaforme, dall'Adriatico al Golfo di Guinea.
         </p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <a href="flotta.html" class="h-12 px-8 bg-secondary text-on-primary font-label-lg text-label-lg rounded hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all shadow-lg inline-flex items-center gap-2 uppercase tracking-wider">
-            Scopri la Flotta
-            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-          </a>
-          <a href="servizi.html" class="h-12 px-8 border-2 border-white text-white font-label-lg text-label-lg rounded hover:bg-white/15 transition-all inline-flex items-center gap-2 uppercase tracking-wider">
-            I Nostri Servizi
+        <div data-reveal>
+          <a href="flotta.html" class="btn btn--primary">
+            Scopri la flotta
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
           </a>
         </div>
       </div>
+
+      <a href="#numeri" class="hero__next" aria-label="Vai ai numeri della flotta">
+        <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_down</span>
+      </a>
     </section>
 
-    <!-- Metrics Counter Bar -->
-    <section class="bg-offshore-white py-16 border-b border-outline-variant shadow-inner">
+    <!-- (b) Stats band: hairline grid, masked number rise (data-count-to) -->
+    <section id="numeri" class="stats on-dark" aria-labelledby="numeri-title">
+      <h2 id="numeri-title" class="sr-only">Bambini S.p.A. in numeri</h2>
+      <ul class="stats__grid" data-reveal-group>
+        <li class="stats__cell">
+          <p class="stats__figure"><span class="count-mask"><span data-count-to="60" data-count-suffix="+">60+</span></span></p>
+          <p class="stats__label"><strong>Anni</strong>di attività in mare, dal 1962</p>
+        </li>
+        <li class="stats__cell">
+          <p class="stats__figure"><span class="count-mask"><span data-count-to="17">17</span></span></p>
+          <p class="stats__label"><strong>Unità navali</strong>10 FSIV, 6 crew boat, 1 utility</p>
+        </li>
+        <li class="stats__cell">
+          <p class="stats__figure"><span class="count-mask"><span data-count-to="10">10</span></span></p>
+          <p class="stats__label"><strong>FSIV</strong>di cui 4 con posizionamento dinamico DP2</p>
+        </li>
+        <li class="stats__cell">
+          <p class="stats__figure"><span class="count-mask"><span data-count-to="29">29</span></span></p>
+          <p class="stats__label"><strong>Nodi</strong>velocità massima della flotta</p>
+        </li>
+        <li class="stats__cell">
+          <p class="stats__figure"><span class="count-mask"><span data-count-to="200" data-count-suffix="+">200+</span></span></p>
+          <p class="stats__label"><strong>Persone</strong>dipendenti tra bordo e sede</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- (c) Services: expanding panels (CSS only: hover/focus-within grows one panel; stacked on mobile; no auto-cycle) -->
+    <section id="servizi" class="section bg-white" aria-labelledby="servizi-title">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-          <div class="flex flex-col items-center border-r last:border-r-0 border-outline-variant/50 pr-4">
-            <span class="font-headline-lg text-headline-lg text-primary mb-1">60+</span>
-            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Anni di Storia</span>
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Servizi</span>
+            <h2 id="servizi-title" class="section-title" data-reveal>Quattro servizi, una sola flotta</h2>
           </div>
-          <div class="flex flex-col items-center border-r last:border-r-0 border-outline-variant/50 pr-4">
-            <span class="font-headline-lg text-headline-lg text-primary mb-1">17</span>
-            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Unità Navali</span>
-          </div>
-          <div class="flex flex-col items-center border-r last:border-r-0 border-outline-variant/50 pr-4">
-            <span class="font-headline-lg text-headline-lg text-primary mb-1">200+</span>
-            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Professionisti</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <span class="font-headline-lg text-headline-lg text-secondary mb-1">16</span>
-            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Porti tra Europa e Africa</span>
+          <a href="servizi.html" class="text-link">Tutti i servizi <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        </div>
+      </div>
+
+      <div class="px-margin-mobile md:px-[24px] max-w-[1440px] mx-auto">
+        <div class="svc" data-reveal-group>
+          <article class="svc__panel" data-reveal>
+            <img class="svc__img" src="./img/servizi/crew-transfer-basket.jpg" alt="Trasferimento del personale con basket dall'FSIV Blue Mommy" loading="lazy"/>
+            <div class="svc__body">
+              <span class="material-symbols-outlined svc__icon" aria-hidden="true">groups</span>
+              <h3 class="svc__title">Trasporto Personale</h3>
+              <div class="svc__more"><div>
+                <p class="svc__text">Trasferimento di personale verso le piattaforme con FSIV e crew boat, con sbarco diretto o tramite basket.</p>
+                <a href="servizi.html" class="svc__link">Approfondisci<span class="sr-only">: Trasporto Personale</span> <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="svc__panel" data-reveal>
+            <img class="svc__img" src="./img/flotta/blue-giulia-2.jpg" alt="FSIV Blue Giulia ormeggiata in banchina" loading="lazy"/>
+            <div class="svc__body">
+              <span class="material-symbols-outlined svc__icon" aria-hidden="true">inventory_2</span>
+              <h3 class="svc__title">Trasporto Merci &amp; Supply</h3>
+              <div class="svc__more"><div>
+                <p class="svc__text">Attrezzature, materiali e rifornimenti verso le installazioni offshore, su ponti di carico fino a 260 m² e con portate fino a 279 t.</p>
+                <a href="servizi.html" class="svc__link">Approfondisci<span class="sr-only">: Trasporto Merci &amp; Supply</span> <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="svc__panel" data-reveal>
+            <img class="svc__img" src="./img/flotta/famar-intervention-1.jpg" alt="FSIV Famar Intervention, classe DP2 FiFi1" loading="lazy"/>
+            <div class="svc__body">
+              <span class="material-symbols-outlined svc__icon" aria-hidden="true">scuba_diving</span>
+              <h3 class="svc__title">Diving, ROV &amp; Survey</h3>
+              <div class="svc__more"><div>
+                <p class="svc__text">Unità FSIV e utility a supporto di attività subacquee, ROV e survey, con posizionamento dinamico DP1 e DP2.</p>
+                <a href="servizi.html" class="svc__link">Approfondisci<span class="sr-only">: Diving, ROV &amp; Survey</span> <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="svc__panel" data-reveal>
+            <img class="svc__img" src="./img/servizi/fifi.jpg" alt="Impianto antincendio di bordo in funzione" loading="lazy"/>
+            <div class="svc__body">
+              <span class="material-symbols-outlined svc__icon" aria-hidden="true">local_fire_department</span>
+              <h3 class="svc__title">Antincendio &amp; Rec-Oil</h3>
+              <div class="svc__more"><div>
+                <p class="svc__text">Sette unità in classe antincendio FiFi1 e supporto alle operazioni di recupero di idrocarburi in mare.</p>
+                <a href="servizi.html" class="svc__link">Approfondisci<span class="sr-only">: Antincendio &amp; Rec-Oil</span> <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
+              </div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- (d) Fleet: fitted wordmark + strip. The motion JS fills [data-fleet-track] from js/data/fleet.js
+         (card markup documented in css/main.css, .fleet-card). Without JS the track stays empty and hidden;
+         the "Tutta la flotta" link remains. -->
+    <section id="flotta" class="fleet-section" aria-labelledby="flotta-title">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <h2 id="flotta-title" class="wordmark">Flotta</h2>
+        <div class="section-head mt-8 md:mt-10 !mb-8">
+          <p class="text-body-lg text-on-surface-variant max-w-xl">
+            17 unità: 10 FSIV, 6 crew boat e 1 utility. Sette sono in classe antincendio FiFi1, quattro hanno posizionamento dinamico DP2.
+          </p>
+          <a href="flotta.html" class="text-link">Tutta la flotta <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        </div>
+      </div>
+
+      <div id="fleet-strip" class="fleet-strip">
+        <ul class="fleet-strip__track" data-fleet-track data-reveal-group tabindex="0" aria-label="Unità della flotta, scorrimento orizzontale"></ul>
+        <div class="fleet-strip__controls max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <div class="fleet-strip__pagination" data-fleet-pagination role="group" aria-label="Pagine della flotta"></div>
+          <div class="fleet-strip__nav">
+            <button type="button" class="fleet-strip__btn" data-fleet-prev aria-label="Unità precedenti" aria-controls="fleet-strip">
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>
+            </button>
+            <button type="button" class="fleet-strip__btn" data-fleet-next aria-label="Unità successive" aria-controls="fleet-strip">
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key Services Teaser -->
-    <section class="py-24 bg-white">
-      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">I Nostri Servizi</span>
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Supporto Marittimo Integrato</h2>
-          <div class="w-16 h-1 bg-secondary mx-auto"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-          <!-- Card 1 -->
-          <div class="p-8 border border-outline-variant rounded-lg bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="material-symbols-outlined text-primary text-4xl mb-4">groups</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Crew Transport & FSIV</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Trasporto veloce di personale e materiali verso le piattaforme offshore con 10 FSIV e 6 crew boat, fino a 29 nodi.
-              </p>
-            </div>
-            <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
-              Scopri di più <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="p-8 border border-outline-variant rounded-lg bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="material-symbols-outlined text-primary text-4xl mb-4">inventory_2</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Trasporto Merci & Supply</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Attrezzature, materiali, acqua e gasolio verso le installazioni offshore, su ponti di carico fino a 260 m².
-              </p>
-            </div>
-            <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
-              Scopri di più <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="p-8 border border-outline-variant rounded-lg bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
-            <div>
-              <span class="material-symbols-outlined text-primary text-4xl mb-4">scuba_diving</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Diving, ROV & Survey</h3>
-              <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Supporto alle attività subacquee, ROV e survey con unità a posizionamento dinamico DP1 e DP2.
-              </p>
-            </div>
-            <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
-              Scopri di più <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-          </div>
+    <!-- (e) Full-bleed photo band. For a video version, swap the <img> for
+         <video class="band__img" autoplay muted loop playsinline poster="./img/servizi/blue-brother-wide.jpg"> -->
+    <section class="band on-dark" aria-label="La flotta in navigazione">
+      <img class="band__img" src="./img/servizi/blue-brother-wide.jpg" alt="FSIV Blue Brother in navigazione" loading="lazy"/>
+      <div class="band__content max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <p class="band__line" data-reveal>Squadre e materiali, in un solo viaggio.</p>
+        <div class="band__meta">
+          <span>FSIV Blue Brother · 51,30 m · DP1 FiFi1</span>
+          <a href="media.html">Foto e video della flotta <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_forward</span></a>
         </div>
       </div>
     </section>
 
-    <!-- Featured Vessel Spotlight -->
-    <section class="py-24 bg-surface-container-low">
+    <!-- (f) Where we operate teaser (map generated by scripts/build-map.mjs) -->
+    <section class="section bg-white" aria-labelledby="aree-title">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="flex flex-col lg:flex-row items-center gap-16">
-          <div class="lg:w-1/2">
-            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">Unità In Evidenza</span>
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-6">FSIV Blue Brother</h2>
-            <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
-              Fast Support Intervention Vessel di 51 metri, con posizionamento dinamico DP1 e classe antincendio FiFi1: porta fino a 71 passeggeri e 180 tonnellate di carico verso le installazioni offshore.
-            </p>
-            <div class="grid grid-cols-2 gap-4 mb-8 text-xs font-semibold text-primary uppercase tracking-wider">
-              <div class="bg-white p-3 border border-outline-variant rounded">LOA: 51,30 m</div>
-              <div class="bg-white p-3 border border-outline-variant rounded">Velocità: 27 nodi</div>
-              <div class="bg-white p-3 border border-outline-variant rounded">Passeggeri: 71</div>
-              <div class="bg-white p-3 border border-outline-variant rounded">Classe: DP1 FiFi1</div>
-            </div>
-            <a href="vessel-detail.html?v=blue-brother" class="bg-primary text-white px-8 py-3.5 rounded font-label-lg uppercase tracking-wider hover:bg-tertiary transition-all inline-flex items-center gap-3">
-              Scheda Tecnica Completa
-              <span class="material-symbols-outlined">description</span>
-            </a>
-          </div>
-          <div class="lg:w-1/2 relative">
-            <div class="rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
-              <img src="./img/flotta/blue-brother-1.jpg" alt="FSIV Blue Brother in navigazione" class="w-full h-auto object-cover"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Where we operate teaser (map generated by scripts/build-map.mjs) -->
-    <section class="py-24 bg-white">
-      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div class="order-2 lg:order-1 rounded-xl overflow-hidden border border-outline-variant max-w-md mx-auto w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1 rounded-lg overflow-hidden border border-steel-line max-w-md mx-auto w-full">
             <img src="./img/mappa-aree.svg" alt="Paesi in cui operano le unità Bambini S.p.A., tra Europa e Africa" loading="lazy" class="w-full h-auto"/>
           </div>
           <div class="order-1 lg:order-2">
-            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">Aree di Intervento</span>
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Dall'Adriatico al Golfo di Guinea</h2>
-            <p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+            <span class="eyebrow">Aree di intervento</span>
+            <h2 id="aree-title" class="section-title mb-6" data-reveal>Dall'Adriatico al Golfo di Guinea</h2>
+            <p class="text-body-lg text-on-surface-variant mb-8 leading-relaxed max-w-xl">
               Nata al servizio delle piattaforme dell'Adriatico, la flotta opera oggi tra Italia, Croazia e Tunisia e lungo la costa atlantica dell'Africa, dalla Mauritania all'Angola.
             </p>
-            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
-              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
-                <div class="text-3xl font-bold text-primary">16</div>
-                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Porti</div>
+            <div class="map-figures" data-reveal-group>
+              <div>
+                <p class="map-figures__num"><span class="count-mask"><span data-count-to="16">16</span></span></p>
+                <p class="map-figures__label">Porti</p>
               </div>
-              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
-                <div class="text-3xl font-bold text-primary">9</div>
-                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Paesi</div>
+              <div>
+                <p class="map-figures__num"><span class="count-mask"><span data-count-to="9">9</span></span></p>
+                <p class="map-figures__label">Paesi</p>
               </div>
-              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
-                <div class="text-3xl font-bold text-primary">2</div>
-                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Continenti</div>
+              <div>
+                <p class="map-figures__num"><span class="count-mask"><span data-count-to="2">2</span></span></p>
+                <p class="map-figures__label">Continenti</p>
               </div>
             </div>
-            <a href="aree-intervento.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
-              Esplora la mappa dei porti <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
+            <a href="aree-intervento.html" class="text-link">Esplora la mappa dei porti <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-24 bg-deep-sea text-white text-center">
+    <!-- (g) Certifications: static hairline row -->
+    <section class="pb-[clamp(4.5rem,9vw,8rem)] bg-white" aria-labelledby="cert-title">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-        <h2 class="font-display-lg text-display-lg mb-6">Pronti per la vostra prossima missione offshore</h2>
-        <p class="font-body-lg text-offshore-white/80 max-w-2xl mx-auto mb-10">
-          Contattate il nostro ufficio commerciale per preventivi, informazioni sulla flotta o assistenza tecnica h24.
-        </p>
-        <a href="contatti.html" class="bg-secondary text-on-primary px-10 py-4 rounded font-label-lg uppercase tracking-widest hover:brightness-110 transition-all inline-flex items-center gap-3 shadow-xl">
-          Richiedi un Preventivo
-          <span class="material-symbols-outlined">send</span>
-        </a>
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Qualità e sicurezza</span>
+            <h2 id="cert-title" class="section-title" data-reveal>Sistemi di gestione certificati</h2>
+          </div>
+          <a href="hseq.html" class="text-link">HSEQ e sostenibilità <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+        </div>
+        <ul class="certs" data-reveal-group>
+          <li class="certs__item" data-reveal>
+            <p class="certs__code">RINA</p>
+            <p class="certs__label">Ente che certifica i nostri sistemi di gestione</p>
+          </li>
+          <li class="certs__item" data-reveal>
+            <p class="certs__code">ISO 9001</p>
+            <p class="certs__label">Qualità<span class="certs__since">dal 2000</span></p>
+          </li>
+          <li class="certs__item" data-reveal>
+            <p class="certs__code">ISO 14001</p>
+            <p class="certs__label">Ambiente<span class="certs__since">dal 2018</span></p>
+          </li>
+          <li class="certs__item" data-reveal>
+            <p class="certs__code">ISO 45001</p>
+            <p class="certs__label">Salute e sicurezza sul lavoro<span class="certs__since">dal 2018</span></p>
+          </li>
+          <li class="certs__item" data-reveal>
+            <p class="certs__code">Codice ISM</p>
+            <p class="certs__label">Gestione della sicurezza a bordo e a terra</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- (h) CTA band -->
+    <section class="bg-white" aria-labelledby="cta-title">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="cta-panel on-dark flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+          <div>
+            <span class="eyebrow">Ufficio commerciale</span>
+            <h2 id="cta-title" class="cta-panel__title mt-3 mb-5" data-reveal>Serve un mezzo per la prossima campagna offshore?</h2>
+            <p class="text-offshore-white/80 max-w-xl leading-relaxed">
+              Scriveteci per preventivi, disponibilità delle unità e informazioni tecniche sulla flotta, oppure chiamate il +39 0544 530537.
+            </p>
+          </div>
+          <a href="contatti.html" class="btn btn--primary self-start lg:self-auto">
+            Richiedi un preventivo
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </section>
   </main>

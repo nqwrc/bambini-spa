@@ -67,7 +67,7 @@ function buildMap(map) {
 <rect width="${W}" height="${H}" fill="#e8eff6"/>
 <g fill="#d3dae3" stroke="#f8f9fa" stroke-width="0.6" stroke-linejoin="round">${base.join('')}</g>
 <g fill="#1a4d80" stroke="#f8f9fa" stroke-width="0.8" stroke-linejoin="round">${active.join('')}</g>
-<g fill="none" stroke="#546500" stroke-width="1.5" stroke-dasharray="5 4">${frames.join('')}</g>
+<g fill="none" stroke="#1d5fb8" stroke-width="1.5" stroke-dasharray="5 4">${frames.join('')}</g>
 <g fill="#6b8bab" font-family="Inter, sans-serif" font-style="italic" letter-spacing="0.08em" text-anchor="middle">${seaLabels.join('')}</g>
 </svg>
 `;
