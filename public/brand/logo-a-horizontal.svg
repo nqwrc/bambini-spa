@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.14 64" role="img" aria-label="Bambini S.p.A., Ravenna, dal 1962">
+  <title>Bambini S.p.A. - Versione A, Linea, logotipo orizzontale</title>
+  <g transform="scale(0.57)">
+  <g fill="none" stroke="#003662" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+      <circle cx="50" cy="11.5" r="8"/>
+      <path d="M50 19.5V102"/>
+      <path d="M28 29.5H60a12.25 12.25 0 0 1 0 24.5H50"/>
+      <path d="M50 54H62a14 14 0 0 1 0 28H50"/>
+      <path d="M8.69 86.77L12.84 73.97L15.29 79.46A38 38 0 0 0 84.71 79.46L87.16 73.97L91.31 86.77"/>
+    </g>
+  </g>
+  <g fill="#003662" font-family="Montserrat, 'Helvetica Neue', Arial, sans-serif">
+    <text x="73.14" y="37" font-size="31" font-weight="700" letter-spacing="3" textLength="176" lengthAdjust="spacingAndGlyphs">BAMBINI</text>
+    <text x="74.14" y="55" font-size="9" font-weight="600" letter-spacing="2.4" textLength="174" lengthAdjust="spacing">S.P.A. · RAVENNA · 1962</text>
+  </g>
+</svg>

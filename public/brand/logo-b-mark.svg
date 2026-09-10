@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Bambini S.p.A.">
+  <title>Bambini S.p.A. - Versione B, Stampo</title>
+  <g fill="#003662" fill-rule="evenodd">
+    <path d="M60 2a11 11 0 1 1 0 22a11 11 0 1 1 0-22ZM60 8a5 5 0 1 0 0 10a5 5 0 1 0 0-10Z"/>
+    <path d="M55.5 22h9v9h-9Z"/>
+    <path d="M44 30H64a12 12 0 0 1 12 12V47a12 12 0 0 1-12 12a14 14 0 0 1 14 14V96H44ZM53 39H63a4 4 0 0 1 4 4V50.5a4 4 0 0 1-4 4H53ZM53 63.5H65a4 4 0 0 1 4 4V83a4 4 0 0 1-4 4H53Z"/>
+    <path d="M13.64 74.73A50 50 0 0 0 106.36 74.73L111.73 80.13L107.34 58.95L89.47 71.14L97.09 70.98A40 40 0 0 1 22.91 70.98L30.53 71.14L12.66 58.95L8.27 80.13Z"/>
+  </g>
+</svg>
