@@ -1,0 +1,52 @@
+{
+  "_source": "Ports from the marker list of the live bambinispa.it map (WP Go Maps, map_id 1), fetched 2026-09-11. Ortona's coordinates there point to Florida (26.80, -81.31); corrected here to the port of Ortona. Ravenna uses the geocoded HQ address (Viale IV Novembre 79, OpenStreetMap Nominatim).",
+  "ariaLabel": "Mappa dei porti di riferimento di Bambini S.p.A. tra Europa e Africa",
+  "maps": [
+    {
+      "id": "overview",
+      "file": "mappa-aree.svg",
+      "resolution": "110m",
+      "frames": ["adriatic"],
+      "width": 760,
+      "height": 900,
+      "extent": [[-24, -15], [30, 50]],
+      "seaLabels": [
+        { "label": "MAR MEDITERRANEO", "lon": 18.5, "lat": 34.2, "size": 13 },
+        { "label": "OCEANO ATLANTICO", "lon": -17.5, "lat": 30, "size": 13 },
+        { "label": "GOLFO DI GUINEA", "lon": 3.5, "lat": 1.5, "size": 13 }
+      ]
+    },
+    {
+      "id": "adriatic",
+      "file": "mappa-adriatico.svg",
+      "resolution": "50m",
+      "width": 560,
+      "height": 520,
+      "extent": [[10.6, 38.6], [19.2, 46.1]],
+      "seaLabels": [
+        { "label": "MAR ADRIATICO", "lon": 15.6, "lat": 42.95, "size": 13 },
+        { "label": "MAR IONIO", "lon": 18.2, "lat": 38.9, "size": 12 },
+        { "label": "MAR TIRRENO", "lon": 12.2, "lat": 39.6, "size": 12 }
+      ]
+    }
+  ],
+  "highlight": ["Italy", "Croatia", "Tunisia", "Mauritania", "Ghana", "Nigeria", "Gabon", "Congo", "Angola"],
+  "pins": [
+    { "id": "ravenna", "label": "Marina di Ravenna", "country": "Italia", "region": "adriatico", "hq": true, "lon": 12.2737, "lat": 44.4838 },
+    { "id": "porto-levante", "label": "Porto Levante", "country": "Italia", "region": "adriatico", "lon": 12.3643, "lat": 45.0495 },
+    { "id": "chioggia", "label": "Chioggia", "country": "Italia", "region": "adriatico", "lon": 12.2786, "lat": 45.2189 },
+    { "id": "ancona", "label": "Ancona", "country": "Italia", "region": "adriatico", "lon": 13.5130, "lat": 43.6187 },
+    { "id": "san-benedetto", "label": "San Benedetto del Tronto", "country": "Italia", "region": "adriatico", "lon": 13.8807, "lat": 42.9525 },
+    { "id": "ortona", "label": "Ortona", "country": "Italia", "region": "adriatico", "lon": 14.4036, "lat": 42.3553 },
+    { "id": "pula", "label": "Pola", "country": "Croazia", "region": "adriatico", "lon": 13.8565, "lat": 44.8625 },
+    { "id": "crotone", "label": "Crotone", "country": "Italia", "region": "mediterraneo", "lon": 16.8783, "lat": 39.1874 },
+    { "id": "sousse", "label": "Hammam Sousse", "country": "Tunisia", "region": "mediterraneo", "lon": 10.5936, "lat": 35.8750 },
+    { "id": "nouakchott", "label": "Nouakchott", "country": "Mauritania", "region": "africa-occidentale", "lon": -15.9780, "lat": 18.0792 },
+    { "id": "tema", "label": "Tema", "country": "Ghana", "region": "africa-occidentale", "lon": -0.0097, "lat": 5.6596 },
+    { "id": "lagos", "label": "Lagos", "country": "Nigeria", "region": "africa-occidentale", "lon": 3.3942, "lat": 6.4551 },
+    { "id": "port-gentil", "label": "Port-Gentil", "country": "Gabon", "region": "africa-centrale", "lon": 8.7788, "lat": -0.7152 },
+    { "id": "pointe-noire", "label": "Pointe-Noire", "country": "Congo", "region": "africa-centrale", "lon": 11.8503, "lat": -4.7975 },
+    { "id": "soyo", "label": "Soyo (Santo António do Zaire)", "country": "Angola", "region": "africa-centrale", "lon": 12.3690, "lat": -6.1388 },
+    { "id": "luanda", "label": "Luanda", "country": "Angola", "region": "africa-centrale", "lon": 13.2440, "lat": -8.8273 }
+  ]
+}
