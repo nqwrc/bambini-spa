@@ -3,6 +3,7 @@ import { renderHeader } from './components/header.js';
 import { renderFooter } from './components/footer.js';
 import { renderCookieBanner } from './components/cookie-banner.js';
 import { initScrollAnimations } from './components/scroll-animations.js';
+import { initHeroVideo } from './components/hero-video.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCookieBanner();
   initI18n();
   initScrollAnimations();
+  initHeroVideo();
 });

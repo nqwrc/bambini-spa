@@ -15,7 +15,9 @@
   <main>
     <!-- Hero Section (from Homepage 1 mockup) -->
     <section class="relative w-full h-[80vh] min-h-[550px] flex items-center justify-center overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center w-full h-full transform scale-105 transition-transform duration-10000" 
+      <!-- Drone video: put the MP4 at public/video/hero-drone.mp4 and add data-hero-video="./video/hero-drone.mp4" to the div below; js/components/hero-video.js swaps it in for the photo -->
+      <div class="absolute inset-0 bg-cover bg-center w-full h-full transform scale-105 transition-transform duration-10000"
+
            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeEznKkupB39NYugS6xdVPObidIhuPJMEtxgsc5WzyUbEHBtuB-LkapMVEz46SthdQCzWmUkci_9XrhFUoLDP5_X9tqYOWXYZpU9UkaFUO-r7QpkWwLyeC6BEgSYYmOAvBi9zOKa4jsNsKxM-lPOp647A5Yg4vDb3tHg7T67ByDHJ3oX9JgEDCQO6OGTfpVrdRpJlR9SScJMmwSV_sDVoMiQf0XAslVdSYCNpZjj5jXgKd2l5taIHS9rDa5oN_F8NFkx71KJNmOLTn');">
         <div class="absolute inset-0 bg-deep-sea/50 backdrop-contrast-125"></div>
       </div>
@@ -51,16 +53,16 @@
             <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Anni di Storia</span>
           </div>
           <div class="flex flex-col items-center border-r last:border-r-0 border-outline-variant/50 pr-4">
-            <span class="font-headline-lg text-headline-lg text-primary mb-1">50+</span>
+            <span class="font-headline-lg text-headline-lg text-primary mb-1">17</span>
             <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Unità Navali</span>
           </div>
           <div class="flex flex-col items-center border-r last:border-r-0 border-outline-variant/50 pr-4">
-            <span class="font-headline-lg text-headline-lg text-primary mb-1">400+</span>
+            <span class="font-headline-lg text-headline-lg text-primary mb-1">200+</span>
             <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Professionisti</span>
           </div>
           <div class="flex flex-col items-center">
-            <span class="font-headline-lg text-headline-lg text-secondary mb-1">0</span>
-            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Incidenti HSEQ</span>
+            <span class="font-headline-lg text-headline-lg text-secondary mb-1">16</span>
+            <span class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider text-xs">Porti tra Europa e Africa</span>
           </div>
         </div>
       </div>
@@ -82,7 +84,7 @@
               <span class="material-symbols-outlined text-primary text-4xl mb-4">groups</span>
               <h3 class="font-headline-md text-headline-md text-primary mb-3">Crew Transport & FSIV</h3>
               <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Trasporto veloce di personale e materiali leggeri verso piattaforme offshore con unità navali DP2 ad alta velocità.
+                Trasporto veloce di personale e materiali verso le piattaforme offshore con 10 FSIV e 6 crew boat, fino a 29 nodi.
               </p>
             </div>
             <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
@@ -94,9 +96,9 @@
           <div class="p-8 border border-outline-variant rounded-lg bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
             <div>
               <span class="material-symbols-outlined text-primary text-4xl mb-4">inventory_2</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Utility & MPSV Support</h3>
+              <h3 class="font-headline-md text-headline-md text-primary mb-3">Trasporto Merci & Supply</h3>
               <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Unità multiuso equipaggiate con gru ad alta capacità per operazioni subacquee, movimentazione cargo e supporto navale.
+                Attrezzature, materiali, acqua e gasolio verso le installazioni offshore, su ponti di carico fino a 260 m².
               </p>
             </div>
             <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
@@ -107,10 +109,10 @@
           <!-- Card 3 -->
           <div class="p-8 border border-outline-variant rounded-lg bg-surface-container-lowest vessel-card-hover flex flex-col justify-between">
             <div>
-              <span class="material-symbols-outlined text-primary text-4xl mb-4">anchor</span>
-              <h3 class="font-headline-md text-headline-md text-primary mb-3">Rimorchio d'Altura</h3>
+              <span class="material-symbols-outlined text-primary text-4xl mb-4">scuba_diving</span>
+              <h3 class="font-headline-md text-headline-md text-primary mb-3">Diving, ROV & Survey</h3>
               <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Rimorchiatori d'altura per operazioni di assistenza portuale, posizionamento ancore e salvataggio 24/7.
+                Supporto alle attività subacquee, ROV e survey con unità a posizionamento dinamico DP1 e DP2.
               </p>
             </div>
             <a href="servizi.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
@@ -129,24 +131,58 @@
             <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">Unità In Evidenza</span>
             <h2 class="font-headline-lg text-headline-lg text-primary mb-6">FSIV Blue Brother</h2>
             <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
-              Un'ammiraglia di velocità e precisione tecnologica. Con i suoi 53 metri di lunghezza, propulsione da 7.200 BHP e posizionamento dinamico DP2, il Blue Brother rappresenta lo stato dell'arte nei servizi marittimi offshore.
+              Fast Support Intervention Vessel di 51 metri, con posizionamento dinamico DP1 e classe antincendio FiFi1: porta fino a 71 passeggeri e 180 tonnellate di carico verso le installazioni offshore.
             </p>
             <div class="grid grid-cols-2 gap-4 mb-8 text-xs font-semibold text-primary uppercase tracking-wider">
-              <div class="bg-white p-3 border border-outline-variant rounded">LOA: 53.00 m</div>
+              <div class="bg-white p-3 border border-outline-variant rounded">LOA: 51,30 m</div>
               <div class="bg-white p-3 border border-outline-variant rounded">Velocità: 27 nodi</div>
-              <div class="bg-white p-3 border border-outline-variant rounded">Passeggeri: 60 posti</div>
-              <div class="bg-white p-3 border border-outline-variant rounded">Posizionamento: DP2</div>
+              <div class="bg-white p-3 border border-outline-variant rounded">Passeggeri: 71</div>
+              <div class="bg-white p-3 border border-outline-variant rounded">Classe: DP1 FiFi1</div>
             </div>
-            <a href="vessel-detail.html" class="bg-primary text-white px-8 py-3.5 rounded font-label-lg uppercase tracking-wider hover:bg-tertiary transition-all inline-flex items-center gap-3">
+            <a href="vessel-detail.html?v=blue-brother" class="bg-primary text-white px-8 py-3.5 rounded font-label-lg uppercase tracking-wider hover:bg-tertiary transition-all inline-flex items-center gap-3">
               Scheda Tecnica Completa
               <span class="material-symbols-outlined">description</span>
             </a>
           </div>
           <div class="lg:w-1/2 relative">
             <div class="rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYKAL0IpnUAPVkfGeq6oOStBy6bS0M0oZrlllv03u7OsWMaml1UuYf16XWRz2hJDBEc3faFM_6_r4Ybhs3EgXgzAvZb2dfnEwBN8ga7gQRiy4S9UBD9S21rKYiud2-cuHw1NyRjcHUWIhHZCayDXpcQ1AjkWRBMMFwweNifSPY8icnLgLLUwfMT4bpT54dwMOZEN4DJT_BZRbo_e1iZmKWeQU9eV-JEVGGBuFgbRapje_JoUC6kHrBnxCRTlON_seG0XpYh6CS3ykS" 
-                   alt="FSIV Blue Brother at sea" class="w-full h-auto object-cover"/>
+              <img src="./img/flotta/blue-brother-1.jpg" alt="FSIV Blue Brother in navigazione" class="w-full h-auto object-cover"/>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Where we operate teaser (map generated by scripts/build-map.mjs) -->
+    <section class="py-24 bg-white">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 rounded-xl overflow-hidden border border-outline-variant max-w-md mx-auto w-full">
+            <img src="./img/mappa-aree.svg" alt="Paesi in cui operano le unità Bambini S.p.A., tra Europa e Africa" loading="lazy" class="w-full h-auto"/>
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">Aree di Intervento</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Dall'Adriatico al Golfo di Guinea</h2>
+            <p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+              Nata al servizio delle piattaforme dell'Adriatico, la flotta opera oggi tra Italia, Croazia e Tunisia e lungo la costa atlantica dell'Africa, dalla Mauritania all'Angola.
+            </p>
+            <div class="grid grid-cols-3 gap-4 mb-8 text-center">
+              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
+                <div class="text-3xl font-bold text-primary">16</div>
+                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Porti</div>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
+                <div class="text-3xl font-bold text-primary">9</div>
+                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Paesi</div>
+              </div>
+              <div class="bg-surface-container-low p-4 rounded border border-outline-variant">
+                <div class="text-3xl font-bold text-primary">2</div>
+                <div class="text-[11px] uppercase tracking-wider text-on-surface-variant">Continenti</div>
+              </div>
+            </div>
+            <a href="aree-intervento.html" class="text-primary font-bold inline-flex items-center gap-2 hover:text-secondary transition-colors">
+              Esplora la mappa dei porti <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
           </div>
         </div>
       </div>

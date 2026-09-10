@@ -16,8 +16,8 @@ export function renderFooter() {
             Logistica integrata, supporto tecnico d'avanguardia e massima sicurezza operativa per il settore energetico dal 1962.
           </p>
           <div class="text-sm text-offshore-white/60 space-y-1 mb-6">
-            <p><span class="material-symbols-outlined text-xs mr-2">location_on</span>Via Funrocale Soart, 12 — 48123 Marina di Ravenna (RA)</p>
-            <p><span class="material-symbols-outlined text-xs mr-2">phone</span>Tel. +39 0544 530118</p>
+            <p><span class="material-symbols-outlined text-xs mr-2">location_on</span>Viale IV Novembre, 79 — 48122 Marina di Ravenna (RA)</p>
+            <p><span class="material-symbols-outlined text-xs mr-2">phone</span>Tel. +39 0544 530537 · Fax +39 0544 538544</p>
             <p><span class="material-symbols-outlined text-xs mr-2">mail</span>Email: info@bambinispa.it</p>
           </div>
           <div class="flex gap-3">
@@ -74,7 +74,7 @@ export function renderFooter() {
 
       <!-- Copyright Sub-bar -->
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider text-offshore-white/50 uppercase">
-        <span>© 2026 Bambini S.p.A. - Marina di Ravenna. P.IVA 00063620392. <span data-i18n="footer.rightsReserved">Tutti i diritti riservati.</span></span>
+        <span>© 2026 Bambini S.p.A. - Marina di Ravenna. <span data-i18n="footer.rightsReserved">Tutti i diritti riservati.</span></span>
         <div class="flex gap-6">
           <span data-i18n="footer.madeInItaly">Made in Italy</span>
           <span data-i18n="footer.offshoreExcellence">Offshore Excellence</span>
