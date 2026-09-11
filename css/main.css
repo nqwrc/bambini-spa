@@ -680,9 +680,12 @@ body {
   }
 
   @media (max-width: 767px) {
+    /* The text block covers most of the frame on a phone, so the scrim stays
+       dense up to the eyebrow instead of fading out halfway. */
     .hero__scrim {
-      background: linear-gradient(0deg, rgb(7 26 46 / 0.92) 0%, rgb(7 26 46 / 0.7) 55%, rgb(7 26 46 / 0.35) 100%);
+      background: linear-gradient(0deg, rgb(7 26 46 / 0.94) 0%, rgb(7 26 46 / 0.86) 60%, rgb(7 26 46 / 0.6) 100%);
     }
+    .hero .eyebrow { color: rgb(255 255 255 / 0.9); }
     .hero__next { left: auto; right: var(--spacing-margin-mobile); margin-left: 0; }
   }
 
@@ -1335,7 +1338,9 @@ body {
   }
 
   .port-pin--hq::after,
-  .map-pin::after {
+  .map-pin::after,
+  .rfq-step.active,
+  .animate-spin {
     animation: none;
   }
 }

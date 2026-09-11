@@ -3,7 +3,7 @@ export function renderCookieBanner() {
 
   const container = document.createElement('div');
   container.id = 'cookie-banner';
-  container.className = 'fixed bottom-0 left-0 w-full bg-white border-t border-outline-variant p-4 z-[100] transform translate-y-full transition-transform duration-500 shadow-xl';
+  container.className = 'fixed bottom-0 left-0 w-full bg-white border-t border-outline-variant p-4 z-[100] transform translate-y-full transition-transform duration-500 motion-reduce:transition-none shadow-xl';
 
   container.innerHTML = `
     <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">

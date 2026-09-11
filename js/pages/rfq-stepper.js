@@ -22,7 +22,8 @@ export function initRfqStepper() {
       }
     }
 
-    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    form.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
   };
 
   form.addEventListener('submit', (e) => {
@@ -35,7 +36,7 @@ export function initRfqStepper() {
 
       setTimeout(() => {
         btn.innerHTML = '<span class="material-symbols-outlined text-sm">check_circle</span> Richiesta Inviata con Successo!';
-        btn.className = 'bg-green-600 text-white px-10 py-3 rounded-lg font-label-lg shadow-md';
+        btn.className = 'bg-primary text-white px-10 py-3 rounded-lg font-label-lg shadow-md';
         setTimeout(() => {
           btn.innerHTML = origText;
           btn.className = 'bg-secondary text-on-secondary px-10 py-3 rounded-lg font-label-lg hover:bg-secondary/90 transition-all shadow-md';

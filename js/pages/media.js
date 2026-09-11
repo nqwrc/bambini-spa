@@ -51,7 +51,7 @@ function galleryItem(item, index) {
 function initFilters(items, grid, bar) {
   bar.innerHTML = CATEGORIES.map(({ id, label }) => {
     const n = id === 'all' ? items.length : items.filter((it) => it.category === id).length;
-    return `<button type="button" data-category="${id}" class="${CHIP} ${(id === 'all' ? CHIP_ON : CHIP_IDLE).join(' ')}">${label} <span class="opacity-70">${n}</span></button>`;
+    return `<button type="button" data-category="${id}" class="${CHIP} ${(id === 'all' ? CHIP_ON : CHIP_IDLE).join(' ')}">${label} <span class="font-semibold">${n}</span></button>`;
   }).join('');
 
   const itemButtons = Array.from(grid.querySelectorAll('.media-item'));
@@ -94,6 +94,17 @@ function initLightbox(items, grid) {
 
   const visibleButtons = () => Array.from(grid.querySelectorAll('.media-item')).filter((b) => !b.hidden);
 
+  // Tabbing past the lightbox's own controls must not reach the header, the
+  // page content or the cookie banner behind the overlay: inert everything
+  // else in <body> while it is open, instead of hand-tracking a tab loop.
+  function setBackgroundInert(isInert) {
+    Array.from(document.body.children).forEach((el) => {
+      if (el === lightbox) return;
+      if (isInert) el.setAttribute('inert', '');
+      else el.removeAttribute('inert');
+    });
+  }
+
   function show(index) {
     const item = items[index];
     currentIndex = index;
@@ -114,12 +125,14 @@ function initLightbox(items, grid) {
     show(index);
     lightbox.style.display = 'flex';
     document.body.classList.add('overflow-hidden');
+    setBackgroundInert(true);
     closeBtn.focus();
   }
 
   function close() {
     lightbox.style.display = 'none';
     document.body.classList.remove('overflow-hidden');
+    setBackgroundInert(false);
     if (trigger) trigger.focus();
     trigger = null;
   }
@@ -161,7 +174,9 @@ function initVideoSlot() {
   const section = document.querySelector('[data-video-poster]');
   const captionEl = document.getElementById('media-video-caption');
   if (!section) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  // Under reduced motion the video is still offered, but paused with controls,
+  // so the visitor chooses to play it.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const src = './video/hero-drone.mp4';
   fetch(src, { method: 'HEAD' })
@@ -170,9 +185,14 @@ function initVideoSlot() {
       if (!res.ok || !type.startsWith('video/')) return;
 
       const video = document.createElement('video');
-      Object.assign(video, { src, muted: true, loop: true, autoplay: true, playsInline: true });
+      Object.assign(video, { src, muted: true, loop: true, playsInline: true, autoplay: !reduceMotion, controls: reduceMotion });
       video.className = 'absolute inset-0 w-full h-full object-cover';
-      video.setAttribute('aria-hidden', 'true');
+      if (reduceMotion) {
+        video.setAttribute('aria-label', 'Riprese aeree della flotta');
+        video.classList.add('z-10');
+      } else {
+        video.setAttribute('aria-hidden', 'true');
+      }
       section.prepend(video);
       if (captionEl) captionEl.textContent = 'Riprese aeree della flotta.';
     })
