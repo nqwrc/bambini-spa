@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "check-data": "node scripts/check-data.mjs",
+    "prebuild": "node scripts/check-data.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

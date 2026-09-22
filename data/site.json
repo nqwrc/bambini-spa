@@ -1,0 +1,25 @@
+{
+  "updated": "2026-09-22",
+  "company": "Bambini S.p.A.",
+  "address": {
+    "street": "Viale IV Novembre 79",
+    "zip": "48122",
+    "city": "Marina di Ravenna (RA)",
+    "verified": true,
+    "source": "bambinispa.it/contatti"
+  },
+  "phone": "+39 0544 530537",
+  "fax": "+39 0544 538544",
+  "email": "info@bambinispa.it",
+  "linkedin": "https://it.linkedin.com/company/bambini-s-p-a",
+  "vat": null,
+  "founded": null,
+  "languages": ["it", "en", "fr"],
+  "facts": [
+    { "key": "fleet", "value": 17, "label_it": "unita in flotta", "source": "bambinispa.it/flotta", "asOf": "2026-09", "verified": true },
+    { "key": "certifications", "value": 3, "label_it": "certificazioni RINA", "source": "bambinispa.it/certificazioni", "asOf": "2026-09", "verified": true },
+    { "key": "years", "value": 60, "suffix": "+", "label_it": "anni di attivita", "source": "bambinispa.it", "asOf": "2026-09", "verified": true },
+    { "key": "revenue2024", "value": 34.2, "unit": "M EUR", "label_it": "fatturato 2024", "source": "registri pubblici", "asOf": "2024", "verified": false },
+    { "key": "employees", "value": "100-199", "label_it": "dipendenti", "source": "registri pubblici", "asOf": "2024", "verified": false }
+  ]
+}

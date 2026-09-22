@@ -24,6 +24,19 @@ npm run build
 npm run preview
 ```
 
+## Data
+
+Dynamic content (fleet, news, timeline, contacts, certifications, counters, team)
+lives in `data/*.json`. Only facts verified against public sources are filled in
+(source and date are recorded on each entry); everything else is `null` and renders
+as a visible placeholder on the site, never as an invented value. The department
+contacts other than the switchboard and `info@` are unconfirmed and marked
+`"verified": false`.
+
+`npm run build` runs `scripts/check-data.mjs` first. With `BAMBINI_MODE=production`
+the build stops while any published contact channel is unverified; without it
+(mockup mode, the default) unverified items are listed as warnings.
+
 ## Stack
 
 Vite, Tailwind CSS, JavaScript

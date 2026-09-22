@@ -1,0 +1,6 @@
+[
+  { "role_it": "Responsabile operativo", "dept": "ops", "name": null, "photo": null },
+  { "role_it": "Responsabile commerciale", "dept": "sales", "name": null, "photo": null },
+  { "role_it": "Responsabile HSEQ", "dept": "hseq", "name": null, "photo": null },
+  { "role_it": "Responsabile tecnico", "dept": "technical", "name": null, "photo": null }
+]

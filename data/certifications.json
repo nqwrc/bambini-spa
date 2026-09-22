@@ -1,0 +1,6 @@
+[
+  { "name": "ISO 9001:2015", "body": "RINA", "since": "2000-05", "lastAudit": null, "expires": null, "source": "bambinispa.it/certificazioni", "verified": true },
+  { "name": "ISO 45001:2018", "body": "RINA", "since": "2018-05", "lastAudit": null, "expires": null, "source": "bambinispa.it/certificazioni", "verified": true },
+  { "name": "ISO 14001:2015", "body": "RINA", "since": null, "lastAudit": null, "expires": null, "source": "bambinispa.it/certificazioni", "verified": false },
+  { "name": "STCW", "kind": "training", "body": null, "since": null, "lastAudit": null, "expires": null, "source": "bambinispa.it/certificazioni", "verified": true }
+]
