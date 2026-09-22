@@ -142,6 +142,8 @@ if (positions) {
     if (!p.id || !p.title_it) errors.push('positions.json: every position needs id and title_it');
     // A position without both dates is never shown; say so at build time so it is not forgotten.
     if (!ISO_DATE.test(p.posted ?? '') || !ISO_DATE.test(p.deadline ?? '')) warnings.push(`positions.json: "${p.title_it}" lacks posted/deadline and will not be shown`);
+    // An example vacancy must never reach production: candidates would apply for a job that does not exist.
+    if (p.verified !== true) (mode === 'production' ? errors : warnings).push(`positions.json: "${p.title_it}" is an example (verified:false)`);
   }
   if (positions.length === 0) warnings.push('positions.json: no open positions (the page shows the spontaneous-application note)');
 }

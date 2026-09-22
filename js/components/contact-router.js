@@ -54,8 +54,12 @@ export function initContactForm() {
     .map((c) => `<option value="${c.key}">${c.label_it} · ${c.email}</option>`)
     .join('');
 
-  const requested = new URLSearchParams(window.location.search).get('to');
+  const params = new URLSearchParams(window.location.search);
+  const requested = params.get('to');
   select.value = requested && byKey[requested]?.email ? requested : DEFAULT_KEY;
+  // vessel-detail.html passes ?vessel=<name>: prefill the message so the unit is in the request.
+  const vessel = params.get('vessel');
+  if (vessel) form.querySelector('#contact-message').value = `Unita: ${vessel}\nPeriodo: \nArea operativa: \n`;
 
   const update = () => {
     const c = byKey[select.value];

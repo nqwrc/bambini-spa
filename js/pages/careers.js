@@ -12,15 +12,20 @@ const today = new Date().toISOString().slice(0, 10);
 const open = positions.filter((p) => p.posted && p.deadline && p.deadline >= today);
 
 function positionCard(p) {
+  // An unverified position is a worked example of the format, shown with its badge so it
+  // is never mistaken for a real vacancy. The apply flow works the same for both.
+  const reqs = (p.requirements_it ?? []).map((r) => `<li>${r}</li>`).join('');
   return `
     <article class="bg-white border border-outline-variant rounded-lg p-6 flex flex-col gap-3 vessel-card-hover" data-reveal>
       <div class="flex items-start justify-between gap-2">
-        <h3 class="font-headline-md text-headline-md text-primary">${p.title_it}</h3>
-        <span class="text-xs font-semibold text-on-surface-variant whitespace-nowrap">${p.location_it ?? ''}</span>
+        <h3 class="font-headline-md text-headline-md text-primary" style="font-size: 20px; line-height: 28px;">${p.title_it}</h3>
+        ${p.verified ? '<span class="badge-verified">posizione reale</span>' : '<span class="badge-verify">esempio, da confermare</span>'}
       </div>
+      <p class="text-xs font-semibold text-on-surface-variant">${[p.location_it, p.contract_it].filter(Boolean).join(' · ')}</p>
       <p class="text-sm text-on-surface-variant">${p.summary_it ?? ''}</p>
-      <p class="text-xs text-on-surface-variant">Pubblicata il <time datetime="${p.posted}">${p.posted}</time> · scade il <time datetime="${p.deadline}">${p.deadline}</time></p>
-      <a href="#apply-form" class="self-start text-xs font-label-lg uppercase tracking-wider text-primary hover:underline" data-apply="${p.id}">Candidati</a>
+      ${reqs ? `<ul class="text-sm text-on-surface-variant list-disc pl-5 flex flex-col gap-1">${reqs}</ul>` : ''}
+      <p class="text-xs text-on-surface-variant mt-auto">Pubblicata il <time datetime="${p.posted}">${p.posted}</time> · scade il <time datetime="${p.deadline}">${p.deadline}</time></p>
+      <a href="#apply-form" class="inline-flex items-center justify-center h-11 border-2 border-primary text-primary rounded font-label-lg text-xs uppercase tracking-wider hover:bg-surface-container-low transition-colors" data-apply="${p.id}">Candidati</a>
     </article>`;
 }
 
