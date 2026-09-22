@@ -319,16 +319,90 @@ body {
   }
 }
 
-/* --- Scroll Reveal --- */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+/* ================================================================
+   Motion tokens (one easing, three durations, nothing over 700 ms)
+   ================================================================ */
+
+:root {
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 200ms;
+  --dur: 500ms;
+  --dur-slow: 700ms;
 }
 
-.scroll-reveal.visible {
+/* --- Scroll reveal: opt-in with data-reveal, never on every section --- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+[data-reveal].is-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* --- Counter: digits keep a fixed width so the number does not jitter while counting --- */
+[data-count] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Verification badges (data/*.json verified flag) --- */
+.badge-verify,
+.badge-verified,
+.badge-missing {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-DEFAULT);
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.badge-verify {
+  border: 1px solid #b45309;
+  background: #fff7ed;
+  color: #7c2d12;
+}
+
+.badge-verified {
+  border: 1px solid var(--color-secondary);
+  background: #f3f8dc;
+  color: #3f4c00;
+}
+
+.badge-missing {
+  border: 1px dashed #b45309;
+  background: #fff7ed;
+  color: #7c2d12;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* --- Reduced motion: everything collapses to opacity or the final state --- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    transform: none;
+    transition: opacity var(--dur-fast) linear;
+  }
+
+  .vessel-card-hover,
+  .service-card .card-icon,
+  .rfq-step.active,
+  .map-pin::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 /* ================================================================
