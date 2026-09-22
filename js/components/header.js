@@ -57,7 +57,7 @@ export function renderHeader() {
           </div>
 
           <!-- Request Quote CTA -->
-          <a href="contatti.html" data-i18n="nav.requestQuote" class="hidden sm:flex items-center gap-2 bg-secondary text-on-primary px-5 py-2.5 rounded font-label-lg uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all text-xs">
+          <a href="contatti.html?to=ops" data-i18n="nav.requestQuote" class="hidden sm:flex items-center gap-2 bg-secondary text-on-primary px-5 py-2.5 rounded font-label-lg uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all text-xs">
             Richiedi Preventivo
           </a>
 
@@ -73,7 +73,7 @@ export function renderHeader() {
         <div class="py-2">
           ${mobileDropdownLinks}
           <div class="p-4 bg-surface-container-low flex justify-center">
-            <a href="contatti.html" data-i18n="nav.requestQuote" class="w-full text-center bg-secondary text-on-primary py-3 rounded font-label-lg uppercase tracking-wider block">
+            <a href="contatti.html?to=ops" data-i18n="nav.requestQuote" class="w-full text-center bg-secondary text-on-primary py-3 rounded font-label-lg uppercase tracking-wider block">
               Richiedi Preventivo
             </a>
           </div>

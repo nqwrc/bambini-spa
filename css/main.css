@@ -214,16 +214,6 @@ body {
   color: white;
 }
 
-/* --- RFQ Stepper --- */
-.rfq-step {
-  display: none;
-}
-
-.rfq-step.active {
-  display: block;
-  animation: fadeIn 0.4s ease-out;
-}
-
 /* --- Hero Gradient --- */
 .hero-gradient {
   background: linear-gradient(rgba(13, 38, 64, 0.4), rgba(13, 38, 64, 0.6));
@@ -397,7 +387,6 @@ body {
 
   .vessel-card-hover,
   .service-card .card-icon,
-  .rfq-step.active,
   .map-pin::after {
     animation: none !important;
     transition: none !important;
