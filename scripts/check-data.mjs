@@ -135,6 +135,25 @@ if (team && contacts) {
   }
 }
 
+// --- positions.json / clients.json ---------------------------------------------
+const positions = load('positions.json');
+if (positions) {
+  for (const p of positions) {
+    if (!p.id || !p.title_it) errors.push('positions.json: every position needs id and title_it');
+    // A position without both dates is never shown; say so at build time so it is not forgotten.
+    if (!ISO_DATE.test(p.posted ?? '') || !ISO_DATE.test(p.deadline ?? '')) warnings.push(`positions.json: "${p.title_it}" lacks posted/deadline and will not be shown`);
+  }
+  if (positions.length === 0) warnings.push('positions.json: no open positions (the page shows the spontaneous-application note)');
+}
+const clients = load('clients.json');
+if (clients) {
+  for (const c of clients) {
+    if (!c.name || !c.year) errors.push('clients.json: every client needs name and year');
+    if (c.verified !== true) warnings.push(`clients.json: "${c.name}" is not verified`);
+    else if (!c.source) errors.push(`clients.json: "${c.name}" is verified but has no source`);
+  }
+}
+
 // --- report ------------------------------------------------------------------
 console.log(`check-data: mode=${mode}, ${errors.length} error(s), ${warnings.length} warning(s)`);
 for (const w of warnings) console.log(`  warn  ${w}`);
