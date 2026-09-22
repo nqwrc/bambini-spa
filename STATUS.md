@@ -15,13 +15,12 @@ Pages (deploy.yml runs on every push to main): S1 data/*.json + prebuild guardra
 base (opt-in reveal, count-up, reduced-motion), S3 contatti with department router and real
 footer, S5 flotta (17 vessels from fleet.json, live-count filters, refit table), S6 servizi and
 lavora-con-noi (services from the real fleet, dated positions, mailto applications), MIT
-licence. Pages still on the generated mockup: index, vessel-detail, aree-intervento, hseq,
-compliance.
+licence, S4 home (hero poster, today counters, timeline, real facts, news), S7 azienda.html
+and news.html (new). Pages still on the generated mockup: vessel-detail, aree-intervento,
+hseq, compliance.
 
 ## backlog
-- S4 home (index.html rows 46-69 still show 50+/400+; hero video, timeline, news)
 - S6b vessel-detail.html (?id= from fleet.json; invented Blue Brother specs still live)
-- S7 azienda.html + news.html (new pages, vite.config.js input)
 - S8 hseq.html, aree-intervento.html, compliance.html cleanup, FR in js/translations.js
 - data to collect, in blocking order: 8 department contacts, real photos, fleet spec
   sheets, timeline events 2020/2022/2023/2025, counters, certification audit dates,
