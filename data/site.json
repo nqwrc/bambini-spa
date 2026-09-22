@@ -64,5 +64,16 @@
     }
   ],
   "heroVideo": null,
-  "heroPoster": null
+  "heroPoster": "https://www.bambinispa.it/wp-content/uploads/2025/11/SLIDE-1-_-Blue-Brother-foto-scaled-1-e1762793033903.jpg",
+  "heroPosterCaption": "FSIV DP1 FiFi1 · Blue Brother",
+  "media": {
+    "fifiTest": "https://www.bambinispa.it/wp-content/uploads/2025/11/slide-3-e1762793239967.jpg",
+    "offshore": "https://www.bambinispa.it/wp-content/uploads/2025/11/Blue-Mommy1.jpg",
+    "crew": "https://www.bambinispa.it/wp-content/uploads/2025/11/blue-boy.jpg",
+    "utility": "https://www.bambinispa.it/wp-content/uploads/2025/11/Melanie-B.jpeg",
+    "towing": "https://www.bambinispa.it/wp-content/uploads/2025/11/Aline-B-senza-nome-2048x1365-1.jpg",
+    "careers": "https://www.bambinispa.it/wp-content/uploads/2025/11/agnes-1280x720-1-e1762534397269.webp",
+    "credit": "Foto: bambinispa.it (materiale dell'azienda, da fornire in alta risoluzione)"
+  },
+  "maps": "https://maps.app.goo.gl/Qj7MuVeuCQgFUFLYA"
 }

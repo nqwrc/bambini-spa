@@ -60,7 +60,9 @@ function fleetTeaser() {
       return `
       <a href="vessel-detail.html?id=${v.id}" class="block bg-white border border-outline-variant rounded-lg overflow-hidden vessel-card-hover" data-reveal>
         <figure class="relative h-48 bg-deep-sea flex items-center justify-center text-white/70 text-xs">
-          ${v.photo ? `<img src="${v.photo}" alt="${v.name}, ${cls}" class="w-full h-full object-cover"/>` : `[FOTO DA FORNIRE: ${v.name}]`}
+          ${v.photo ? `<img src="${v.photo}" alt="${v.name}, ${cls}" loading="lazy" class="w-full h-full object-cover"/>` : `[FOTO DA FORNIRE: ${v.name}]`}
+          <div class="absolute inset-x-0 bottom-0 h-20" style="background: linear-gradient(to top, rgba(13,38,64,0.85), transparent);"></div>
+          ${v.speed !== null ? `<span class="absolute right-4 top-3 font-headline-md font-extrabold text-white tracking-[0.06em] drop-shadow">${v.speed} NODI</span>` : ''}
           <figcaption class="absolute left-5 bottom-4 font-headline-md font-extrabold uppercase tracking-[0.08em] text-white text-lg">${cls} · ${v.name}</figcaption>
         </figure>
         <div class="p-4 flex items-center justify-between"><span class="font-headline-md text-primary" style="font-size: 18px;">${v.name}</span><span class="text-xs font-semibold text-on-surface-variant">${cls}</span></div>

@@ -37,6 +37,13 @@ contacts other than the switchboard and `info@` are unconfirmed and marked
 the build stops while any published contact channel is unverified; without it
 (mockup mode, the default) unverified items are listed as warnings.
 
+## Media
+
+Vessel photos and the hero image are Bambini S.p.A.'s own material, referenced from
+bambinispa.it (not copied into this repository) and credited on the page, pending the
+originals in high resolution. Fleet specifications come from bambinispa.it/flotta
+(September 2026). No image on the site is generated.
+
 ## Stack
 
 Vite, Tailwind CSS, JavaScript

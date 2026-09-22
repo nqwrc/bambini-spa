@@ -1,12 +1,94 @@
 [
-  { "key": "ops", "label_it": "Operations / Chartering", "who_it": "responsabile operativo", "scope_it": "RFQ, disponibilita unita", "email": "ops@bambinispa.it", "phone": null, "verified": false },
-  { "key": "sales", "label_it": "Commerciale", "who_it": "responsabile commerciale", "scope_it": "preventivi e contratti", "email": "commerciale@bambinispa.it", "phone": null, "verified": false },
-  { "key": "crewing", "label_it": "Crewing", "who_it": "ufficio equipaggi", "scope_it": "equipaggi, imbarchi", "email": "crewing@bambinispa.it", "phone": null, "verified": false },
-  { "key": "hseq", "label_it": "HSEQ", "who_it": "responsabile HSEQ", "scope_it": "audit, certificazioni, incidenti", "email": "hseq@bambinispa.it", "phone": null, "verified": false },
-  { "key": "technical", "label_it": "Ufficio tecnico", "who_it": "responsabile tecnico", "scope_it": "manutenzione, refit", "email": "tecnico@bambinispa.it", "phone": null, "verified": false },
-  { "key": "hr", "label_it": "HR", "who_it": "ufficio personale", "scope_it": "candidature", "email": "hr@bambinispa.it", "phone": null, "verified": false },
-  { "key": "admin", "label_it": "Amministrazione", "who_it": "ufficio amministrativo", "scope_it": "fatture, fornitori", "email": "amministrazione@bambinispa.it", "phone": null, "verified": false },
-  { "key": "dpa", "label_it": "Emergenze 24h / DPA", "who_it": "Designated Person Ashore (ISM)", "scope_it": "emergenze", "email": null, "phone": null, "verified": false },
-  { "key": "switchboard", "label_it": "Centralino", "who_it": "segreteria", "scope_it": "centralino", "email": null, "phone": "+39 0544 530537", "verified": true },
-  { "key": "other", "label_it": "Altro", "who_it": "segreteria", "scope_it": "tutto il resto, ultima scelta", "email": "info@bambinispa.it", "phone": null, "verified": true, "lastResort": true }
+  {
+    "key": "ops",
+    "label_it": "Operations / Chartering",
+    "who_it": "responsabile operativo",
+    "scope_it": "RFQ, disponibilita unita",
+    "email": "ops@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "sales",
+    "label_it": "Commerciale",
+    "who_it": "responsabile commerciale",
+    "scope_it": "preventivi e contratti",
+    "email": "commerciale@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "crewing",
+    "label_it": "Crewing",
+    "who_it": "ufficio equipaggi",
+    "scope_it": "equipaggi, imbarchi",
+    "email": "crewing@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "hseq",
+    "label_it": "HSEQ",
+    "who_it": "responsabile HSEQ",
+    "scope_it": "audit, certificazioni, incidenti",
+    "email": "hseq@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "technical",
+    "label_it": "Ufficio tecnico",
+    "who_it": "responsabile tecnico",
+    "scope_it": "manutenzione, refit",
+    "email": "tecnico@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "hr",
+    "label_it": "HR",
+    "who_it": "ufficio personale (casella ufficiale per le candidature)",
+    "scope_it": "candidature",
+    "email": "info@bambinispa.it",
+    "phone": null,
+    "verified": true,
+    "source": "bambinispa.it/lavora-con-noi"
+  },
+  {
+    "key": "admin",
+    "label_it": "Amministrazione",
+    "who_it": "ufficio amministrativo",
+    "scope_it": "fatture, fornitori",
+    "email": "amministrazione@bambinispa.it",
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "dpa",
+    "label_it": "Emergenze 24h / DPA",
+    "who_it": "Designated Person Ashore (ISM)",
+    "scope_it": "emergenze",
+    "email": null,
+    "phone": null,
+    "verified": false
+  },
+  {
+    "key": "switchboard",
+    "label_it": "Centralino",
+    "who_it": "segreteria",
+    "scope_it": "centralino",
+    "email": null,
+    "phone": "+39 0544 530537",
+    "verified": true
+  },
+  {
+    "key": "other",
+    "label_it": "Altro",
+    "who_it": "segreteria",
+    "scope_it": "tutto il resto, ultima scelta",
+    "email": "info@bambinispa.it",
+    "phone": null,
+    "verified": true,
+    "lastResort": true
+  }
 ]

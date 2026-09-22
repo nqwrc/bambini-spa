@@ -1,35 +1,48 @@
 [
   {
     "id": "comandante-fsiv",
-    "title_it": "Comandante FSIV (DP1/DP2)",
-    "location_it": "A bordo · Adriatico",
+    "title_it": "Comandante FSIV (oltre 500 GT)",
+    "location_it": "A bordo · Italia e Africa occidentale",
     "contract_it": "Imbarco a rotazione",
-    "summary_it": "Comando di FSIV a posizionamento dinamico a supporto delle piattaforme in Adriatico.",
-    "requirements_it": ["Certificato di competenza per il comando", "Certificazione DP (Nautical Institute) in corso di validita", "Formazione STCW e certificati di sicurezza aggiornati", "Esperienza su FSIV o crew boat offshore"],
-    "posted": "2026-09-22",
-    "deadline": "2026-12-31",
-    "verified": false
+    "summary_it": "Comando di FSIV a supporto delle installazioni offshore, in Italia e in Africa occidentale.",
+    "requirements_it": [
+      "Certificato di competenza per il comando di navi oltre 500 GT",
+      "Elenco certificati con date di scadenza e storico degli imbarchi",
+      "Conoscenza delle lingue: da indicare nel CV"
+    ],
+    "posted": null,
+    "deadline": null,
+    "source": "bambinispa.it/lavora-con-noi",
+    "verified": true
   },
   {
-    "id": "ufficiale-macchina",
-    "title_it": "Ufficiale di macchina",
-    "location_it": "A bordo · Adriatico",
+    "id": "primo-ufficiale-coperta",
+    "title_it": "Primo ufficiale di coperta (oltre 500 GT)",
+    "location_it": "A bordo · Italia e Africa occidentale",
     "contract_it": "Imbarco a rotazione",
-    "summary_it": "Conduzione e manutenzione dell'apparato motore su FSIV e crew boat.",
-    "requirements_it": ["Certificato di competenza per la sezione macchina", "Formazione STCW aggiornata", "Esperienza su propulsione veloce (waterjet o eliche a passo variabile) gradita"],
-    "posted": "2026-09-22",
-    "deadline": "2026-12-31",
-    "verified": false
+    "summary_it": "Primo ufficiale su FSIV a supporto delle installazioni offshore.",
+    "requirements_it": [
+      "Certificato di competenza per navi oltre 500 GT",
+      "Elenco certificati con date di scadenza e storico degli imbarchi"
+    ],
+    "posted": null,
+    "deadline": null,
+    "source": "bambinispa.it/lavora-con-noi",
+    "verified": true
   },
   {
-    "id": "marinaio-coperta",
-    "title_it": "Marinaio di coperta",
-    "location_it": "A bordo · Marina di Ravenna",
+    "id": "direttore-macchina",
+    "title_it": "Direttore di macchina (oltre 3000 kW)",
+    "location_it": "A bordo · Italia e Africa occidentale",
     "contract_it": "Imbarco a rotazione",
-    "summary_it": "Operazioni di coperta, trasferimento passeggeri e movimentazione carichi sulle unita della flotta.",
-    "requirements_it": ["Libretto di navigazione e certificati STCW di base", "Corso antincendio e sopravvivenza", "Disponibilita a turni di imbarco"],
-    "posted": "2026-09-22",
-    "deadline": "2026-11-30",
-    "verified": false
+    "summary_it": "Direzione dell'apparato motore su FSIV oltre 3000 kW.",
+    "requirements_it": [
+      "Certificato di competenza per apparati oltre 3000 kW",
+      "Elenco certificati con date di scadenza e storico degli imbarchi"
+    ],
+    "posted": null,
+    "deadline": null,
+    "source": "bambinispa.it/lavora-con-noi",
+    "verified": true
   }
 ]

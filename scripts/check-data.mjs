@@ -63,6 +63,9 @@ if (fleet) {
     if (![1, 2, null].includes(v.dp)) errors.push(`fleet.json: "${v.name}" dp must be 1, 2 or null`);
     if (typeof v.fifi !== 'boolean') errors.push(`fleet.json: "${v.name}" fifi must be boolean`);
     if (v.lastRefit !== null && !ISO_DATE.test(v.lastRefit)) errors.push(`fleet.json: "${v.name}" lastRefit must be ISO or null`);
+    // Photos are the company's own, referenced from its site until originals are supplied.
+    if (v.photo !== null && !/^https:\/\/www\.bambinispa\.it\//.test(v.photo)) errors.push(`fleet.json: "${v.name}" photo must come from bambinispa.it or be null`);
+    if (v.photo === null) warnings.push(`fleet.json: "${v.name}" has no photo`);
   }
 }
 
@@ -141,7 +144,7 @@ if (positions) {
   for (const p of positions) {
     if (!p.id || !p.title_it) errors.push('positions.json: every position needs id and title_it');
     // A position without both dates is never shown; say so at build time so it is not forgotten.
-    if (!ISO_DATE.test(p.posted ?? '') || !ISO_DATE.test(p.deadline ?? '')) warnings.push(`positions.json: "${p.title_it}" lacks posted/deadline and will not be shown`);
+    if (!ISO_DATE.test(p.posted ?? '') || !ISO_DATE.test(p.deadline ?? '')) warnings.push(`positions.json: "${p.title_it}" lacks posted/deadline${p.verified ? ' (shown as undated, from the official site)' : ' and will not be shown'}`);
     // An example vacancy must never reach production: candidates would apply for a job that does not exist.
     if (p.verified !== true) (mode === 'production' ? errors : warnings).push(`positions.json: "${p.title_it}" is an example (verified:false)`);
   }

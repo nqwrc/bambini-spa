@@ -321,6 +321,17 @@ body {
   transform: translateY(0);
 }
 
+/* --- Hero poster: slow Ken Burns (20 s, scale 1 -> 1.06), replaced by the video when one exists --- */
+@keyframes ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+.hero-poster {
+  animation: ken-burns 20s linear both;
+  transform-origin: 60% 50%;
+}
+
 /* --- Counter: digits keep a fixed width so the number does not jitter while counting --- */
 [data-count] {
   font-variant-numeric: tabular-nums;
@@ -372,6 +383,10 @@ body {
   [data-reveal] {
     transform: none;
     transition: opacity var(--dur-fast) linear;
+  }
+
+  .hero-poster {
+    animation: none;
   }
 
   .vessel-card-hover,

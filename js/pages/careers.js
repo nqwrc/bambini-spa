@@ -9,7 +9,9 @@ import contacts from '../../data/contacts.json';
 const hr = contacts.find((c) => c.key === 'hr');
 const today = new Date().toISOString().slice(0, 10);
 
-const open = positions.filter((p) => p.posted && p.deadline && p.deadline >= today);
+// Shown: a verified vacancy (from the official site, even undated) or any vacancy whose
+// deadline has not passed. An unverified vacancy without dates never appears.
+const open = positions.filter((p) => (p.verified && !p.deadline) || (p.posted && p.deadline && p.deadline >= today));
 
 function positionCard(p) {
   // An unverified position is a worked example of the format, shown with its badge so it
@@ -24,7 +26,7 @@ function positionCard(p) {
       <p class="text-xs font-semibold text-on-surface-variant">${[p.location_it, p.contract_it].filter(Boolean).join(' · ')}</p>
       <p class="text-sm text-on-surface-variant">${p.summary_it ?? ''}</p>
       ${reqs ? `<ul class="text-sm text-on-surface-variant list-disc pl-5 flex flex-col gap-1">${reqs}</ul>` : ''}
-      <p class="text-xs text-on-surface-variant mt-auto">Pubblicata il <time datetime="${p.posted}">${p.posted}</time> · scade il <time datetime="${p.deadline}">${p.deadline}</time></p>
+      <p class="text-xs text-on-surface-variant mt-auto">${p.posted ? `Pubblicata il <time datetime="${p.posted}">${p.posted}</time>` : 'Pubblicata: <span class="badge-missing">[data da fornire]</span>'} · ${p.deadline ? `scade il <time datetime="${p.deadline}">${p.deadline}</time>` : 'scadenza: <span class="badge-missing">[da fornire]</span>'}${p.source ? ` · fonte ${p.source}` : ''}</p>
       <a href="#apply-form" class="inline-flex items-center justify-center h-11 border-2 border-primary text-primary rounded font-label-lg text-xs uppercase tracking-wider hover:bg-surface-container-low transition-colors" data-apply="${p.id}">Candidati</a>
     </article>`;
 }
@@ -67,7 +69,9 @@ export function initCareers() {
     const chosen = select.options[select.selectedIndex].textContent;
     const message = form.querySelector('#candidate-message').value.trim();
     const subject = `[Candidatura] ${chosen}`;
-    const body = `${message}\n\nAllego il mio CV.\n\n--\n${name}\n${email}`;
+    // The official page asks for: experience, languages, and for seafarers the list of
+    // certificates with expiry dates plus the embarkation history.
+    const body = `${message}\n\nAllego il CV con esperienze, lingue conosciute, elenco certificati con scadenze e storico imbarchi.\n\n--\n${name}\n${email}`;
     window.location.href = `mailto:${hr.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
