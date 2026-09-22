@@ -19,6 +19,8 @@ export default defineConfig({
         compliance: resolve(__dirname, 'compliance.html'),
         contatti: resolve(__dirname, 'contatti.html'),
         lavoraConNoi: resolve(__dirname, 'lavora-con-noi.html'),
+        azienda: resolve(__dirname, 'azienda.html'),
+        news: resolve(__dirname, 'news.html'),
       },
     },
   },

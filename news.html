@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News e feed LinkedIn | Bambini S.p.A.</title>
+  <meta name="description" content="Notizie datate su Bambini S.p.A.: contratti, base operativa, flotta, certificazioni. Fonti di stampa e post LinkedIn."/>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+
+  <div id="app-header"></div>
+
+  <main>
+    <section class="bg-primary-container text-white py-20">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <span class="text-secondary-fixed font-label-lg uppercase tracking-widest block mb-2">News</span>
+        <h1 class="font-display-lg text-display-lg mb-4">Notizie e feed LinkedIn</h1>
+        <p class="font-body-lg text-on-primary-container max-w-2xl leading-relaxed">Ogni notizia ha data, fonte e categoria. Finche non arrivano i post LinkedIn restano le notizie di stampa.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-8">
+        <div id="news-filters" class="flex flex-wrap gap-2" role="group" aria-label="Filtra le notizie"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+          <div id="news-list" class="lg:col-span-8 flex flex-col gap-4"></div>
+          <aside class="lg:col-span-4 bg-surface-container-low rounded-lg p-6 flex flex-col gap-3">
+            <span class="text-secondary font-label-lg uppercase tracking-widest">LinkedIn</span>
+            <a href="https://it.linkedin.com/company/bambini-s-p-a" rel="noopener" target="_blank" class="text-sm text-primary hover:underline">it.linkedin.com/company/bambini-s-p-a</a>
+            <div id="linkedin-posts" class="flex flex-col gap-3"></div>
+            <p class="text-xs text-on-surface-variant">Nessun embed: i post vengono copiati in news.json con sourceType linkedin.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script type="module">
+    import './js/main.js';
+    import { initNews } from './js/pages/news.js';
+    document.addEventListener('DOMContentLoaded', () => initNews());
+  </script>
+</body>
+</html>

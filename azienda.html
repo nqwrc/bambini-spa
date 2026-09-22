@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azienda: oltre 60 anni a Marina di Ravenna | Bambini S.p.A.</title>
+  <meta name="description" content="Bambini S.p.A.: la storia recente, i numeri di oggi, le certificazioni RINA con le date e i responsabili di reparto."/>
+  <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+
+  <div id="app-header"></div>
+
+  <main>
+    <section class="bg-primary-container text-white py-20">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <span class="text-secondary-fixed font-label-lg uppercase tracking-widest block mb-2">Azienda</span>
+        <h1 class="font-display-lg text-display-lg mb-4">Oltre 60 anni, con l'ultimo evento in evidenza</h1>
+        <p class="font-body-lg text-on-primary-container max-w-2xl leading-relaxed">Servizi marittimi offshore da Marina di Ravenna. La storia recente chiude sull'ultimo traguardo datato; gli anni senza un evento verificato restano segnaposto.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+        <div class="lg:col-span-7">
+          <span class="text-secondary font-label-lg uppercase tracking-widest block mb-2">2020 - oggi</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-8">Cosa e successo negli ultimi anni</h2>
+          <ol id="timeline-v" class="flex flex-col"></ol>
+          <div class="grid grid-cols-[80px_24px_1fr] gap-x-4">
+            <span class="font-headline-lg text-on-surface-variant leading-none"><span class="badge-missing">[ANNO]</span></span>
+            <span></span>
+            <div class="flex flex-col gap-1"><p class="text-sm">Fondazione a Marina di Ravenna</p><span class="badge-missing">[anno e fondatori da fornire]</span></div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex flex-col gap-10">
+          <div>
+            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-3">Oggi</span>
+            <div id="company-facts" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+          </div>
+          <div>
+            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-3">Certificazioni RINA</span>
+            <div id="certifications" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+          </div>
+          <div>
+            <span class="text-secondary font-label-lg uppercase tracking-widest block mb-3">Team per reparto</span>
+            <div id="team" class="grid grid-cols-2 gap-3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white border-t border-outline-variant">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+        <div class="flex flex-col gap-4" data-reveal>
+          <span class="text-secondary font-label-lg uppercase tracking-widest">Base operativa</span>
+          <h2 class="font-headline-lg text-headline-lg text-primary">Marina di Ravenna, nuova area in concessione dal 2026</h2>
+          <p class="text-on-surface-variant">Tra viale dei Mille e via della Foca Monica (ravenna24ore.it, 2026-04-07). Sede in Viale IV Novembre 79.</p>
+          <a href="contatti.html" class="text-sm font-semibold text-primary hover:underline">Contatti e sede</a>
+        </div>
+        <figure class="relative h-80 rounded-lg bg-deep-sea flex items-center justify-center text-white/70 text-xs" data-reveal>
+          [FOTO DA FORNIRE: banchina e uffici, drone]
+          <figcaption class="absolute left-5 bottom-4 font-headline-md font-extrabold uppercase tracking-[0.08em] text-white text-lg">Base · Marina di Ravenna</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script type="module">
+    import './js/main.js';
+    import { initCompany } from './js/pages/company.js';
+    document.addEventListener('DOMContentLoaded', () => initCompany());
+  </script>
+</body>
+</html>

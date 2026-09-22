@@ -1,15 +1,17 @@
 export const translations = {
   it: {
     nav: {
+      company: "Azienda",
+      news: "News",
       services: "Servizi",
-      fleet: "La Flotta",
-      areas: "Aree di Intervento",
-      hseq: "HSEQ & Sostenibilità",
-      compliance: "Compliance & Ethics",
+      fleet: "Flotta",
+      areas: "Aree",
+      hseq: "HSEQ",
+      compliance: "Compliance",
       contact: "Contatti",
-      careers: "Lavora con Noi",
+      careers: "Lavora con noi",
       clientPortal: "Client Portal",
-      requestQuote: "Richiedi Preventivo"
+      requestQuote: "Preventivo"
     },
     footer: {
       tagline: "Eccellenza marittima e supporto logistico integrato dal 1962.",
@@ -34,15 +36,17 @@ export const translations = {
   },
   en: {
     nav: {
+      company: "Company",
+      news: "News",
       services: "Services",
       fleet: "Fleet",
-      areas: "Areas of Operation",
-      hseq: "HSEQ & Sustainability",
-      compliance: "Compliance & Ethics",
+      areas: "Areas",
+      hseq: "HSEQ",
+      compliance: "Compliance",
       contact: "Contact",
       careers: "Careers",
       clientPortal: "Client Portal",
-      requestQuote: "Request Quote"
+      requestQuote: "Quote"
     },
     footer: {
       tagline: "Maritime excellence and integrated logistics support since 1962.",

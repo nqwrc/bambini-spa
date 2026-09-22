@@ -8,17 +8,19 @@ export function renderHeader() {
   const pageName = path.split('/').pop() || 'index.html';
 
   const navItems = [
+    { href: 'azienda.html', key: 'nav.company', label: 'Azienda', active: pageName === 'azienda.html' },
     { href: 'servizi.html', key: 'nav.services', label: 'Servizi', active: pageName === 'servizi.html' },
     { href: 'flotta.html', key: 'nav.fleet', label: 'Flotta', active: pageName === 'flotta.html' || pageName === 'vessel-detail.html' },
     { href: 'aree-intervento.html', key: 'nav.areas', label: 'Aree di Intervento', active: pageName === 'aree-intervento.html' },
     { href: 'hseq.html', key: 'nav.hseq', label: 'HSEQ', active: pageName === 'hseq.html' },
     { href: 'compliance.html', key: 'nav.compliance', label: 'Compliance', active: pageName === 'compliance.html' },
+    { href: 'news.html', key: 'nav.news', label: 'News', active: pageName === 'news.html' },
     { href: 'contatti.html', key: 'nav.contact', label: 'Contatti', active: pageName === 'contatti.html' },
     { href: 'lavora-con-noi.html', key: 'nav.careers', label: 'Careers', active: pageName === 'lavora-con-noi.html' },
   ];
 
   const desktopNavLinks = navItems.map(item => `
-    <a href="${item.href}" data-i18n="${item.key}" class="font-label-lg text-label-lg uppercase tracking-wider transition-all px-3 py-1 ${
+    <a href="${item.href}" data-i18n="${item.key}" class="font-label-lg text-label-lg uppercase tracking-wider whitespace-nowrap transition-all px-3 py-1 ${
       item.active ? 'text-primary font-bold border-b-2 border-primary' : 'text-on-surface-variant hover:text-primary'
     }">
       ${item.label}
@@ -43,7 +45,7 @@ export function renderHeader() {
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-2">
+        <nav class="hidden lg:flex items-center gap-1">
           ${desktopNavLinks}
         </nav>
 
