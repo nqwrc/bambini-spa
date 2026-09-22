@@ -5,7 +5,6 @@ import { countUp } from './counter.js';
 
 export function initScrollAnimations() {
   const targets = document.querySelectorAll('[data-reveal], [data-count]');
-  if (!targets.length) return;
 
   // Without IntersectionObserver (very old browsers) show everything at once.
   if (!('IntersectionObserver' in window)) {
@@ -30,4 +29,17 @@ export function initScrollAnimations() {
   );
 
   targets.forEach((el) => observer.observe(el));
+
+  // Pages render cards from JSON after this runs (fleet grid, department cards):
+  // watch the DOM so elements added later are observed too, instead of staying at opacity 0.
+  new MutationObserver((mutations) => {
+    mutations.forEach((m) =>
+      m.addedNodes.forEach((node) => {
+        if (node.nodeType !== 1) return;
+        const els = node.matches('[data-reveal], [data-count]') ? [node] : [];
+        els.push(...node.querySelectorAll('[data-reveal], [data-count]'));
+        els.forEach((el) => observer.observe(el));
+      })
+    );
+  }).observe(document.body, { childList: true, subtree: true });
 }
