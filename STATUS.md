@@ -16,11 +16,12 @@ base (opt-in reveal, count-up, reduced-motion), S3 contatti with department rout
 footer, S5 flotta (17 vessels from fleet.json, live-count filters, refit table), S6 servizi and
 lavora-con-noi (services from the real fleet, dated positions, mailto applications), MIT
 licence, S4 home (hero poster, today counters, timeline, real facts, news), S7 azienda.html
-and news.html (new). Pages still on the generated mockup: vessel-detail, aree-intervento,
-hseq, compliance.
+and news.html (new), S6b vessel-detail from fleet.json by ?id= plus three example vacancies
+(verified:false, blocked in production) with the full apply flow. Pages still on the generated
+mockup: aree-intervento, hseq, compliance.
 
 ## backlog
-- S6b vessel-detail.html (?id= from fleet.json; invented Blue Brother specs still live)
+- pitch to the company: problem + solution per finding (see issue log 2026-09-22)
 - S8 hseq.html, aree-intervento.html, compliance.html cleanup, FR in js/translations.js
 - data to collect, in blocking order: 8 department contacts, real photos, fleet spec
   sheets, timeline events 2020/2022/2023/2025, counters, certification audit dates,
